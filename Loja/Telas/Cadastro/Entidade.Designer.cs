@@ -28,72 +28,84 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.Cpf_Cnpj = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.RazaoSocial = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Codigo = new System.Windows.Forms.TextBox();
+            this.Flg_ativo = new System.Windows.Forms.CheckBox();
+            this.Grupo = new System.Windows.Forms.TextBox();
+            this.DescricaoGrupo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.sss = new System.Windows.Forms.TabControl();
             this.Endereco = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtLocalizar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.Estado = new System.Windows.Forms.TextBox();
+            this.Bairro = new System.Windows.Forms.TextBox();
+            this.Complemento = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.Numero = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.Cidade = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Logradouro = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.Cep = new System.Windows.Forms.MaskedTextBox();
             this.Contatos = new System.Windows.Forms.TabPage();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.whatsappCelular2 = new System.Windows.Forms.CheckBox();
+            this.whatsappCelular1 = new System.Windows.Forms.CheckBox();
+            this.Celular2 = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.Celular1 = new System.Windows.Forms.MaskedTextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.EmailContato = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
+            this.DataCadastro = new System.Windows.Forms.MaskedTextBox();
+            this.DataAlteracao = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Bt_Salvar = new System.Windows.Forms.Button();
+            this.Foto = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.Bt_Tirar_Foto = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BtCarregarFoto = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.Observacao = new System.Windows.Forms.TextBox();
+            this.Bt_Excluir = new System.Windows.Forms.Button();
+            this.Bt_Localizar = new System.Windows.Forms.Button();
             this.AtivarFoto = new System.Windows.Forms.CheckBox();
+            this.Configuracoes = new System.Windows.Forms.TabPage();
+            this.Flg_vip = new System.Windows.Forms.CheckBox();
+            this.Flg_notificar_produto_novo = new System.Windows.Forms.CheckBox();
+            this.Flg_notificar_vencimeneto = new System.Windows.Forms.CheckBox();
+            this.Flg_Notificar_Promocao = new System.Windows.Forms.CheckBox();
+            this.Flg_Aceita_Fiado = new System.Windows.Forms.CheckBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.Facebook = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.NomeCelular1 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.NomeCelular2 = new System.Windows.Forms.TextBox();
+            this.Flg_Notificar_Aniversario = new System.Windows.Forms.CheckBox();
             this.sss.SuspendLayout();
             this.Endereco.SuspendLayout();
             this.Contatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Foto)).BeginInit();
+            this.Configuracoes.SuspendLayout();
             this.SuspendLayout();
             // 
-            // maskedTextBox1
+            // Cpf_Cnpj
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(282, 12);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(119, 20);
-            this.maskedTextBox1.TabIndex = 0;
+            this.Cpf_Cnpj.Location = new System.Drawing.Point(282, 12);
+            this.Cpf_Cnpj.Name = "Cpf_Cnpj";
+            this.Cpf_Cnpj.Size = new System.Drawing.Size(119, 20);
+            this.Cpf_Cnpj.TabIndex = 20;
             // 
             // label1
             // 
@@ -109,16 +121,16 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Razão Social:";
+            this.label2.Text = "Nome:";
             // 
-            // textBox1
+            // RazaoSocial
             // 
-            this.textBox1.Location = new System.Drawing.Point(102, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(620, 20);
-            this.textBox1.TabIndex = 3;
+            this.RazaoSocial.Location = new System.Drawing.Point(102, 38);
+            this.RazaoSocial.Name = "RazaoSocial";
+            this.RazaoSocial.Size = new System.Drawing.Size(620, 20);
+            this.RazaoSocial.TabIndex = 40;
             // 
             // label3
             // 
@@ -129,36 +141,39 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Código:";
             // 
-            // textBox2
+            // Codigo
             // 
-            this.textBox2.Location = new System.Drawing.Point(102, 12);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.Codigo.Enabled = false;
+            this.Codigo.Location = new System.Drawing.Point(102, 12);
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Size = new System.Drawing.Size(100, 20);
+            this.Codigo.TabIndex = 10;
             // 
-            // checkBox1
+            // Flg_ativo
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(407, 15);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(50, 17);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Ativo";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.Flg_ativo.AutoSize = true;
+            this.Flg_ativo.Location = new System.Drawing.Point(407, 15);
+            this.Flg_ativo.Name = "Flg_ativo";
+            this.Flg_ativo.Size = new System.Drawing.Size(50, 17);
+            this.Flg_ativo.TabIndex = 30;
+            this.Flg_ativo.Text = "Ativo";
+            this.Flg_ativo.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // Grupo
             // 
-            this.textBox3.Location = new System.Drawing.Point(102, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
+            this.Grupo.Location = new System.Drawing.Point(102, 64);
+            this.Grupo.Name = "Grupo";
+            this.Grupo.Size = new System.Drawing.Size(100, 20);
+            this.Grupo.TabIndex = 50;
+            this.Grupo.Leave += new System.EventHandler(this.Grupo_Leave);
             // 
-            // textBox4
+            // DescricaoGrupo
             // 
-            this.textBox4.Location = new System.Drawing.Point(211, 64);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(511, 20);
-            this.textBox4.TabIndex = 8;
+            this.DescricaoGrupo.Enabled = false;
+            this.DescricaoGrupo.Location = new System.Drawing.Point(211, 64);
+            this.DescricaoGrupo.Name = "DescricaoGrupo";
+            this.DescricaoGrupo.Size = new System.Drawing.Size(511, 20);
+            this.DescricaoGrupo.TabIndex = 60;
             // 
             // label4
             // 
@@ -173,45 +188,46 @@
             // 
             this.sss.Controls.Add(this.Endereco);
             this.sss.Controls.Add(this.Contatos);
+            this.sss.Controls.Add(this.Configuracoes);
             this.sss.Location = new System.Drawing.Point(12, 116);
             this.sss.Name = "sss";
             this.sss.SelectedIndex = 0;
-            this.sss.Size = new System.Drawing.Size(546, 209);
-            this.sss.TabIndex = 10;
+            this.sss.Size = new System.Drawing.Size(546, 181);
+            this.sss.TabIndex = 82;
             // 
             // Endereco
             // 
-            this.Endereco.Controls.Add(this.button1);
+            this.Endereco.Controls.Add(this.BtLocalizar);
             this.Endereco.Controls.Add(this.label11);
-            this.Endereco.Controls.Add(this.textBox10);
-            this.Endereco.Controls.Add(this.textBox9);
-            this.Endereco.Controls.Add(this.textBox8);
+            this.Endereco.Controls.Add(this.Estado);
+            this.Endereco.Controls.Add(this.Bairro);
+            this.Endereco.Controls.Add(this.Complemento);
             this.Endereco.Controls.Add(this.label10);
             this.Endereco.Controls.Add(this.label9);
-            this.Endereco.Controls.Add(this.textBox7);
+            this.Endereco.Controls.Add(this.Numero);
             this.Endereco.Controls.Add(this.label8);
-            this.Endereco.Controls.Add(this.textBox6);
+            this.Endereco.Controls.Add(this.Cidade);
             this.Endereco.Controls.Add(this.label7);
-            this.Endereco.Controls.Add(this.textBox5);
+            this.Endereco.Controls.Add(this.Logradouro);
             this.Endereco.Controls.Add(this.label6);
             this.Endereco.Controls.Add(this.label5);
-            this.Endereco.Controls.Add(this.maskedTextBox2);
+            this.Endereco.Controls.Add(this.Cep);
             this.Endereco.Location = new System.Drawing.Point(4, 22);
             this.Endereco.Name = "Endereco";
             this.Endereco.Padding = new System.Windows.Forms.Padding(3);
-            this.Endereco.Size = new System.Drawing.Size(538, 183);
+            this.Endereco.Size = new System.Drawing.Size(538, 155);
             this.Endereco.TabIndex = 0;
             this.Endereco.Text = "Endereço";
             this.Endereco.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // BtLocalizar
             // 
-            this.button1.Location = new System.Drawing.Point(154, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 20);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Localizar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtLocalizar.Location = new System.Drawing.Point(154, 5);
+            this.BtLocalizar.Name = "BtLocalizar";
+            this.BtLocalizar.Size = new System.Drawing.Size(75, 20);
+            this.BtLocalizar.TabIndex = 100;
+            this.BtLocalizar.Text = "Localizar";
+            this.BtLocalizar.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -222,26 +238,26 @@
             this.label11.TabIndex = 14;
             this.label11.Text = "Estado:";
             // 
-            // textBox10
+            // Estado
             // 
-            this.textBox10.Location = new System.Drawing.Point(83, 110);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(174, 20);
-            this.textBox10.TabIndex = 13;
+            this.Estado.Location = new System.Drawing.Point(83, 110);
+            this.Estado.Name = "Estado";
+            this.Estado.Size = new System.Drawing.Size(174, 20);
+            this.Estado.TabIndex = 160;
             // 
-            // textBox9
+            // Bairro
             // 
-            this.textBox9.Location = new System.Drawing.Point(343, 58);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(174, 20);
-            this.textBox9.TabIndex = 12;
+            this.Bairro.Location = new System.Drawing.Point(343, 58);
+            this.Bairro.Name = "Bairro";
+            this.Bairro.Size = new System.Drawing.Size(174, 20);
+            this.Bairro.TabIndex = 130;
             // 
-            // textBox8
+            // Complemento
             // 
-            this.textBox8.Location = new System.Drawing.Point(343, 84);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(174, 20);
-            this.textBox8.TabIndex = 11;
+            this.Complemento.Location = new System.Drawing.Point(343, 84);
+            this.Complemento.Name = "Complemento";
+            this.Complemento.Size = new System.Drawing.Size(174, 20);
+            this.Complemento.TabIndex = 150;
             // 
             // label10
             // 
@@ -261,12 +277,12 @@
             this.label9.TabIndex = 9;
             this.label9.Text = "Bairro:";
             // 
-            // textBox7
+            // Numero
             // 
-            this.textBox7.Location = new System.Drawing.Point(83, 84);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(174, 20);
-            this.textBox7.TabIndex = 7;
+            this.Numero.Location = new System.Drawing.Point(83, 84);
+            this.Numero.Name = "Numero";
+            this.Numero.Size = new System.Drawing.Size(174, 20);
+            this.Numero.TabIndex = 140;
             // 
             // label8
             // 
@@ -277,12 +293,12 @@
             this.label8.TabIndex = 6;
             this.label8.Text = "Número:";
             // 
-            // textBox6
+            // Cidade
             // 
-            this.textBox6.Location = new System.Drawing.Point(83, 58);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(174, 20);
-            this.textBox6.TabIndex = 5;
+            this.Cidade.Location = new System.Drawing.Point(83, 58);
+            this.Cidade.Name = "Cidade";
+            this.Cidade.Size = new System.Drawing.Size(174, 20);
+            this.Cidade.TabIndex = 120;
             // 
             // label7
             // 
@@ -293,21 +309,21 @@
             this.label7.TabIndex = 4;
             this.label7.Text = "Cidade:";
             // 
-            // textBox5
+            // Logradouro
             // 
-            this.textBox5.Location = new System.Drawing.Point(83, 32);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(434, 20);
-            this.textBox5.TabIndex = 3;
+            this.Logradouro.Location = new System.Drawing.Point(83, 32);
+            this.Logradouro.Name = "Logradouro";
+            this.Logradouro.Size = new System.Drawing.Size(434, 20);
+            this.Logradouro.TabIndex = 110;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(6, 35);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 13);
+            this.label6.Size = new System.Drawing.Size(30, 13);
             this.label6.TabIndex = 2;
-            this.label6.Text = "Logradouro:";
+            this.label6.Text = "Rua:";
             // 
             // label5
             // 
@@ -318,82 +334,64 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "CEP: ";
             // 
-            // maskedTextBox2
+            // Cep
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(83, 6);
-            this.maskedTextBox2.Mask = "#####-###";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(65, 20);
-            this.maskedTextBox2.TabIndex = 0;
+            this.Cep.Location = new System.Drawing.Point(83, 6);
+            this.Cep.Mask = "#####-###";
+            this.Cep.Name = "Cep";
+            this.Cep.Size = new System.Drawing.Size(65, 20);
+            this.Cep.TabIndex = 90;
             // 
             // Contatos
             // 
-            this.Contatos.Controls.Add(this.checkBox5);
-            this.Contatos.Controls.Add(this.checkBox4);
-            this.Contatos.Controls.Add(this.checkBox3);
-            this.Contatos.Controls.Add(this.checkBox2);
-            this.Contatos.Controls.Add(this.maskedTextBox4);
+            this.Contatos.Controls.Add(this.label22);
+            this.Contatos.Controls.Add(this.NomeCelular2);
+            this.Contatos.Controls.Add(this.label21);
+            this.Contatos.Controls.Add(this.NomeCelular1);
+            this.Contatos.Controls.Add(this.whatsappCelular2);
+            this.Contatos.Controls.Add(this.whatsappCelular1);
+            this.Contatos.Controls.Add(this.Celular2);
             this.Contatos.Controls.Add(this.label15);
-            this.Contatos.Controls.Add(this.maskedTextBox3);
+            this.Contatos.Controls.Add(this.Celular1);
             this.Contatos.Controls.Add(this.label14);
             this.Contatos.Controls.Add(this.label13);
-            this.Contatos.Controls.Add(this.textBox12);
+            this.Contatos.Controls.Add(this.Facebook);
             this.Contatos.Controls.Add(this.label12);
-            this.Contatos.Controls.Add(this.textBox11);
+            this.Contatos.Controls.Add(this.EmailContato);
             this.Contatos.Location = new System.Drawing.Point(4, 22);
             this.Contatos.Name = "Contatos";
             this.Contatos.Padding = new System.Windows.Forms.Padding(3);
-            this.Contatos.Size = new System.Drawing.Size(538, 183);
+            this.Contatos.Size = new System.Drawing.Size(538, 155);
             this.Contatos.TabIndex = 1;
             this.Contatos.Text = "Contatos";
             this.Contatos.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // whatsappCelular2
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(388, 86);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(134, 17);
-            this.checkBox5.TabIndex = 11;
-            this.checkBox5.Text = "Notificar Produto Novo";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.whatsappCelular2.AutoSize = true;
+            this.whatsappCelular2.Location = new System.Drawing.Point(192, 87);
+            this.whatsappCelular2.Name = "whatsappCelular2";
+            this.whatsappCelular2.Size = new System.Drawing.Size(76, 17);
+            this.whatsappCelular2.TabIndex = 250;
+            this.whatsappCelular2.Text = "WhatsApp";
+            this.whatsappCelular2.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // whatsappCelular1
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(388, 61);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(116, 17);
-            this.checkBox4.TabIndex = 10;
-            this.checkBox4.Text = "Notificar Promoção";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.whatsappCelular1.AutoSize = true;
+            this.whatsappCelular1.Location = new System.Drawing.Point(192, 61);
+            this.whatsappCelular1.Name = "whatsappCelular1";
+            this.whatsappCelular1.Size = new System.Drawing.Size(76, 17);
+            this.whatsappCelular1.TabIndex = 230;
+            this.whatsappCelular1.Text = "WhatsApp";
+            this.whatsappCelular1.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // Celular2
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(192, 87);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(76, 17);
-            this.checkBox3.TabIndex = 9;
-            this.checkBox3.Text = "WhatsApp";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(192, 61);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(76, 17);
-            this.checkBox2.TabIndex = 8;
-            this.checkBox2.Text = "WhatsApp";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // maskedTextBox4
-            // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(83, 84);
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox4.TabIndex = 7;
+            this.Celular2.Location = new System.Drawing.Point(83, 84);
+            this.Celular2.Name = "Celular2";
+            this.Celular2.Size = new System.Drawing.Size(100, 20);
+            this.Celular2.TabIndex = 240;
             // 
             // label15
             // 
@@ -404,12 +402,12 @@
             this.label15.TabIndex = 6;
             this.label15.Text = "Celular:";
             // 
-            // maskedTextBox3
+            // Celular1
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(83, 58);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox3.TabIndex = 5;
+            this.Celular1.Location = new System.Drawing.Point(83, 58);
+            this.Celular1.Name = "Celular1";
+            this.Celular1.Size = new System.Drawing.Size(100, 20);
+            this.Celular1.TabIndex = 220;
             // 
             // label14
             // 
@@ -420,37 +418,21 @@
             this.label14.TabIndex = 4;
             this.label14.Text = "Celular:";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(2, 35);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(70, 13);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "E-mail Inform:";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(83, 32);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(449, 20);
-            this.textBox12.TabIndex = 2;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(3, 9);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(78, 13);
+            this.label12.Size = new System.Drawing.Size(38, 13);
             this.label12.TabIndex = 1;
-            this.label12.Text = "E-mail Contato:";
+            this.label12.Text = "E-mail:";
             // 
-            // textBox11
+            // EmailContato
             // 
-            this.textBox11.Location = new System.Drawing.Point(83, 6);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(449, 20);
-            this.textBox11.TabIndex = 0;
+            this.EmailContato.Location = new System.Drawing.Point(83, 6);
+            this.EmailContato.Name = "EmailContato";
+            this.EmailContato.Size = new System.Drawing.Size(449, 20);
+            this.EmailContato.TabIndex = 200;
             // 
             // label16
             // 
@@ -461,23 +443,23 @@
             this.label16.TabIndex = 12;
             this.label16.Text = "Data Cadastro:";
             // 
-            // maskedTextBox5
+            // DataCadastro
             // 
-            this.maskedTextBox5.Location = new System.Drawing.Point(102, 90);
-            this.maskedTextBox5.Mask = "00/00/0000 90:00";
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox5.TabIndex = 13;
-            this.maskedTextBox5.ValidatingType = typeof(System.DateTime);
+            this.DataCadastro.Location = new System.Drawing.Point(102, 90);
+            this.DataCadastro.Mask = "00/00/0000 90:00";
+            this.DataCadastro.Name = "DataCadastro";
+            this.DataCadastro.Size = new System.Drawing.Size(100, 20);
+            this.DataCadastro.TabIndex = 70;
+            this.DataCadastro.ValidatingType = typeof(System.DateTime);
             // 
-            // maskedTextBox6
+            // DataAlteracao
             // 
-            this.maskedTextBox6.Location = new System.Drawing.Point(299, 90);
-            this.maskedTextBox6.Mask = "00/00/0000 90:00";
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox6.TabIndex = 15;
-            this.maskedTextBox6.ValidatingType = typeof(System.DateTime);
+            this.DataAlteracao.Location = new System.Drawing.Point(299, 90);
+            this.DataAlteracao.Mask = "00/00/0000 90:00";
+            this.DataAlteracao.Name = "DataAlteracao";
+            this.DataAlteracao.Size = new System.Drawing.Size(100, 20);
+            this.DataAlteracao.TabIndex = 80;
+            this.DataAlteracao.ValidatingType = typeof(System.DateTime);
             // 
             // label17
             // 
@@ -488,22 +470,22 @@
             this.label17.TabIndex = 14;
             this.label17.Text = "Data Alteração:";
             // 
-            // button2
+            // Bt_Salvar
             // 
-            this.button2.Location = new System.Drawing.Point(15, 415);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Salvar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Bt_Salvar.Location = new System.Drawing.Point(15, 351);
+            this.Bt_Salvar.Name = "Bt_Salvar";
+            this.Bt_Salvar.Size = new System.Drawing.Size(75, 23);
+            this.Bt_Salvar.TabIndex = 320;
+            this.Bt_Salvar.Text = "Salvar";
+            this.Bt_Salvar.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // Foto
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(564, 138);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 130);
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
+            this.Foto.Location = new System.Drawing.Point(564, 138);
+            this.Foto.Name = "Foto";
+            this.Foto.Size = new System.Drawing.Size(158, 130);
+            this.Foto.TabIndex = 17;
+            this.Foto.TabStop = false;
             // 
             // label18
             // 
@@ -516,56 +498,56 @@
             // 
             // Bt_Tirar_Foto
             // 
-            this.Bt_Tirar_Foto.Location = new System.Drawing.Point(660, 302);
+            this.Bt_Tirar_Foto.Location = new System.Drawing.Point(660, 274);
             this.Bt_Tirar_Foto.Name = "Bt_Tirar_Foto";
             this.Bt_Tirar_Foto.Size = new System.Drawing.Size(62, 23);
-            this.Bt_Tirar_Foto.TabIndex = 19;
+            this.Bt_Tirar_Foto.TabIndex = 190;
             this.Bt_Tirar_Foto.Text = "Tirar Foto";
             this.Bt_Tirar_Foto.UseVisualStyleBackColor = true;
             this.Bt_Tirar_Foto.Click += new System.EventHandler(this.Bt_Tirar_Foto_Click);
             // 
-            // button4
+            // BtCarregarFoto
             // 
-            this.button4.Location = new System.Drawing.Point(564, 302);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(90, 23);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "Carregar Foto";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtCarregarFoto.Location = new System.Drawing.Point(564, 274);
+            this.BtCarregarFoto.Name = "BtCarregarFoto";
+            this.BtCarregarFoto.Size = new System.Drawing.Size(90, 23);
+            this.BtCarregarFoto.TabIndex = 180;
+            this.BtCarregarFoto.Text = "Carregar Foto";
+            this.BtCarregarFoto.UseVisualStyleBackColor = true;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(12, 334);
+            this.label19.Location = new System.Drawing.Point(12, 306);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(68, 13);
             this.label19.TabIndex = 21;
             this.label19.Text = "Observação:";
             // 
-            // textBox13
+            // Observacao
             // 
-            this.textBox13.Location = new System.Drawing.Point(102, 331);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(620, 20);
-            this.textBox13.TabIndex = 22;
+            this.Observacao.Location = new System.Drawing.Point(102, 303);
+            this.Observacao.Name = "Observacao";
+            this.Observacao.Size = new System.Drawing.Size(620, 20);
+            this.Observacao.TabIndex = 310;
             // 
-            // button5
+            // Bt_Excluir
             // 
-            this.button5.Location = new System.Drawing.Point(96, 415);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Excluir";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Bt_Excluir.Location = new System.Drawing.Point(96, 351);
+            this.Bt_Excluir.Name = "Bt_Excluir";
+            this.Bt_Excluir.Size = new System.Drawing.Size(75, 23);
+            this.Bt_Excluir.TabIndex = 330;
+            this.Bt_Excluir.Text = "Excluir";
+            this.Bt_Excluir.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // Bt_Localizar
             // 
-            this.button6.Location = new System.Drawing.Point(177, 415);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 24;
-            this.button6.Text = "Localizar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.Bt_Localizar.Location = new System.Drawing.Point(177, 351);
+            this.Bt_Localizar.Name = "Bt_Localizar";
+            this.Bt_Localizar.Size = new System.Drawing.Size(75, 23);
+            this.Bt_Localizar.TabIndex = 340;
+            this.Bt_Localizar.Text = "Localizar";
+            this.Bt_Localizar.UseVisualStyleBackColor = true;
             // 
             // AtivarFoto
             // 
@@ -573,41 +555,184 @@
             this.AtivarFoto.Location = new System.Drawing.Point(669, 115);
             this.AtivarFoto.Name = "AtivarFoto";
             this.AtivarFoto.Size = new System.Drawing.Size(53, 17);
-            this.AtivarFoto.TabIndex = 25;
+            this.AtivarFoto.TabIndex = 170;
             this.AtivarFoto.Text = "Ativar";
             this.AtivarFoto.UseVisualStyleBackColor = true;
             this.AtivarFoto.CheckedChanged += new System.EventHandler(this.AtivarFoto_CheckedChanged);
+            // 
+            // Configuracoes
+            // 
+            this.Configuracoes.Controls.Add(this.Flg_Notificar_Aniversario);
+            this.Configuracoes.Controls.Add(this.Flg_Aceita_Fiado);
+            this.Configuracoes.Controls.Add(this.Flg_Notificar_Promocao);
+            this.Configuracoes.Controls.Add(this.Flg_notificar_vencimeneto);
+            this.Configuracoes.Controls.Add(this.Flg_notificar_produto_novo);
+            this.Configuracoes.Controls.Add(this.Flg_vip);
+            this.Configuracoes.Location = new System.Drawing.Point(4, 22);
+            this.Configuracoes.Name = "Configuracoes";
+            this.Configuracoes.Size = new System.Drawing.Size(538, 155);
+            this.Configuracoes.TabIndex = 2;
+            this.Configuracoes.Text = "Configurações";
+            this.Configuracoes.UseVisualStyleBackColor = true;
+            // 
+            // Flg_vip
+            // 
+            this.Flg_vip.AutoSize = true;
+            this.Flg_vip.Location = new System.Drawing.Point(3, 3);
+            this.Flg_vip.Name = "Flg_vip";
+            this.Flg_vip.Size = new System.Drawing.Size(78, 17);
+            this.Flg_vip.TabIndex = 260;
+            this.Flg_vip.Text = "Cliente VIP";
+            this.Flg_vip.UseVisualStyleBackColor = true;
+            // 
+            // Flg_notificar_produto_novo
+            // 
+            this.Flg_notificar_produto_novo.AutoSize = true;
+            this.Flg_notificar_produto_novo.Location = new System.Drawing.Point(3, 26);
+            this.Flg_notificar_produto_novo.Name = "Flg_notificar_produto_novo";
+            this.Flg_notificar_produto_novo.Size = new System.Drawing.Size(134, 17);
+            this.Flg_notificar_produto_novo.TabIndex = 270;
+            this.Flg_notificar_produto_novo.Text = "Notificar Produto Novo";
+            this.Flg_notificar_produto_novo.UseVisualStyleBackColor = true;
+            // 
+            // Flg_notificar_vencimeneto
+            // 
+            this.Flg_notificar_vencimeneto.AutoSize = true;
+            this.Flg_notificar_vencimeneto.Location = new System.Drawing.Point(3, 49);
+            this.Flg_notificar_vencimeneto.Name = "Flg_notificar_vencimeneto";
+            this.Flg_notificar_vencimeneto.Size = new System.Drawing.Size(124, 17);
+            this.Flg_notificar_vencimeneto.TabIndex = 280;
+            this.Flg_notificar_vencimeneto.Text = "Notificar Vencimento";
+            this.Flg_notificar_vencimeneto.UseVisualStyleBackColor = true;
+            // 
+            // Flg_Notificar_Promocao
+            // 
+            this.Flg_Notificar_Promocao.AutoSize = true;
+            this.Flg_Notificar_Promocao.Location = new System.Drawing.Point(3, 72);
+            this.Flg_Notificar_Promocao.Name = "Flg_Notificar_Promocao";
+            this.Flg_Notificar_Promocao.Size = new System.Drawing.Size(116, 17);
+            this.Flg_Notificar_Promocao.TabIndex = 290;
+            this.Flg_Notificar_Promocao.Text = "Notificar Promoção";
+            this.Flg_Notificar_Promocao.UseVisualStyleBackColor = true;
+            // 
+            // Flg_Aceita_Fiado
+            // 
+            this.Flg_Aceita_Fiado.AutoSize = true;
+            this.Flg_Aceita_Fiado.Location = new System.Drawing.Point(3, 95);
+            this.Flg_Aceita_Fiado.Name = "Flg_Aceita_Fiado";
+            this.Flg_Aceita_Fiado.Size = new System.Drawing.Size(85, 17);
+            this.Flg_Aceita_Fiado.TabIndex = 300;
+            this.Flg_Aceita_Fiado.Text = "Aceita Fiado";
+            this.Flg_Aceita_Fiado.UseVisualStyleBackColor = true;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(405, 93);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(66, 13);
+            this.label20.TabIndex = 341;
+            this.label20.Text = "Nascimento:";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(477, 90);
+            this.maskedTextBox1.Mask = "00/00/0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(65, 20);
+            this.maskedTextBox1.TabIndex = 81;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            // 
+            // Facebook
+            // 
+            this.Facebook.Location = new System.Drawing.Point(83, 32);
+            this.Facebook.Name = "Facebook";
+            this.Facebook.Size = new System.Drawing.Size(449, 20);
+            this.Facebook.TabIndex = 210;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(2, 35);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 13);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Facebook:";
+            // 
+            // NomeCelular1
+            // 
+            this.NomeCelular1.Location = new System.Drawing.Point(324, 58);
+            this.NomeCelular1.Name = "NomeCelular1";
+            this.NomeCelular1.Size = new System.Drawing.Size(208, 20);
+            this.NomeCelular1.TabIndex = 231;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(280, 61);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(38, 13);
+            this.label21.TabIndex = 252;
+            this.label21.Text = "Nome:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(280, 87);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(38, 13);
+            this.label22.TabIndex = 254;
+            this.label22.Text = "Nome:";
+            // 
+            // NomeCelular2
+            // 
+            this.NomeCelular2.Location = new System.Drawing.Point(324, 84);
+            this.NomeCelular2.Name = "NomeCelular2";
+            this.NomeCelular2.Size = new System.Drawing.Size(208, 20);
+            this.NomeCelular2.TabIndex = 253;
+            // 
+            // Flg_Notificar_Aniversario
+            // 
+            this.Flg_Notificar_Aniversario.AutoSize = true;
+            this.Flg_Notificar_Aniversario.Location = new System.Drawing.Point(143, 3);
+            this.Flg_Notificar_Aniversario.Name = "Flg_Notificar_Aniversario";
+            this.Flg_Notificar_Aniversario.Size = new System.Drawing.Size(120, 17);
+            this.Flg_Notificar_Aniversario.TabIndex = 310;
+            this.Flg_Notificar_Aniversario.Text = "Notificar Anicersário";
+            this.Flg_Notificar_Aniversario.UseVisualStyleBackColor = true;
             // 
             // Entidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 450);
+            this.ClientSize = new System.Drawing.Size(734, 388);
+            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.label20);
             this.Controls.Add(this.AtivarFoto);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.Bt_Localizar);
+            this.Controls.Add(this.Bt_Excluir);
+            this.Controls.Add(this.Observacao);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.BtCarregarFoto);
             this.Controls.Add(this.Bt_Tirar_Foto);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.maskedTextBox6);
+            this.Controls.Add(this.Foto);
+            this.Controls.Add(this.Bt_Salvar);
+            this.Controls.Add(this.DataAlteracao);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.maskedTextBox5);
+            this.Controls.Add(this.DataCadastro);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.sss);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.DescricaoGrupo);
+            this.Controls.Add(this.Grupo);
+            this.Controls.Add(this.Flg_ativo);
+            this.Controls.Add(this.Codigo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.RazaoSocial);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.Cpf_Cnpj);
             this.Name = "Entidade";
             this.Text = "Entidade";
             this.sss.ResumeLayout(false);
@@ -615,7 +740,9 @@
             this.Endereco.PerformLayout();
             this.Contatos.ResumeLayout(false);
             this.Contatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Foto)).EndInit();
+            this.Configuracoes.ResumeLayout(false);
+            this.Configuracoes.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -623,59 +750,70 @@
 
         #endregion
 
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox Cpf_Cnpj;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox RazaoSocial;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox Codigo;
+        private System.Windows.Forms.CheckBox Flg_ativo;
+        private System.Windows.Forms.TextBox Grupo;
+        private System.Windows.Forms.TextBox DescricaoGrupo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabControl sss;
         private System.Windows.Forms.TabPage Endereco;
         private System.Windows.Forms.TabPage Contatos;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.MaskedTextBox Cep;
+        private System.Windows.Forms.TextBox Logradouro;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox Cidade;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox Numero;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox Bairro;
+        private System.Windows.Forms.TextBox Complemento;
+        private System.Windows.Forms.TextBox Estado;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtLocalizar;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.TextBox EmailContato;
+        private System.Windows.Forms.MaskedTextBox Celular1;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.CheckBox whatsappCelular2;
+        private System.Windows.Forms.CheckBox whatsappCelular1;
+        private System.Windows.Forms.MaskedTextBox Celular2;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox6;
+        private System.Windows.Forms.MaskedTextBox DataCadastro;
+        private System.Windows.Forms.MaskedTextBox DataAlteracao;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Bt_Salvar;
+        private System.Windows.Forms.PictureBox Foto;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button Bt_Tirar_Foto;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BtCarregarFoto;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox Observacao;
+        private System.Windows.Forms.Button Bt_Excluir;
+        private System.Windows.Forms.Button Bt_Localizar;
         private System.Windows.Forms.CheckBox AtivarFoto;
+        private System.Windows.Forms.TabPage Configuracoes;
+        private System.Windows.Forms.CheckBox Flg_vip;
+        private System.Windows.Forms.CheckBox Flg_notificar_produto_novo;
+        private System.Windows.Forms.CheckBox Flg_Notificar_Promocao;
+        private System.Windows.Forms.CheckBox Flg_notificar_vencimeneto;
+        private System.Windows.Forms.CheckBox Flg_Aceita_Fiado;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox Facebook;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox NomeCelular1;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox NomeCelular2;
+        private System.Windows.Forms.CheckBox Flg_Notificar_Aniversario;
     }
 }

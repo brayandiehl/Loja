@@ -31,8 +31,7 @@ namespace Loja.Telas.Cadastro
 
         private void Bt_Tirar_Foto_Click(object sender, EventArgs e)
         {
-
-            pictureBox1.Image.Save("C:\\Temp\\teste1.png", System.Drawing.Imaging.ImageFormat.Png);
+            Foto.Image.Save("C:\\Temp\\teste1.png", System.Drawing.Imaging.ImageFormat.Png);
             MessageBox.Show("Salvo com sucesso");
         }
 
@@ -43,12 +42,10 @@ namespace Loja.Telas.Cadastro
                 AForge.Video.DirectShow.FilterInfoCollection videosource = new AForge.Video.DirectShow.FilterInfoCollection(AForge.Video.DirectShow.FilterCategory.VideoInputDevice);
                 if (videosource != null)
                 {
-
                     videoSource = new AForge.Video.DirectShow.VideoCaptureDevice(videosource[0].MonikerString); ;
                     videoSource.VideoResolution = videoSource.VideoCapabilities[4];
-                    videoSource.NewFrame += (s, a) => pictureBox1.Image = (Bitmap)a.Frame.Clone();
+                    videoSource.NewFrame += (s, a) => Foto.Image = (Bitmap)a.Frame.Clone();
                     videoSource.Start();
-
                 }
             }
             else
@@ -57,6 +54,18 @@ namespace Loja.Telas.Cadastro
                 {
                     videoSource.Stop();
                 }
+            }
+        }
+
+        private void Grupo_Leave(object sender, EventArgs e)
+        {
+            if(Grupo.Text == "1")
+            {
+                DescricaoGrupo.Text = "Cliente";
+            }
+            else
+            {
+                DescricaoGrupo.Text = "";
             }
         }
     }
