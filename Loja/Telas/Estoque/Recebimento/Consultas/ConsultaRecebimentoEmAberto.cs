@@ -7,20 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Loja.Telas.Cadastro
+namespace Loja.Telas.Estoque.Recebimento.Consultas
 {
-    public partial class Produto : Form
+    public partial class ConsultaRecebimentoEmAberto : Form
     {
-        public Produto()
+        public ConsultaRecebimentoEmAberto()
         {
             InitializeComponent();
         }
-
-        private void Valores_Click(object sender, EventArgs e)
-        {
-
-        }
-
-      
-    }  
+    }
 }

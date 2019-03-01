@@ -7,20 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Loja.Telas.Cadastro
+namespace Loja.Telas.Configuracoes.Estrategia
 {
-    public partial class Produto : Form
+    public partial class ClassesEstrategia : Form
     {
-        public Produto()
+        public ClassesEstrategia()
         {
             InitializeComponent();
         }
-
-        private void Valores_Click(object sender, EventArgs e)
-        {
-
-        }
-
-      
-    }  
+    }
 }

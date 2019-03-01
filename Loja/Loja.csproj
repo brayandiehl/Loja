@@ -40,6 +40,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,6 +72,48 @@
     <Compile Include="Telas\Cadastro\Produto.Designer.cs">
       <DependentUpon>Produto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Configuracoes\Estrategia\ClassesEstrategia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Configuracoes\Estrategia\ClassesEstrategia.Designer.cs">
+      <DependentUpon>ClassesEstrategia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Configuracoes\Estrategia\Estrategias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Configuracoes\Estrategia\Estrategias.Designer.cs">
+      <DependentUpon>Estrategias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Configuracoes\Parametrizacoes\Classes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Configuracoes\Parametrizacoes\Classes.Designer.cs">
+      <DependentUpon>Classes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Configuracoes\Parametrizacoes\Status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Configuracoes\Parametrizacoes\Status.Designer.cs">
+      <DependentUpon>Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Estoque\Recebimento\CadastraRecebimento\ItensRecebimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Estoque\Recebimento\CadastraRecebimento\ItensRecebimento.Designer.cs">
+      <DependentUpon>ItensRecebimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Estoque\Recebimento\CadastraRecebimento\CadastrarRecebimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Estoque\Recebimento\CadastraRecebimento\CadastrarRecebimento.Designer.cs">
+      <DependentUpon>CadastrarRecebimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Estoque\Recebimento\Consultas\ConsultaRecebimentoEmAberto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Estoque\Recebimento\Consultas\ConsultaRecebimentoEmAberto.Designer.cs">
+      <DependentUpon>ConsultaRecebimentoEmAberto.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -87,6 +130,27 @@
     <EmbeddedResource Include="Telas\Cadastro\Produto.resx">
       <DependentUpon>Produto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Configuracoes\Estrategia\ClassesEstrategia.resx">
+      <DependentUpon>ClassesEstrategia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Configuracoes\Estrategia\Estrategias.resx">
+      <DependentUpon>Estrategias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Configuracoes\Parametrizacoes\Classes.resx">
+      <DependentUpon>Classes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Configuracoes\Parametrizacoes\Status.resx">
+      <DependentUpon>Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Estoque\Recebimento\CadastraRecebimento\ItensRecebimento.resx">
+      <DependentUpon>ItensRecebimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Estoque\Recebimento\CadastraRecebimento\CadastrarRecebimento.resx">
+      <DependentUpon>CadastrarRecebimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Estoque\Recebimento\Consultas\ConsultaRecebimentoEmAberto.resx">
+      <DependentUpon>ConsultaRecebimentoEmAberto.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -98,10 +162,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Telas\Configuracoes\" />
-    <Folder Include="Telas\Estoque\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Resources\Salvar.png" />
   </ItemGroup>
