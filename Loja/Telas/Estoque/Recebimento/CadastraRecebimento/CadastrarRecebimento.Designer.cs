@@ -52,7 +52,8 @@
             this.BtRemover = new System.Windows.Forms.Button();
             this.BtSalvar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.BtLiberar = new System.Windows.Forms.Button();
+            this.BtReceber = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.TabelaItens)).BeginInit();
             this.SuspendLayout();
             // 
@@ -262,21 +263,32 @@
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // BtLiberar
+            // BtReceber
             // 
-            this.BtLiberar.Location = new System.Drawing.Point(91, 482);
-            this.BtLiberar.Name = "BtLiberar";
-            this.BtLiberar.Size = new System.Drawing.Size(75, 23);
-            this.BtLiberar.TabIndex = 130;
-            this.BtLiberar.Text = "Liberar";
-            this.BtLiberar.UseVisualStyleBackColor = true;
+            this.BtReceber.Location = new System.Drawing.Point(91, 482);
+            this.BtReceber.Name = "BtReceber";
+            this.BtReceber.Size = new System.Drawing.Size(75, 23);
+            this.BtReceber.TabIndex = 130;
+            this.BtReceber.Text = "Receber";
+            this.BtReceber.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(471, 14);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(51, 17);
+            this.checkBox1.TabIndex = 141;
+            this.checkBox1.Text = "Pago";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // CadastrarRecebimento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 540);
-            this.Controls.Add(this.BtLiberar);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.BtReceber);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.BtSalvar);
             this.Controls.Add(this.BtRemover);
@@ -331,6 +343,7 @@
         private System.Windows.Forms.Button BtRemover;
         private System.Windows.Forms.Button BtSalvar;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button BtLiberar;
+        private System.Windows.Forms.Button BtReceber;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

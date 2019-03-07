@@ -361,7 +361,6 @@
             this.BtAdicionarImagem.TabIndex = 60;
             this.BtAdicionarImagem.Text = "Adicionar Imagem";
             this.BtAdicionarImagem.UseVisualStyleBackColor = true;
-            
             // 
             // label15
             // 
@@ -395,6 +394,8 @@
             // AlertaProdutoVencer
             // 
             this.AlertaProdutoVencer.AutoSize = true;
+            this.AlertaProdutoVencer.Checked = true;
+            this.AlertaProdutoVencer.CheckState = System.Windows.Forms.CheckState.Checked;
             this.AlertaProdutoVencer.Location = new System.Drawing.Point(135, 29);
             this.AlertaProdutoVencer.Name = "AlertaProdutoVencer";
             this.AlertaProdutoVencer.Size = new System.Drawing.Size(142, 17);
@@ -425,6 +426,8 @@
             // AlertaEstoqueMinimo
             // 
             this.AlertaEstoqueMinimo.AutoSize = true;
+            this.AlertaEstoqueMinimo.Checked = true;
+            this.AlertaEstoqueMinimo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.AlertaEstoqueMinimo.Location = new System.Drawing.Point(135, 6);
             this.AlertaEstoqueMinimo.Name = "AlertaEstoqueMinimo";
             this.AlertaEstoqueMinimo.Size = new System.Drawing.Size(134, 17);

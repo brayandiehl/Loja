@@ -108,11 +108,41 @@
     <Compile Include="Telas\Estoque\Recebimento\CadastraRecebimento\CadastrarRecebimento.Designer.cs">
       <DependentUpon>CadastrarRecebimento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Estoque\Recebimento\CadastraRecebimento\Pagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Estoque\Recebimento\CadastraRecebimento\Pagamento.Designer.cs">
+      <DependentUpon>Pagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Estoque\Recebimento\Consultas\ConsultaRecebimentoEmAberto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Telas\Estoque\Recebimento\Consultas\ConsultaRecebimentoEmAberto.Designer.cs">
       <DependentUpon>ConsultaRecebimentoEmAberto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Estoque\Saida\Consultas\ConsultaPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Estoque\Saida\Consultas\ConsultaPedidos.Designer.cs">
+      <DependentUpon>ConsultaPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Estoque\Saida\Desperdicio\CadastroDesperdicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Estoque\Saida\Desperdicio\CadastroDesperdicio.Designer.cs">
+      <DependentUpon>CadastroDesperdicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Estoque\Saida\Pedido\PagamentoPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Estoque\Saida\Pedido\PagamentoPedido.Designer.cs">
+      <DependentUpon>PagamentoPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Estoque\Saida\Pedido\Pedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Estoque\Saida\Pedido\Pedido.Designer.cs">
+      <DependentUpon>Pedido.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -148,8 +178,23 @@
     <EmbeddedResource Include="Telas\Estoque\Recebimento\CadastraRecebimento\CadastrarRecebimento.resx">
       <DependentUpon>CadastrarRecebimento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Estoque\Recebimento\CadastraRecebimento\Pagamento.resx">
+      <DependentUpon>Pagamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Estoque\Recebimento\Consultas\ConsultaRecebimentoEmAberto.resx">
       <DependentUpon>ConsultaRecebimentoEmAberto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Estoque\Saida\Consultas\ConsultaPedidos.resx">
+      <DependentUpon>ConsultaPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Estoque\Saida\Desperdicio\CadastroDesperdicio.resx">
+      <DependentUpon>CadastroDesperdicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Estoque\Saida\Pedido\PagamentoPedido.resx">
+      <DependentUpon>PagamentoPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Estoque\Saida\Pedido\Pedido.resx">
+      <DependentUpon>Pedido.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

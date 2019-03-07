@@ -15,5 +15,10 @@ namespace Loja.Telas.Estoque.Recebimento.Consultas
         {
             InitializeComponent();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
