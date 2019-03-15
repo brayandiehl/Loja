@@ -15,7 +15,7 @@ namespace Loja
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Telas.Estoque.Saida.Pedido.PagamentoPedido());
+            Application.Run(new Telas.Financeiro.Caixa.AcompanharSaidaCaixa());
         }
     }
 }

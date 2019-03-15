@@ -41,17 +41,11 @@
             this.EstoqueAtual = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.EstoqueMinimo = new System.Windows.Forms.TextBox();
-            this.LucroReais = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.LucroPorcentagem = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.ValorVenda = new System.Windows.Forms.TextBox();
             this.Unidade = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.ValorPago = new System.Windows.Forms.TextBox();
             this.GarantiasEmDias = new System.Windows.Forms.TextBox();
             this.Categoria = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -59,7 +53,6 @@
             this.Configuracao = new System.Windows.Forms.TabPage();
             this.BtAdicionarImagem = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-            this.ImagemProduto = new System.Windows.Forms.PictureBox();
             this.PrdAtivo = new System.Windows.Forms.CheckBox();
             this.AlertaProdutoVencer = new System.Windows.Forms.CheckBox();
             this.ControleLote = new System.Windows.Forms.CheckBox();
@@ -68,6 +61,7 @@
             this.BtSalvar = new System.Windows.Forms.Button();
             this.BtCancelar = new System.Windows.Forms.Button();
             this.BtLocalizar = new System.Windows.Forms.Button();
+            this.ImagemProduto = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.Dados.SuspendLayout();
             this.Configuracao.SuspendLayout();
@@ -148,17 +142,11 @@
             this.Dados.Controls.Add(this.EstoqueAtual);
             this.Dados.Controls.Add(this.label13);
             this.Dados.Controls.Add(this.EstoqueMinimo);
-            this.Dados.Controls.Add(this.LucroReais);
-            this.Dados.Controls.Add(this.label12);
-            this.Dados.Controls.Add(this.LucroPorcentagem);
-            this.Dados.Controls.Add(this.label11);
             this.Dados.Controls.Add(this.label10);
             this.Dados.Controls.Add(this.label8);
             this.Dados.Controls.Add(this.ValorVenda);
             this.Dados.Controls.Add(this.Unidade);
-            this.Dados.Controls.Add(this.label7);
             this.Dados.Controls.Add(this.label9);
-            this.Dados.Controls.Add(this.ValorPago);
             this.Dados.Controls.Add(this.GarantiasEmDias);
             this.Dados.Controls.Add(this.Categoria);
             this.Dados.Controls.Add(this.label4);
@@ -177,7 +165,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(229, 144);
+            this.label14.Location = new System.Drawing.Point(229, 89);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(73, 13);
             this.label14.TabIndex = 28;
@@ -186,7 +174,7 @@
             // EstoqueAtual
             // 
             this.EstoqueAtual.Enabled = false;
-            this.EstoqueAtual.Location = new System.Drawing.Point(318, 141);
+            this.EstoqueAtual.Location = new System.Drawing.Point(318, 86);
             this.EstoqueAtual.Name = "EstoqueAtual";
             this.EstoqueAtual.Size = new System.Drawing.Size(64, 20);
             this.EstoqueAtual.TabIndex = 27;
@@ -194,7 +182,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 141);
+            this.label13.Location = new System.Drawing.Point(6, 115);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(82, 13);
             this.label13.TabIndex = 26;
@@ -202,49 +190,15 @@
             // 
             // EstoqueMinimo
             // 
-            this.EstoqueMinimo.Location = new System.Drawing.Point(89, 138);
+            this.EstoqueMinimo.Location = new System.Drawing.Point(89, 112);
             this.EstoqueMinimo.Name = "EstoqueMinimo";
             this.EstoqueMinimo.Size = new System.Drawing.Size(100, 20);
             this.EstoqueMinimo.TabIndex = 120;
             // 
-            // LucroReais
-            // 
-            this.LucroReais.Enabled = false;
-            this.LucroReais.Location = new System.Drawing.Point(318, 115);
-            this.LucroReais.Name = "LucroReais";
-            this.LucroReais.Size = new System.Drawing.Size(64, 20);
-            this.LucroReais.TabIndex = 22;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(229, 115);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(51, 13);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "Lucro R$";
-            // 
-            // LucroPorcentagem
-            // 
-            this.LucroPorcentagem.Enabled = false;
-            this.LucroPorcentagem.Location = new System.Drawing.Point(318, 86);
-            this.LucroPorcentagem.Name = "LucroPorcentagem";
-            this.LucroPorcentagem.Size = new System.Drawing.Size(64, 20);
-            this.LucroPorcentagem.TabIndex = 20;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(229, 89);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(45, 13);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Lucro %";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 115);
+            this.label10.Location = new System.Drawing.Point(6, 89);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 13);
             this.label10.TabIndex = 15;
@@ -261,7 +215,7 @@
             // 
             // ValorVenda
             // 
-            this.ValorVenda.Location = new System.Drawing.Point(89, 112);
+            this.ValorVenda.Location = new System.Drawing.Point(89, 86);
             this.ValorVenda.Name = "ValorVenda";
             this.ValorVenda.Size = new System.Drawing.Size(100, 20);
             this.ValorVenda.TabIndex = 110;
@@ -274,15 +228,6 @@
             this.Unidade.Size = new System.Drawing.Size(134, 21);
             this.Unidade.TabIndex = 80;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 89);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Valor Pago";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -291,13 +236,6 @@
             this.label9.Size = new System.Drawing.Size(74, 13);
             this.label9.TabIndex = 16;
             this.label9.Text = "Garantia Dias:";
-            // 
-            // ValorPago
-            // 
-            this.ValorPago.Location = new System.Drawing.Point(89, 86);
-            this.ValorPago.Name = "ValorPago";
-            this.ValorPago.Size = new System.Drawing.Size(100, 20);
-            this.ValorPago.TabIndex = 100;
             // 
             // GarantiasEmDias
             // 
@@ -338,12 +276,12 @@
             // 
             this.Configuracao.Controls.Add(this.BtAdicionarImagem);
             this.Configuracao.Controls.Add(this.label15);
-            this.Configuracao.Controls.Add(this.ImagemProduto);
             this.Configuracao.Controls.Add(this.PrdAtivo);
             this.Configuracao.Controls.Add(this.AlertaProdutoVencer);
             this.Configuracao.Controls.Add(this.ControleLote);
             this.Configuracao.Controls.Add(this.ControlaValidade);
             this.Configuracao.Controls.Add(this.AlertaEstoqueMinimo);
+            this.Configuracao.Controls.Add(this.ImagemProduto);
             this.Configuracao.Location = new System.Drawing.Point(4, 22);
             this.Configuracao.Name = "Configuracao";
             this.Configuracao.Padding = new System.Windows.Forms.Padding(3);
@@ -370,14 +308,6 @@
             this.label15.Size = new System.Drawing.Size(31, 13);
             this.label15.TabIndex = 14;
             this.label15.Text = "Foto:";
-            // 
-            // ImagemProduto
-            // 
-            this.ImagemProduto.Location = new System.Drawing.Point(582, 6);
-            this.ImagemProduto.Name = "ImagemProduto";
-            this.ImagemProduto.Size = new System.Drawing.Size(195, 195);
-            this.ImagemProduto.TabIndex = 13;
-            this.ImagemProduto.TabStop = false;
             // 
             // PrdAtivo
             // 
@@ -462,6 +392,14 @@
             this.BtLocalizar.Text = "Localizar";
             this.BtLocalizar.UseVisualStyleBackColor = true;
             // 
+            // ImagemProduto
+            // 
+            this.ImagemProduto.Location = new System.Drawing.Point(582, 6);
+            this.ImagemProduto.Name = "ImagemProduto";
+            this.ImagemProduto.Size = new System.Drawing.Size(195, 195);
+            this.ImagemProduto.TabIndex = 13;
+            this.ImagemProduto.TabStop = false;
+            // 
             // Produto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,12 +447,6 @@
         private System.Windows.Forms.ComboBox Unidade;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox ValorVenda;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox ValorPago;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox LucroPorcentagem;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox LucroReais;
         private System.Windows.Forms.CheckBox AlertaEstoqueMinimo;
         private System.Windows.Forms.CheckBox ControlaValidade;
         private System.Windows.Forms.CheckBox ControleLote;

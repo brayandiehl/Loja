@@ -84,6 +84,12 @@
     <Compile Include="Telas\Configuracoes\Estrategia\Estrategias.Designer.cs">
       <DependentUpon>Estrategias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Configuracoes\Estrategia\Parametros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Configuracoes\Estrategia\Parametros.Designer.cs">
+      <DependentUpon>Parametros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Configuracoes\Parametrizacoes\Classes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,18 @@
     </Compile>
     <Compile Include="Telas\Configuracoes\Parametrizacoes\Status.Designer.cs">
       <DependentUpon>Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Estoque\Estoque\BloquearEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Estoque\Estoque\BloquearEstoque.Designer.cs">
+      <DependentUpon>BloquearEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Estoque\Estoque\Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Estoque\Estoque\Estoque.Designer.cs">
+      <DependentUpon>Estoque.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Estoque\Recebimento\CadastraRecebimento\ItensRecebimento.cs">
       <SubType>Form</SubType>
@@ -144,6 +162,54 @@
     <Compile Include="Telas\Estoque\Saida\Pedido\Pedido.Designer.cs">
       <DependentUpon>Pedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Financeiro\Caixa\AbrirCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Financeiro\Caixa\AbrirCaixa.Designer.cs">
+      <DependentUpon>AbrirCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Financeiro\Caixa\AcompanharCaixas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Financeiro\Caixa\AcompanharCaixas.Designer.cs">
+      <DependentUpon>AcompanharCaixas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Financeiro\Caixa\AcompanharSaidaCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Financeiro\Caixa\AcompanharSaidaCaixa.Designer.cs">
+      <DependentUpon>AcompanharSaidaCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Financeiro\Caixa\CadastrarCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Financeiro\Caixa\CadastrarCaixa.Designer.cs">
+      <DependentUpon>CadastrarCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Financeiro\Caixa\FechamentoMensal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Financeiro\Caixa\FechamentoMensal.Designer.cs">
+      <DependentUpon>FechamentoMensal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Financeiro\Caixa\FecharCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Financeiro\Caixa\FecharCaixa.Designer.cs">
+      <DependentUpon>FecharCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Financeiro\Caixa\SaidaCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Financeiro\Caixa\SaidaCaixa.Designer.cs">
+      <DependentUpon>SaidaCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Orcamento\RealizarOrcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Orcamento\RealizarOrcamento.Designer.cs">
+      <DependentUpon>RealizarOrcamento.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -166,11 +232,20 @@
     <EmbeddedResource Include="Telas\Configuracoes\Estrategia\Estrategias.resx">
       <DependentUpon>Estrategias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Configuracoes\Estrategia\Parametros.resx">
+      <DependentUpon>Parametros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Configuracoes\Parametrizacoes\Classes.resx">
       <DependentUpon>Classes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Configuracoes\Parametrizacoes\Status.resx">
       <DependentUpon>Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Estoque\Estoque\BloquearEstoque.resx">
+      <DependentUpon>BloquearEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Estoque\Estoque\Estoque.resx">
+      <DependentUpon>Estoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Estoque\Recebimento\CadastraRecebimento\ItensRecebimento.resx">
       <DependentUpon>ItensRecebimento.cs</DependentUpon>
@@ -196,6 +271,30 @@
     <EmbeddedResource Include="Telas\Estoque\Saida\Pedido\Pedido.resx">
       <DependentUpon>Pedido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Financeiro\Caixa\AbrirCaixa.resx">
+      <DependentUpon>AbrirCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Financeiro\Caixa\AcompanharCaixas.resx">
+      <DependentUpon>AcompanharCaixas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Financeiro\Caixa\AcompanharSaidaCaixa.resx">
+      <DependentUpon>AcompanharSaidaCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Financeiro\Caixa\CadastrarCaixa.resx">
+      <DependentUpon>CadastrarCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Financeiro\Caixa\FechamentoMensal.resx">
+      <DependentUpon>FechamentoMensal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Financeiro\Caixa\FecharCaixa.resx">
+      <DependentUpon>FecharCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Financeiro\Caixa\SaidaCaixa.resx">
+      <DependentUpon>SaidaCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Orcamento\RealizarOrcamento.resx">
+      <DependentUpon>RealizarOrcamento.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -207,9 +306,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Resources\Salvar.png" />
+    <Folder Include="Telas\Financeiro\Movimentacao\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

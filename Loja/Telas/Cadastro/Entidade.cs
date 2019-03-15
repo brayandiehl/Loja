@@ -43,7 +43,7 @@ namespace Loja.Telas.Cadastro
                 if (videosource != null)
                 {
                     videoSource = new AForge.Video.DirectShow.VideoCaptureDevice(videosource[0].MonikerString); ;
-                    videoSource.VideoResolution = videoSource.VideoCapabilities[4];
+                    videoSource.VideoResolution = videoSource.VideoCapabilities[1];
                     videoSource.NewFrame += (s, a) => Foto.Image = (Bitmap)a.Frame.Clone();
                     videoSource.Start();
                 }

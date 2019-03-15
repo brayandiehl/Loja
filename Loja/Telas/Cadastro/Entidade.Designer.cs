@@ -56,14 +56,27 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Cep = new System.Windows.Forms.MaskedTextBox();
             this.Contatos = new System.Windows.Forms.TabPage();
+            this.label22 = new System.Windows.Forms.Label();
+            this.NomeCelular2 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.NomeCelular1 = new System.Windows.Forms.TextBox();
             this.whatsappCelular2 = new System.Windows.Forms.CheckBox();
             this.whatsappCelular1 = new System.Windows.Forms.CheckBox();
             this.Celular2 = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.Celular1 = new System.Windows.Forms.MaskedTextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.Facebook = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.EmailContato = new System.Windows.Forms.TextBox();
+            this.Configuracoes = new System.Windows.Forms.TabPage();
+            this.Flg_Notificar_Aniversario = new System.Windows.Forms.CheckBox();
+            this.Flg_Aceita_Fiado = new System.Windows.Forms.CheckBox();
+            this.Flg_Notificar_Promocao = new System.Windows.Forms.CheckBox();
+            this.Flg_notificar_vencimeneto = new System.Windows.Forms.CheckBox();
+            this.Flg_notificar_produto_novo = new System.Windows.Forms.CheckBox();
+            this.Flg_vip = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
             this.DataCadastro = new System.Windows.Forms.MaskedTextBox();
             this.DataAlteracao = new System.Windows.Forms.MaskedTextBox();
@@ -78,26 +91,14 @@
             this.Bt_Excluir = new System.Windows.Forms.Button();
             this.Bt_Localizar = new System.Windows.Forms.Button();
             this.AtivarFoto = new System.Windows.Forms.CheckBox();
-            this.Configuracoes = new System.Windows.Forms.TabPage();
-            this.Flg_vip = new System.Windows.Forms.CheckBox();
-            this.Flg_notificar_produto_novo = new System.Windows.Forms.CheckBox();
-            this.Flg_notificar_vencimeneto = new System.Windows.Forms.CheckBox();
-            this.Flg_Notificar_Promocao = new System.Windows.Forms.CheckBox();
-            this.Flg_Aceita_Fiado = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.Facebook = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.NomeCelular1 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.NomeCelular2 = new System.Windows.Forms.TextBox();
-            this.Flg_Notificar_Aniversario = new System.Windows.Forms.CheckBox();
+            this.Idade = new System.Windows.Forms.Label();
             this.sss.SuspendLayout();
             this.Endereco.SuspendLayout();
             this.Contatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Foto)).BeginInit();
             this.Configuracoes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Foto)).BeginInit();
             this.SuspendLayout();
             // 
             // Cpf_Cnpj
@@ -366,6 +367,38 @@
             this.Contatos.Text = "Contatos";
             this.Contatos.UseVisualStyleBackColor = true;
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(280, 87);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(38, 13);
+            this.label22.TabIndex = 254;
+            this.label22.Text = "Nome:";
+            // 
+            // NomeCelular2
+            // 
+            this.NomeCelular2.Location = new System.Drawing.Point(324, 84);
+            this.NomeCelular2.Name = "NomeCelular2";
+            this.NomeCelular2.Size = new System.Drawing.Size(208, 20);
+            this.NomeCelular2.TabIndex = 253;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(280, 61);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(38, 13);
+            this.label21.TabIndex = 252;
+            this.label21.Text = "Nome:";
+            // 
+            // NomeCelular1
+            // 
+            this.NomeCelular1.Location = new System.Drawing.Point(324, 58);
+            this.NomeCelular1.Name = "NomeCelular1";
+            this.NomeCelular1.Size = new System.Drawing.Size(208, 20);
+            this.NomeCelular1.TabIndex = 231;
+            // 
             // whatsappCelular2
             // 
             this.whatsappCelular2.AutoSize = true;
@@ -418,6 +451,22 @@
             this.label14.TabIndex = 4;
             this.label14.Text = "Celular:";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(2, 35);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 13);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Facebook:";
+            // 
+            // Facebook
+            // 
+            this.Facebook.Location = new System.Drawing.Point(83, 32);
+            this.Facebook.Name = "Facebook";
+            this.Facebook.Size = new System.Drawing.Size(449, 20);
+            this.Facebook.TabIndex = 210;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -434,6 +483,81 @@
             this.EmailContato.Size = new System.Drawing.Size(449, 20);
             this.EmailContato.TabIndex = 200;
             // 
+            // Configuracoes
+            // 
+            this.Configuracoes.Controls.Add(this.Flg_Notificar_Aniversario);
+            this.Configuracoes.Controls.Add(this.Flg_Aceita_Fiado);
+            this.Configuracoes.Controls.Add(this.Flg_Notificar_Promocao);
+            this.Configuracoes.Controls.Add(this.Flg_notificar_vencimeneto);
+            this.Configuracoes.Controls.Add(this.Flg_notificar_produto_novo);
+            this.Configuracoes.Controls.Add(this.Flg_vip);
+            this.Configuracoes.Location = new System.Drawing.Point(4, 22);
+            this.Configuracoes.Name = "Configuracoes";
+            this.Configuracoes.Size = new System.Drawing.Size(538, 155);
+            this.Configuracoes.TabIndex = 2;
+            this.Configuracoes.Text = "Configurações";
+            this.Configuracoes.UseVisualStyleBackColor = true;
+            // 
+            // Flg_Notificar_Aniversario
+            // 
+            this.Flg_Notificar_Aniversario.AutoSize = true;
+            this.Flg_Notificar_Aniversario.Location = new System.Drawing.Point(143, 3);
+            this.Flg_Notificar_Aniversario.Name = "Flg_Notificar_Aniversario";
+            this.Flg_Notificar_Aniversario.Size = new System.Drawing.Size(120, 17);
+            this.Flg_Notificar_Aniversario.TabIndex = 310;
+            this.Flg_Notificar_Aniversario.Text = "Notificar Anicersário";
+            this.Flg_Notificar_Aniversario.UseVisualStyleBackColor = true;
+            // 
+            // Flg_Aceita_Fiado
+            // 
+            this.Flg_Aceita_Fiado.AutoSize = true;
+            this.Flg_Aceita_Fiado.Location = new System.Drawing.Point(3, 95);
+            this.Flg_Aceita_Fiado.Name = "Flg_Aceita_Fiado";
+            this.Flg_Aceita_Fiado.Size = new System.Drawing.Size(85, 17);
+            this.Flg_Aceita_Fiado.TabIndex = 300;
+            this.Flg_Aceita_Fiado.Text = "Aceita Fiado";
+            this.Flg_Aceita_Fiado.UseVisualStyleBackColor = true;
+            // 
+            // Flg_Notificar_Promocao
+            // 
+            this.Flg_Notificar_Promocao.AutoSize = true;
+            this.Flg_Notificar_Promocao.Location = new System.Drawing.Point(3, 72);
+            this.Flg_Notificar_Promocao.Name = "Flg_Notificar_Promocao";
+            this.Flg_Notificar_Promocao.Size = new System.Drawing.Size(116, 17);
+            this.Flg_Notificar_Promocao.TabIndex = 290;
+            this.Flg_Notificar_Promocao.Text = "Notificar Promoção";
+            this.Flg_Notificar_Promocao.UseVisualStyleBackColor = true;
+            // 
+            // Flg_notificar_vencimeneto
+            // 
+            this.Flg_notificar_vencimeneto.AutoSize = true;
+            this.Flg_notificar_vencimeneto.Location = new System.Drawing.Point(3, 49);
+            this.Flg_notificar_vencimeneto.Name = "Flg_notificar_vencimeneto";
+            this.Flg_notificar_vencimeneto.Size = new System.Drawing.Size(124, 17);
+            this.Flg_notificar_vencimeneto.TabIndex = 280;
+            this.Flg_notificar_vencimeneto.Text = "Notificar Vencimento";
+            this.Flg_notificar_vencimeneto.UseVisualStyleBackColor = true;
+            // 
+            // Flg_notificar_produto_novo
+            // 
+            this.Flg_notificar_produto_novo.AutoSize = true;
+            this.Flg_notificar_produto_novo.Location = new System.Drawing.Point(3, 26);
+            this.Flg_notificar_produto_novo.Name = "Flg_notificar_produto_novo";
+            this.Flg_notificar_produto_novo.Size = new System.Drawing.Size(134, 17);
+            this.Flg_notificar_produto_novo.TabIndex = 270;
+            this.Flg_notificar_produto_novo.Text = "Notificar Produto Novo";
+            this.Flg_notificar_produto_novo.UseVisualStyleBackColor = true;
+            // 
+            // Flg_vip
+            // 
+            this.Flg_vip.AutoSize = true;
+            this.Flg_vip.Location = new System.Drawing.Point(3, 3);
+            this.Flg_vip.Name = "Flg_vip";
+            this.Flg_vip.Size = new System.Drawing.Size(78, 17);
+            this.Flg_vip.TabIndex = 260;
+            this.Flg_vip.Text = "Cliente VIP";
+            this.Flg_vip.UseVisualStyleBackColor = true;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -445,6 +569,7 @@
             // 
             // DataCadastro
             // 
+            this.DataCadastro.Enabled = false;
             this.DataCadastro.Location = new System.Drawing.Point(102, 90);
             this.DataCadastro.Mask = "00/00/0000 90:00";
             this.DataCadastro.Name = "DataCadastro";
@@ -454,6 +579,7 @@
             // 
             // DataAlteracao
             // 
+            this.DataAlteracao.Enabled = false;
             this.DataAlteracao.Location = new System.Drawing.Point(299, 90);
             this.DataAlteracao.Mask = "00/00/0000 90:00";
             this.DataAlteracao.Name = "DataAlteracao";
@@ -560,71 +686,6 @@
             this.AtivarFoto.UseVisualStyleBackColor = true;
             this.AtivarFoto.CheckedChanged += new System.EventHandler(this.AtivarFoto_CheckedChanged);
             // 
-            // Configuracoes
-            // 
-            this.Configuracoes.Controls.Add(this.Flg_Notificar_Aniversario);
-            this.Configuracoes.Controls.Add(this.Flg_Aceita_Fiado);
-            this.Configuracoes.Controls.Add(this.Flg_Notificar_Promocao);
-            this.Configuracoes.Controls.Add(this.Flg_notificar_vencimeneto);
-            this.Configuracoes.Controls.Add(this.Flg_notificar_produto_novo);
-            this.Configuracoes.Controls.Add(this.Flg_vip);
-            this.Configuracoes.Location = new System.Drawing.Point(4, 22);
-            this.Configuracoes.Name = "Configuracoes";
-            this.Configuracoes.Size = new System.Drawing.Size(538, 155);
-            this.Configuracoes.TabIndex = 2;
-            this.Configuracoes.Text = "Configurações";
-            this.Configuracoes.UseVisualStyleBackColor = true;
-            // 
-            // Flg_vip
-            // 
-            this.Flg_vip.AutoSize = true;
-            this.Flg_vip.Location = new System.Drawing.Point(3, 3);
-            this.Flg_vip.Name = "Flg_vip";
-            this.Flg_vip.Size = new System.Drawing.Size(78, 17);
-            this.Flg_vip.TabIndex = 260;
-            this.Flg_vip.Text = "Cliente VIP";
-            this.Flg_vip.UseVisualStyleBackColor = true;
-            // 
-            // Flg_notificar_produto_novo
-            // 
-            this.Flg_notificar_produto_novo.AutoSize = true;
-            this.Flg_notificar_produto_novo.Location = new System.Drawing.Point(3, 26);
-            this.Flg_notificar_produto_novo.Name = "Flg_notificar_produto_novo";
-            this.Flg_notificar_produto_novo.Size = new System.Drawing.Size(134, 17);
-            this.Flg_notificar_produto_novo.TabIndex = 270;
-            this.Flg_notificar_produto_novo.Text = "Notificar Produto Novo";
-            this.Flg_notificar_produto_novo.UseVisualStyleBackColor = true;
-            // 
-            // Flg_notificar_vencimeneto
-            // 
-            this.Flg_notificar_vencimeneto.AutoSize = true;
-            this.Flg_notificar_vencimeneto.Location = new System.Drawing.Point(3, 49);
-            this.Flg_notificar_vencimeneto.Name = "Flg_notificar_vencimeneto";
-            this.Flg_notificar_vencimeneto.Size = new System.Drawing.Size(124, 17);
-            this.Flg_notificar_vencimeneto.TabIndex = 280;
-            this.Flg_notificar_vencimeneto.Text = "Notificar Vencimento";
-            this.Flg_notificar_vencimeneto.UseVisualStyleBackColor = true;
-            // 
-            // Flg_Notificar_Promocao
-            // 
-            this.Flg_Notificar_Promocao.AutoSize = true;
-            this.Flg_Notificar_Promocao.Location = new System.Drawing.Point(3, 72);
-            this.Flg_Notificar_Promocao.Name = "Flg_Notificar_Promocao";
-            this.Flg_Notificar_Promocao.Size = new System.Drawing.Size(116, 17);
-            this.Flg_Notificar_Promocao.TabIndex = 290;
-            this.Flg_Notificar_Promocao.Text = "Notificar Promoção";
-            this.Flg_Notificar_Promocao.UseVisualStyleBackColor = true;
-            // 
-            // Flg_Aceita_Fiado
-            // 
-            this.Flg_Aceita_Fiado.AutoSize = true;
-            this.Flg_Aceita_Fiado.Location = new System.Drawing.Point(3, 95);
-            this.Flg_Aceita_Fiado.Name = "Flg_Aceita_Fiado";
-            this.Flg_Aceita_Fiado.Size = new System.Drawing.Size(85, 17);
-            this.Flg_Aceita_Fiado.TabIndex = 300;
-            this.Flg_Aceita_Fiado.Text = "Aceita Fiado";
-            this.Flg_Aceita_Fiado.UseVisualStyleBackColor = true;
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -643,69 +704,21 @@
             this.maskedTextBox1.TabIndex = 81;
             this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
             // 
-            // Facebook
+            // Idade
             // 
-            this.Facebook.Location = new System.Drawing.Point(83, 32);
-            this.Facebook.Name = "Facebook";
-            this.Facebook.Size = new System.Drawing.Size(449, 20);
-            this.Facebook.TabIndex = 210;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(2, 35);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 13);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Facebook:";
-            // 
-            // NomeCelular1
-            // 
-            this.NomeCelular1.Location = new System.Drawing.Point(324, 58);
-            this.NomeCelular1.Name = "NomeCelular1";
-            this.NomeCelular1.Size = new System.Drawing.Size(208, 20);
-            this.NomeCelular1.TabIndex = 231;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(280, 61);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(38, 13);
-            this.label21.TabIndex = 252;
-            this.label21.Text = "Nome:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(280, 87);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(38, 13);
-            this.label22.TabIndex = 254;
-            this.label22.Text = "Nome:";
-            // 
-            // NomeCelular2
-            // 
-            this.NomeCelular2.Location = new System.Drawing.Point(324, 84);
-            this.NomeCelular2.Name = "NomeCelular2";
-            this.NomeCelular2.Size = new System.Drawing.Size(208, 20);
-            this.NomeCelular2.TabIndex = 253;
-            // 
-            // Flg_Notificar_Aniversario
-            // 
-            this.Flg_Notificar_Aniversario.AutoSize = true;
-            this.Flg_Notificar_Aniversario.Location = new System.Drawing.Point(143, 3);
-            this.Flg_Notificar_Aniversario.Name = "Flg_Notificar_Aniversario";
-            this.Flg_Notificar_Aniversario.Size = new System.Drawing.Size(120, 17);
-            this.Flg_Notificar_Aniversario.TabIndex = 310;
-            this.Flg_Notificar_Aniversario.Text = "Notificar Anicersário";
-            this.Flg_Notificar_Aniversario.UseVisualStyleBackColor = true;
+            this.Idade.AutoSize = true;
+            this.Idade.Location = new System.Drawing.Point(548, 93);
+            this.Idade.Name = "Idade";
+            this.Idade.Size = new System.Drawing.Size(48, 13);
+            this.Idade.TabIndex = 342;
+            this.Idade.Text = "XX Anos";
             // 
             // Entidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 388);
+            this.Controls.Add(this.Idade);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.AtivarFoto);
@@ -740,9 +753,9 @@
             this.Endereco.PerformLayout();
             this.Contatos.ResumeLayout(false);
             this.Contatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Foto)).EndInit();
             this.Configuracoes.ResumeLayout(false);
             this.Configuracoes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Foto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -815,5 +828,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox NomeCelular2;
         private System.Windows.Forms.CheckBox Flg_Notificar_Aniversario;
+        private System.Windows.Forms.Label Idade;
     }
 }
