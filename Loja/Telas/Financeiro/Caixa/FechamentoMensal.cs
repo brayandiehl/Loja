@@ -15,5 +15,7 @@ namespace Loja.Telas.Financeiro.Caixa
         {
             InitializeComponent();
         }
+
+    
     }
 }
