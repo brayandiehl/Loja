@@ -21,6 +21,9 @@ namespace Loja.Telas.Cadastro
 
         }
 
-      
+        private void Produto_Load(object sender, EventArgs e)
+        {
+
+        }
     }  
 }

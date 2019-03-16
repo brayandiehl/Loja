@@ -58,10 +58,14 @@
             this.ControleLote = new System.Windows.Forms.CheckBox();
             this.ControlaValidade = new System.Windows.Forms.CheckBox();
             this.AlertaEstoqueMinimo = new System.Windows.Forms.CheckBox();
+            this.ImagemProduto = new System.Windows.Forms.PictureBox();
             this.BtSalvar = new System.Windows.Forms.Button();
             this.BtCancelar = new System.Windows.Forms.Button();
             this.BtLocalizar = new System.Windows.Forms.Button();
-            this.ImagemProduto = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.qtdCodBarras = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Dados.SuspendLayout();
             this.Configuracao.SuspendLayout();
@@ -130,7 +134,7 @@
             // 
             this.tabControl1.Controls.Add(this.Dados);
             this.tabControl1.Controls.Add(this.Configuracao);
-            this.tabControl1.Location = new System.Drawing.Point(12, 38);
+            this.tabControl1.Location = new System.Drawing.Point(12, 71);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(791, 233);
@@ -138,6 +142,8 @@
             // 
             // Dados
             // 
+            this.Dados.Controls.Add(this.label7);
+            this.Dados.Controls.Add(this.qtdCodBarras);
             this.Dados.Controls.Add(this.label14);
             this.Dados.Controls.Add(this.EstoqueAtual);
             this.Dados.Controls.Add(this.label13);
@@ -365,33 +371,6 @@
             this.AlertaEstoqueMinimo.Text = "Alertar Estoque Minimo";
             this.AlertaEstoqueMinimo.UseVisualStyleBackColor = true;
             // 
-            // BtSalvar
-            // 
-            this.BtSalvar.Location = new System.Drawing.Point(12, 292);
-            this.BtSalvar.Name = "BtSalvar";
-            this.BtSalvar.Size = new System.Drawing.Size(75, 23);
-            this.BtSalvar.TabIndex = 200;
-            this.BtSalvar.Text = "Salvar";
-            this.BtSalvar.UseVisualStyleBackColor = true;
-            // 
-            // BtCancelar
-            // 
-            this.BtCancelar.Location = new System.Drawing.Point(174, 292);
-            this.BtCancelar.Name = "BtCancelar";
-            this.BtCancelar.Size = new System.Drawing.Size(75, 23);
-            this.BtCancelar.TabIndex = 220;
-            this.BtCancelar.Text = "Cancelar";
-            this.BtCancelar.UseVisualStyleBackColor = true;
-            // 
-            // BtLocalizar
-            // 
-            this.BtLocalizar.Location = new System.Drawing.Point(93, 292);
-            this.BtLocalizar.Name = "BtLocalizar";
-            this.BtLocalizar.Size = new System.Drawing.Size(75, 23);
-            this.BtLocalizar.TabIndex = 210;
-            this.BtLocalizar.Text = "Localizar";
-            this.BtLocalizar.UseVisualStyleBackColor = true;
-            // 
             // ImagemProduto
             // 
             this.ImagemProduto.Location = new System.Drawing.Point(582, 6);
@@ -400,11 +379,73 @@
             this.ImagemProduto.TabIndex = 13;
             this.ImagemProduto.TabStop = false;
             // 
+            // BtSalvar
+            // 
+            this.BtSalvar.Location = new System.Drawing.Point(12, 323);
+            this.BtSalvar.Name = "BtSalvar";
+            this.BtSalvar.Size = new System.Drawing.Size(75, 23);
+            this.BtSalvar.TabIndex = 200;
+            this.BtSalvar.Text = "Salvar";
+            this.BtSalvar.UseVisualStyleBackColor = true;
+            // 
+            // BtCancelar
+            // 
+            this.BtCancelar.Location = new System.Drawing.Point(174, 323);
+            this.BtCancelar.Name = "BtCancelar";
+            this.BtCancelar.Size = new System.Drawing.Size(75, 23);
+            this.BtCancelar.TabIndex = 220;
+            this.BtCancelar.Text = "Cancelar";
+            this.BtCancelar.UseVisualStyleBackColor = true;
+            // 
+            // BtLocalizar
+            // 
+            this.BtLocalizar.Location = new System.Drawing.Point(93, 323);
+            this.BtLocalizar.Name = "BtLocalizar";
+            this.BtLocalizar.Size = new System.Drawing.Size(75, 23);
+            this.BtLocalizar.TabIndex = 210;
+            this.BtLocalizar.Text = "Localizar";
+            this.BtLocalizar.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(93, 38);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(213, 20);
+            this.textBox1.TabIndex = 25;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 41);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.TabIndex = 222;
+            this.label6.Text = "Cod. Barras";
+            // 
+            // qtdCodBarras
+            // 
+            this.qtdCodBarras.Enabled = false;
+            this.qtdCodBarras.Location = new System.Drawing.Point(318, 112);
+            this.qtdCodBarras.Name = "qtdCodBarras";
+            this.qtdCodBarras.Size = new System.Drawing.Size(64, 20);
+            this.qtdCodBarras.TabIndex = 125;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(210, 115);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 13);
+            this.label7.TabIndex = 122;
+            this.label7.Text = "Qtde. P/ Cód barras";
+            // 
             // Produto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 328);
+            this.ClientSize = new System.Drawing.Size(818, 358);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.BtLocalizar);
             this.Controls.Add(this.BtCancelar);
             this.Controls.Add(this.BtSalvar);
@@ -415,6 +456,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Produto";
             this.Text = "Produto";
+            this.Load += new System.EventHandler(this.Produto_Load);
             this.tabControl1.ResumeLayout(false);
             this.Dados.ResumeLayout(false);
             this.Dados.PerformLayout();
@@ -462,5 +504,9 @@
         private System.Windows.Forms.PictureBox ImagemProduto;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button BtAdicionarImagem;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox qtdCodBarras;
     }
 }

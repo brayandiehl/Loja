@@ -15,7 +15,7 @@ namespace Loja
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Telas.Financeiro.Caixa.FechamentoMensal());
+            Application.Run(new Telas.Cadastro.Entidade());
         }
     }
 }
