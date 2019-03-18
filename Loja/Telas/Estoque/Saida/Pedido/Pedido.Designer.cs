@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.NrPedido = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,6 +61,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.BtFinalizar = new System.Windows.Forms.Button();
             this.BtCancelar = new System.Windows.Forms.Button();
+            this.CodBarras = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TabelaItens)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,7 +143,7 @@
             // 
             // BtInserir
             // 
-            this.BtInserir.Location = new System.Drawing.Point(223, 138);
+            this.BtInserir.Location = new System.Drawing.Point(369, 112);
             this.BtInserir.Name = "BtInserir";
             this.BtInserir.Size = new System.Drawing.Size(75, 20);
             this.BtInserir.TabIndex = 100;
@@ -150,15 +152,15 @@
             // 
             // QuantidadeProduto
             // 
-            this.QuantidadeProduto.Location = new System.Drawing.Point(117, 138);
+            this.QuantidadeProduto.Location = new System.Drawing.Point(117, 86);
             this.QuantidadeProduto.Name = "QuantidadeProduto";
             this.QuantidadeProduto.Size = new System.Drawing.Size(100, 20);
-            this.QuantidadeProduto.TabIndex = 90;
+            this.QuantidadeProduto.TabIndex = 60;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 141);
+            this.label8.Location = new System.Drawing.Point(12, 90);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 13);
             this.label8.TabIndex = 93;
@@ -166,24 +168,24 @@
             // 
             // BtLocalizarItem
             // 
-            this.BtLocalizarItem.Location = new System.Drawing.Point(284, 86);
+            this.BtLocalizarItem.Location = new System.Drawing.Point(288, 111);
             this.BtLocalizarItem.Name = "BtLocalizarItem";
             this.BtLocalizarItem.Size = new System.Drawing.Size(75, 20);
-            this.BtLocalizarItem.TabIndex = 70;
+            this.BtLocalizarItem.TabIndex = 90;
             this.BtLocalizarItem.Text = "Localizar";
             this.BtLocalizarItem.UseVisualStyleBackColor = true;
             // 
             // DescricaoProduto
             // 
-            this.DescricaoProduto.Location = new System.Drawing.Point(117, 112);
+            this.DescricaoProduto.Location = new System.Drawing.Point(117, 138);
             this.DescricaoProduto.Name = "DescricaoProduto";
-            this.DescricaoProduto.Size = new System.Drawing.Size(770, 20);
-            this.DescricaoProduto.TabIndex = 80;
+            this.DescricaoProduto.Size = new System.Drawing.Size(676, 20);
+            this.DescricaoProduto.TabIndex = 105;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 115);
+            this.label7.Location = new System.Drawing.Point(12, 142);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 92;
@@ -192,7 +194,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 89);
+            this.label6.Location = new System.Drawing.Point(12, 115);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 91;
@@ -200,23 +202,23 @@
             // 
             // Produto
             // 
-            this.Produto.Location = new System.Drawing.Point(117, 86);
+            this.Produto.Location = new System.Drawing.Point(117, 112);
             this.Produto.Name = "Produto";
             this.Produto.Size = new System.Drawing.Size(165, 20);
-            this.Produto.TabIndex = 60;
+            this.Produto.TabIndex = 80;
             // 
             // TabelaItens
             // 
             this.TabelaItens.AllowUserToAddRows = false;
             this.TabelaItens.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TabelaItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TabelaItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.TabelaItens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TabelaItens.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Item,
@@ -225,14 +227,14 @@
             this.Quantidade,
             this.ValorItem,
             this.Valor});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TabelaItens.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TabelaItens.DefaultCellStyle = dataGridViewCellStyle10;
             this.TabelaItens.Location = new System.Drawing.Point(15, 164);
             this.TabelaItens.Name = "TabelaItens";
             this.TabelaItens.RowHeadersVisible = false;
@@ -337,11 +339,29 @@
             this.BtCancelar.Text = "Cancelar";
             this.BtCancelar.UseVisualStyleBackColor = true;
             // 
+            // CodBarras
+            // 
+            this.CodBarras.Location = new System.Drawing.Point(293, 86);
+            this.CodBarras.Name = "CodBarras";
+            this.CodBarras.Size = new System.Drawing.Size(205, 20);
+            this.CodBarras.TabIndex = 70;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(225, 90);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 13);
+            this.label10.TabIndex = 212;
+            this.label10.Text = "Cód Barras:";
+            // 
             // Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 549);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.CodBarras);
             this.Controls.Add(this.BtCancelar);
             this.Controls.Add(this.BtFinalizar);
             this.Controls.Add(this.label9);
@@ -409,5 +429,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
         private System.Windows.Forms.Button BtFinalizar;
         private System.Windows.Forms.Button BtCancelar;
+        private System.Windows.Forms.TextBox CodBarras;
+        private System.Windows.Forms.Label label10;
     }
 }
