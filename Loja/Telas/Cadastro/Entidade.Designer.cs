@@ -505,7 +505,7 @@
             this.Flg_Notificar_Aniversario.Name = "Flg_Notificar_Aniversario";
             this.Flg_Notificar_Aniversario.Size = new System.Drawing.Size(120, 17);
             this.Flg_Notificar_Aniversario.TabIndex = 310;
-            this.Flg_Notificar_Aniversario.Text = "Notificar Anicersário";
+            this.Flg_Notificar_Aniversario.Text = "Notificar Aniversário";
             this.Flg_Notificar_Aniversario.UseVisualStyleBackColor = true;
             // 
             // Flg_Aceita_Fiado

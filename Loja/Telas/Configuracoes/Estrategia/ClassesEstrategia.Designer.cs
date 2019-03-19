@@ -39,6 +39,7 @@
             // 
             // TabelaClasses
             // 
+            this.TabelaClasses.AllowUserToDeleteRows = false;
             this.TabelaClasses.AllowUserToResizeColumns = false;
             this.TabelaClasses.AllowUserToResizeRows = false;
             this.TabelaClasses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -92,6 +93,7 @@
             this.BtSalvar.TabIndex = 31;
             this.BtSalvar.Text = "Salvar";
             this.BtSalvar.UseVisualStyleBackColor = true;
+            this.BtSalvar.Click += new System.EventHandler(this.BtSalvar_Click);
             // 
             // ClassesEstrategia
             // 

@@ -15,7 +15,7 @@ namespace Loja
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Telas.Cadastro.Entidade());
+            Application.Run(new Telas.Configuracoes.Estrategia.ClassesEstrategia());
         }
     }
 }
