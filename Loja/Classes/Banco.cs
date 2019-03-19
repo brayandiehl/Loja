@@ -60,9 +60,15 @@ namespace Loja.Classes
                     //return "Query não pode ser nulla";
                 }
             }
-            catch (Exception EX)
+            catch (MySqlException my)
             {
-                Erro = "Erro: " + EX.Message;
+                
+                Erro = "Erro: " + my.Message;
+                return false;
+            }
+            catch(Exception ex)
+            {
+                Erro = "Erro: " + ex.Message;
                 return false;
             }
 

@@ -312,5 +312,8 @@
   <ItemGroup>
     <Folder Include="Telas\Financeiro\Movimentacao\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Comandos\Sqls.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

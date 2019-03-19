@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TabelaClasses = new System.Windows.Forms.DataGridView();
+            this.TabelaClassesEstrategia = new System.Windows.Forms.DataGridView();
             this.Classe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescricaoClasse = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClasseAtiva = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.BtCancelar = new System.Windows.Forms.Button();
             this.BtSalvar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.TabelaClasses)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TabelaClassesEstrategia)).BeginInit();
             this.SuspendLayout();
             // 
-            // TabelaClasses
+            // TabelaClassesEstrategia
             // 
-            this.TabelaClasses.AllowUserToDeleteRows = false;
-            this.TabelaClasses.AllowUserToResizeColumns = false;
-            this.TabelaClasses.AllowUserToResizeRows = false;
-            this.TabelaClasses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TabelaClasses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TabelaClassesEstrategia.AllowUserToDeleteRows = false;
+            this.TabelaClassesEstrategia.AllowUserToResizeColumns = false;
+            this.TabelaClassesEstrategia.AllowUserToResizeRows = false;
+            this.TabelaClassesEstrategia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TabelaClassesEstrategia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Classe,
             this.DescricaoClasse,
             this.ClasseAtiva});
-            this.TabelaClasses.Location = new System.Drawing.Point(12, 12);
-            this.TabelaClasses.MultiSelect = false;
-            this.TabelaClasses.Name = "TabelaClasses";
-            this.TabelaClasses.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.TabelaClasses.ShowCellToolTips = false;
-            this.TabelaClasses.ShowEditingIcon = false;
-            this.TabelaClasses.ShowRowErrors = false;
-            this.TabelaClasses.Size = new System.Drawing.Size(594, 287);
-            this.TabelaClasses.TabIndex = 11;
+            this.TabelaClassesEstrategia.Location = new System.Drawing.Point(12, 12);
+            this.TabelaClassesEstrategia.MultiSelect = false;
+            this.TabelaClassesEstrategia.Name = "TabelaClassesEstrategia";
+            this.TabelaClassesEstrategia.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.TabelaClassesEstrategia.ShowCellToolTips = false;
+            this.TabelaClassesEstrategia.ShowEditingIcon = false;
+            this.TabelaClassesEstrategia.ShowRowErrors = false;
+            this.TabelaClassesEstrategia.Size = new System.Drawing.Size(594, 287);
+            this.TabelaClassesEstrategia.TabIndex = 11;
             // 
             // Classe
             // 
@@ -102,17 +102,17 @@
             this.ClientSize = new System.Drawing.Size(622, 339);
             this.Controls.Add(this.BtCancelar);
             this.Controls.Add(this.BtSalvar);
-            this.Controls.Add(this.TabelaClasses);
+            this.Controls.Add(this.TabelaClassesEstrategia);
             this.Name = "ClassesEstrategia";
             this.Text = "ClassesEstrategia";
-            ((System.ComponentModel.ISupportInitialize)(this.TabelaClasses)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TabelaClassesEstrategia)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView TabelaClasses;
+        private System.Windows.Forms.DataGridView TabelaClassesEstrategia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Classe;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescricaoClasse;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ClasseAtiva;

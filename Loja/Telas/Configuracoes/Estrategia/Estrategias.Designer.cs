@@ -32,11 +32,11 @@
             this.BtSalvar = new System.Windows.Forms.Button();
             this.TabelaStatus = new System.Windows.Forms.DataGridView();
             this.TabelaClasses = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValorParametro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Classe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescricaoClasse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estrategia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValorParametro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.TabelaStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabelaClasses)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +68,7 @@
             this.TabelaStatus.AllowUserToResizeRows = false;
             this.TabelaStatus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TabelaStatus.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
+            this.Estrategia,
             this.ValorParametro,
             this.dataGridViewTextBoxColumn2});
             this.TabelaStatus.Location = new System.Drawing.Point(12, 162);
@@ -99,26 +99,7 @@
             this.TabelaClasses.ShowRowErrors = false;
             this.TabelaClasses.Size = new System.Drawing.Size(594, 144);
             this.TabelaClasses.TabIndex = 41;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Status";
-            this.dataGridViewTextBoxColumn1.MaxInputLength = 10;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // ValorParametro
-            // 
-            this.ValorParametro.HeaderText = "Parâmetro";
-            this.ValorParametro.Name = "ValorParametro";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Descrição";
-            this.dataGridViewTextBoxColumn2.MaxInputLength = 50;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 350;
+            this.TabelaClasses.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TabelaClasses_CellClick);
             // 
             // Classe
             // 
@@ -133,6 +114,26 @@
             this.DescricaoClasse.MaxInputLength = 50;
             this.DescricaoClasse.Name = "DescricaoClasse";
             this.DescricaoClasse.Width = 490;
+            // 
+            // Estrategia
+            // 
+            this.Estrategia.HeaderText = "Estrategia";
+            this.Estrategia.MaxInputLength = 10;
+            this.Estrategia.Name = "Estrategia";
+            this.Estrategia.ReadOnly = true;
+            // 
+            // ValorParametro
+            // 
+            this.ValorParametro.HeaderText = "Parâmetro";
+            this.ValorParametro.Name = "ValorParametro";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn2.MaxInputLength = 50;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 350;
             // 
             // Estrategias
             // 
@@ -157,10 +158,10 @@
         private System.Windows.Forms.Button BtSalvar;
         private System.Windows.Forms.DataGridView TabelaStatus;
         private System.Windows.Forms.DataGridView TabelaClasses;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ValorParametro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Classe;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescricaoClasse;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estrategia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValorParametro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }

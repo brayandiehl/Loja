@@ -21,11 +21,10 @@ namespace Loja.Telas.Configuracoes.Estrategia
         {
             try
             {
-                if (!Classes.ClassEstrategia.RetornarEstrategias(TabelaClasses))
+                if (!Classes.ClassEstrategia.RetornarEstrategias(TabelaClassesEstrategia))
                 {
                     MessageBox.Show(Classes.ClassEstrategia.Erro, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
             catch (Exception ex)
             {
@@ -35,39 +34,35 @@ namespace Loja.Telas.Configuracoes.Estrategia
 
         private void BtSalvar_Click(object sender, EventArgs e)
         {
-
-
-            if (Classes.ClassEstrategia.RetonraQuantidadeRegistros())
+            for (int a = 0; a < TabelaClassesEstrategia.RowCount - 1; a++)
             {
-
-
-                for (int a = 0; a <= TabelaClasses.RowCount - 1; a++)
+                if (!TabelaClassesEstrategia.Rows[a].Cells["Classe"].ReadOnly)
                 {
-                    if()
+                    int EstrategiaAtiva = 0;
+                    if (Convert.ToBoolean(TabelaClassesEstrategia.Rows[a].Cells["ClasseAtiva"].Value))
+                    {
+                        EstrategiaAtiva = 1;
+                    }
+                    if (Classes.ClassEstrategia.ValidaCampos(TabelaClassesEstrategia))
+                    {
+                        if (Classes.ClassEstrategia.InsereEstrategia(TabelaClassesEstrategia.Rows[a].Cells["Classe"].Value.ToString(), TabelaClassesEstrategia.Rows[a].Cells["DescricaoClasse"].Value.ToString(), Convert.ToString(EstrategiaAtiva), "BRAYAN"))
+                        {
+                            MessageBox.Show("Estratégias Salvas com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
+                        }
+                        else
+                        {
+                            if (MessageBox.Show(Classes.ClassEstrategia.Erro + "\nDesejá continuar?", "ERRO", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.No)
+                            {
+                                return;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(Classes.ClassEstrategia.Erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-
-
-                int linhas = (TabelaClasses.RowCount - 1) - Convert.ToInt32(Classes.ClassEstrategia.QuantidadeRegistros);
-
-                var teste = TabelaClasses.Rows[1].Cells["Classe"].ReadOnly;
-
-
-
-
-
-
-                for (int a = Convert.ToInt32(Classes.ClassEstrategia.QuantidadeRegistros); a <= linhas; a++)
-                {
-
-
-                }
-
             }
-
-
-
-
-
         }
     }
 }

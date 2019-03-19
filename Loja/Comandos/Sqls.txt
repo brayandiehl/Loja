@@ -1,0 +1,30 @@
+﻿CREATE SCHEMA emporiodosaquarios ;
+
+create table classes_estrategias(
+	id_classe int(10) primary key auto_increment,
+	classe varchar(255) unique key not null,
+	nome_classe varchar(255) not null,
+	classe_ativa int(1) not null,
+	usuario_criacao varchar(50) not null,
+	data_criacao datetime,
+	usuario_modificacao varchar(50),
+	data_modificacao datetime default now()
+)
+
+
+create table estrategias (
+	id_estrategia int(10) primary key auto_increment,
+	classe varchar(255) not null,
+	estrategia varchar(255) not null,
+	nome_estrategia varchar(255) not null,
+	parametro varchar(255) default 0,
+	usuario_criacao varchar(50) not null,
+	data_criacao datetime not null,
+	usuario_modificacao varchar(50),
+	data_alteracao datetime default now()
+	
+)
+
+ALTER TABLE estrategias
+ADD CONSTRAINT FK_classe
+FOREIGN KEY (classe) REFERENCES classes_estrategias(classe);

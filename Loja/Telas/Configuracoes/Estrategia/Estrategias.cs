@@ -14,11 +14,20 @@ namespace Loja.Telas.Configuracoes.Estrategia
         public Estrategias()
         {
             InitializeComponent();
+            Classes.ClassEstrategia.RetornarEstrategias(TabelaClasses);
         }
 
         private void BtSalvar_Click(object sender, EventArgs e)
         {
-            TabelaStatus.Rows.Insert(0,"Teste",null,"TESTE1");
+
+        }
+
+        private void TabelaClasses_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                Classes.ClassEstrategia.RetornaParametros(TabelaStatus, TabelaClasses.Rows[e.RowIndex].Cells["Classe"].Value.ToString());
+            }
         }
     }
 }
