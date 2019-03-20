@@ -1,6 +1,6 @@
 ﻿namespace Loja.Telas.Configuracoes.Estrategia
 {
-    partial class Estrategias
+    partial class EstrategiasDinamica
     {
         /// <summary>
         /// Required designer variable.
@@ -31,12 +31,12 @@
             this.BtCancelar = new System.Windows.Forms.Button();
             this.BtSalvar = new System.Windows.Forms.Button();
             this.TabelaStatus = new System.Windows.Forms.DataGridView();
+            this.Estrategia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValorParametro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TabelaClasses = new System.Windows.Forms.DataGridView();
             this.Classe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescricaoClasse = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estrategia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValorParametro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.TabelaStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabelaClasses)).BeginInit();
             this.SuspendLayout();
@@ -70,15 +70,34 @@
             this.TabelaStatus.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Estrategia,
             this.ValorParametro,
-            this.Descricao});
+            this.dataGridViewTextBoxColumn2});
             this.TabelaStatus.Location = new System.Drawing.Point(12, 162);
             this.TabelaStatus.Name = "TabelaStatus";
-           // this.TabelaStatus.ShowCellToolTips = false;
+            this.TabelaStatus.ShowCellToolTips = false;
             this.TabelaStatus.ShowEditingIcon = false;
-           // this.TabelaStatus.ShowRowErrors = false;
+            this.TabelaStatus.ShowRowErrors = false;
             this.TabelaStatus.Size = new System.Drawing.Size(594, 295);
             this.TabelaStatus.TabIndex = 42;
-            
+            // 
+            // Estrategia
+            // 
+            this.Estrategia.HeaderText = "Estrategia";
+            this.Estrategia.MaxInputLength = 10;
+            this.Estrategia.Name = "Estrategia";
+            this.Estrategia.ReadOnly = true;
+            // 
+            // ValorParametro
+            // 
+            this.ValorParametro.HeaderText = "Parâmetro";
+            this.ValorParametro.Name = "ValorParametro";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn2.MaxInputLength = 50;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 350;
             // 
             // TabelaClasses
             // 
@@ -116,25 +135,7 @@
             this.DescricaoClasse.Name = "DescricaoClasse";
             this.DescricaoClasse.Width = 490;
             // 
-            // Estrategia
-            // 
-            this.Estrategia.HeaderText = "Estrategia";
-            this.Estrategia.MaxInputLength = 10;
-            this.Estrategia.Name = "Estrategia";
-            this.Estrategia.ReadOnly = true;
-            // 
-            // ValorParametro
-            // 
-            this.ValorParametro.HeaderText = "Parâmetro";
-            this.ValorParametro.Name = "ValorParametro";
-            // 
-            // Descricao
-            // 
-            this.Descricao.HeaderText = "Descrição";
-            this.Descricao.Name = "Descricao";
-            this.Descricao.Width = 350;
-            // 
-            // Estrategias
+            // EstrategiasDinamica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,8 +144,8 @@
             this.Controls.Add(this.BtSalvar);
             this.Controls.Add(this.TabelaStatus);
             this.Controls.Add(this.TabelaClasses);
-            this.Name = "Estrategias";
-            this.Text = "Estrategias";
+            this.Name = "EstrategiasDinamica";
+            this.Text = "EstrategiasDinamica";
             ((System.ComponentModel.ISupportInitialize)(this.TabelaStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabelaClasses)).EndInit();
             this.ResumeLayout(false);
@@ -161,6 +162,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DescricaoClasse;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estrategia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorParametro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }

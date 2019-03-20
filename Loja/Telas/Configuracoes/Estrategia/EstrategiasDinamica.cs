@@ -9,10 +9,10 @@ using System.Windows.Forms;
 
 namespace Loja.Telas.Configuracoes.Estrategia
 {
-    public partial class Estrategias : Form
+    public partial class EstrategiasDinamica : Form
     {
         private string ClasseSelecionada { get; set; }
-        public Estrategias()
+        public EstrategiasDinamica()
         {
             InitializeComponent();
             Classes.ClassEstrategia.RetornarEstrategias(TabelaClasses);
@@ -23,7 +23,6 @@ namespace Loja.Telas.Configuracoes.Estrategia
             Cursor = Cursors.WaitCursor;
             for (int a = 0; a < TabelaStatus.RowCount; a++)
             {
-                //Pega os valores do Parametro
                 if (string.IsNullOrEmpty((string)TabelaStatus.Rows[a].Cells["ValorParametro"].Value))
                 {
                     if (MessageBox.Show("Valor do Paramêtro está em branco! \nAo continuar será atribuido atuomáticamente o valor 0!\nDesejá continuar?", "ERRO", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.No)
@@ -49,50 +48,7 @@ namespace Loja.Telas.Configuracoes.Estrategia
                         }
                     }
                 }
-                //Pega as descrição
-                if (string.IsNullOrEmpty((string)TabelaStatus.Rows[a].Cells["Descricao"].Value))
-                {
-                    if (MessageBox.Show("Valor do Descrição está em branco! \nAo continuar será atribuido atuomáticamente o descrição 0!\nDesejá continuar?", "ERRO", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.No)
-                    {
-                        Cursor = Cursors.Default;
-                        return;
-                    }
-                    else
-                    {
-                        TabelaStatus[2, a].Value = "0";
-                    }
-                }
-                var DescricaoAtual = TabelaStatus.Rows[a].Cells["Descricao"].Value.ToString();
-                Classes.ClassEstrategia.RetornaValorParametro(ClasseSelecionada, TabelaStatus.Rows[a].Cells["Descricao"].Value.ToString());
-
-                if (!ParametroAtual.Equals(Classes.ClassEstrategia.DescricaoParametro))
-                {
-                    if (!Classes.ClassEstrategia.AtualizaValorParametroDescricao(ClasseSelecionada, TabelaStatus.Rows[a].Cells["Descricao"].Value.ToString(), ParametroAtual))
-                    {
-                        if (MessageBox.Show("Erro ao Atualizar\nClasse:  " + ClasseSelecionada + "\nDescricção da Estratégia: " + TabelaStatus.Rows[a].Cells["Estrategia"].Value.ToString() + "\nParametro: " + ParametroAtual + "\nErro: " + Classes.ClassEstrategia.Erro + "\n\nDEsejá continuar sem atualizar o parametro acima?", "ERRO", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.No)
-                        {
-                            Cursor = Cursors.Default;
-                            return;
-                        }
-                    }
-                }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             }
-
             Cursor = Cursors.Default;
         }
 
@@ -104,7 +60,5 @@ namespace Loja.Telas.Configuracoes.Estrategia
                 Classes.ClassEstrategia.RetornaParametros(TabelaStatus, ClasseSelecionada);
             }
         }
-
-       
     }
 }

@@ -74,6 +74,12 @@
     <Compile Include="Telas\Cadastro\Produto.Designer.cs">
       <DependentUpon>Produto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Configuracoes\Estrategia\ClassesEstrategiaDinamica .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Configuracoes\Estrategia\ClassesEstrategiaDinamica .Designer.cs">
+      <DependentUpon>ClassesEstrategiaDinamica .cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Configuracoes\Estrategia\ClassesEstrategia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,17 +87,17 @@
       <DependentUpon>ClassesEstrategia.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Configuracoes\Estrategia\Classes\ClassEstrategia.cs" />
+    <Compile Include="Telas\Configuracoes\Estrategia\EstrategiasDinamica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Configuracoes\Estrategia\EstrategiasDinamica.Designer.cs">
+      <DependentUpon>EstrategiasDinamica.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Configuracoes\Estrategia\Estrategias.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Telas\Configuracoes\Estrategia\Estrategias.Designer.cs">
       <DependentUpon>Estrategias.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Configuracoes\Estrategia\Parametros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\Configuracoes\Estrategia\Parametros.Designer.cs">
-      <DependentUpon>Parametros.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Configuracoes\Parametrizacoes\Classes.cs">
       <SubType>Form</SubType>
@@ -229,14 +235,17 @@
     <EmbeddedResource Include="Telas\Cadastro\Produto.resx">
       <DependentUpon>Produto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Configuracoes\Estrategia\ClassesEstrategiaDinamica .resx">
+      <DependentUpon>ClassesEstrategiaDinamica .cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Configuracoes\Estrategia\ClassesEstrategia.resx">
       <DependentUpon>ClassesEstrategia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Configuracoes\Estrategia\EstrategiasDinamica.resx">
+      <DependentUpon>EstrategiasDinamica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Configuracoes\Estrategia\Estrategias.resx">
       <DependentUpon>Estrategias.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Configuracoes\Estrategia\Parametros.resx">
-      <DependentUpon>Parametros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Configuracoes\Parametrizacoes\Classes.resx">
       <DependentUpon>Classes.cs</DependentUpon>

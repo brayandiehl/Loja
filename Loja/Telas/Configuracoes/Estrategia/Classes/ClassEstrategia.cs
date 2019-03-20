@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Loja.Classes;
 
 namespace Loja.Telas.Configuracoes.Estrategia.Classes
 {
@@ -12,6 +13,8 @@ namespace Loja.Telas.Configuracoes.Estrategia.Classes
     {
         public static string Erro { get; private set; }
         public static string QuantidadeRegistros { get; private set; }
+        public static string Parametro { get; private set; }
+        public static string DescricaoParametro { get; private set; }
 
         public static bool RetornarEstrategias(DataGridView dgw)
         {
@@ -34,7 +37,7 @@ namespace Loja.Telas.Configuracoes.Estrategia.Classes
                     else if (dgw.Name.Trim().Equals("TabelaClasses"))
                     {
                         query = "select c.classe, c.nome_classe, c.classe_ativa from classes_estrategias c where c.classe_ativa = '1' order by c.id_classe desc";
-                    }
+                    } 
                     MySqlCommand cm = new MySqlCommand(query, conn);
                     MySqlDataReader dr = cm.ExecuteReader();
                     int cont = 0;
@@ -49,8 +52,13 @@ namespace Loja.Telas.Configuracoes.Estrategia.Classes
                             dgw.Rows.Insert(cont, dr["classe"], dr["nome_classe"]);
                         }
 
-                        dgw.Rows[cont].Cells["Classe"].ReadOnly = true;
-                        dgw.Rows[cont].Cells["DescricaoClasse"].ReadOnly = true;
+                        if (dgw.Name.Trim().Equals("TabelaClassesEstrategia"))
+                        {
+                            dgw.Rows[cont].Cells["Descricao"].ReadOnly = false;
+                     
+                        }
+                        //dgw.Rows[cont].Cells["Classe"].ReadOnly = true;
+                        //dgw.Rows[cont].Cells["DescricaoClasse"].ReadOnly = true;
                     }
 
                     dr.Close();
@@ -158,7 +166,6 @@ namespace Loja.Telas.Configuracoes.Estrategia.Classes
 
         public static bool RetornaParametros(DataGridView dgv, string classe)
         {
-
             try
             {
                 if (!string.IsNullOrEmpty(classe))
@@ -180,9 +187,6 @@ namespace Loja.Telas.Configuracoes.Estrategia.Classes
                         {
 
                             dgv.Rows.Insert(cont, dr["estrategia"], dr["parametro"], dr["nome_estrategia"]);
-
-                            //dgv.Rows[cont].Cells["Classe"].ReadOnly = true;
-                            //dgv.Rows[cont].Cells["DescricaoClasse"].ReadOnly = true;
                         }
 
                         dr.Close();
@@ -194,8 +198,6 @@ namespace Loja.Telas.Configuracoes.Estrategia.Classes
                         Erro = "Falha abrir conexão com o banco de dados";
                         return false;
                     }
-
-
                 }
                 else
                 {
@@ -208,8 +210,128 @@ namespace Loja.Telas.Configuracoes.Estrategia.Classes
                 Erro = ex.Message;
                 return false;
             }
-
-            return false;
         }
+
+        public static bool RetornaValorParametro(string classe, string estrategia)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(classe))
+                {
+                    Erro = "Classe não pode ser em branca";
+                    return false;
+                }
+                if (string.IsNullOrEmpty(estrategia))
+                {
+                    Erro = "Estratégia não pode ser em branca";
+                    return false;
+                }
+
+                var conn = Loja.Classes.Banco.ConectaMysql();
+
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+                var query = "select s.parametro, s.nome_estrategia from estrategias s where s.classe = '" + classe + "' and s.estrategia = '" + estrategia + "'";
+                MySqlCommand cm = new MySqlCommand(query, conn);
+                MySqlDataReader dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    Parametro = dr["parametro"].ToString();
+                    DescricaoParametro = dr["nome_estrategia"].ToString();
+                }
+
+                dr.Close();
+                conn.Close();
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                Erro = ex.Message;
+                return false;
+            }
+        }
+
+        public static bool AtualizaValorParametro(string classe, string estrategia, string parametro)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(classe))
+                {
+                    Erro = "Clase não pode estar em branco";
+                    return false;
+                }
+                if (string.IsNullOrEmpty(estrategia))
+                {
+                    Erro = "Estratégia não pode estar em branco";
+                    return false;
+                }
+                if (string.IsNullOrEmpty(parametro))
+                {
+                    Erro = "Parametro não pode estar em branco";
+                    return false;
+                }
+
+                string query = "update estrategias set parametro = '" + parametro + "', usuario_modificacao = '" + Program.UsuarioLogado + "' where estrategia = '" + estrategia + "' and classe = '" + classe + "'";
+
+                if (!Banco.ExecutaQuery(query))
+                {
+                    Erro = Banco.Erro;
+                    return false;
+                }
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                Erro = ex.Message;
+                return false;
+            }
+        }
+
+        public static bool AtualizaValorParametroDescricao(string classe, string estrategia, string nome_estrategia)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(classe))
+                {
+                    Erro = "Clase não pode estar em branco";
+                    return false;
+                }
+                if (string.IsNullOrEmpty(estrategia))
+                {
+                    Erro = "Estratégia não pode estar em branco";
+                    return false;
+                }
+                if (string.IsNullOrEmpty(nome_estrategia))
+                {
+                    Erro = "Nome da Estratégia não pode estar em branco";
+                    return false;
+                }
+
+                string query = "update estrategias set nome_estrategia = '" + nome_estrategia + "', usuario_modificacao = '" + Program.UsuarioLogado + "' where estrategia = '" + estrategia + "' and classe = '" + classe + "'";
+
+                if (!Banco.ExecutaQuery(query))
+                {
+                    Erro = Banco.Erro;
+                    return false;
+                }
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                Erro = ex.Message;
+                return false;
+            }
+        }
+
+
+
+
+
+
     }
 }

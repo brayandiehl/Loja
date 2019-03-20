@@ -10,12 +10,16 @@ namespace Loja
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
+        /// 
+        public static string UsuarioLogado { get; set; }
+
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Telas.Configuracoes.Estrategia.Estrategias());
+            UsuarioLogado = "BRAYAN";
+            Application.Run(new Telas.Configuracoes.Estrategia.EstrategiasDinamica());
         }
     }
 }
