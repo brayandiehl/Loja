@@ -16,12 +16,13 @@ namespace Loja.Telas.Configuracoes.Estrategia
         {
             InitializeComponent();
             Classes.ClassEstrategia.RetornarEstrategias(TabelaClasses);
+           TabelaStatus.Rows[0].Cells[1].ReadOnly = true;
         }
 
         private void BtSalvar_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            for (int a = 0; a < TabelaStatus.RowCount; a++)
+            for (int a = 0; a < TabelaStatus.RowCount -1; a++)
             {
                 //Pega os valores do Parametro
                 if (string.IsNullOrEmpty((string)TabelaStatus.Rows[a].Cells["ValorParametro"].Value))
@@ -65,31 +66,17 @@ namespace Loja.Telas.Configuracoes.Estrategia
                 var DescricaoAtual = TabelaStatus.Rows[a].Cells["Descricao"].Value.ToString();
                 Classes.ClassEstrategia.RetornaValorParametro(ClasseSelecionada, TabelaStatus.Rows[a].Cells["Descricao"].Value.ToString());
 
-                if (!ParametroAtual.Equals(Classes.ClassEstrategia.DescricaoParametro))
+                if (!DescricaoAtual.Equals(Classes.ClassEstrategia.DescricaoParametro))
                 {
-                    if (!Classes.ClassEstrategia.AtualizaValorParametroDescricao(ClasseSelecionada, TabelaStatus.Rows[a].Cells["Descricao"].Value.ToString(), ParametroAtual))
+                    if (!Classes.ClassEstrategia.AtualizaValorParametroDescricao(ClasseSelecionada, TabelaStatus.Rows[a].Cells["Estrategia"].Value.ToString(), DescricaoAtual))
                     {
-                        if (MessageBox.Show("Erro ao Atualizar\nClasse:  " + ClasseSelecionada + "\nDescricção da Estratégia: " + TabelaStatus.Rows[a].Cells["Estrategia"].Value.ToString() + "\nParametro: " + ParametroAtual + "\nErro: " + Classes.ClassEstrategia.Erro + "\n\nDEsejá continuar sem atualizar o parametro acima?", "ERRO", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.No)
+                        if (MessageBox.Show("Erro ao Atualizar\nClasse:  " + ClasseSelecionada + "\nDescricção da Estratégia: " + TabelaStatus.Rows[a].Cells["Descricao"].Value.ToString() + "\nParametro: " + ParametroAtual + "\nErro: " + Classes.ClassEstrategia.Erro + "\n\nDEsejá continuar sem atualizar o parametro acima?", "ERRO", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.No)
                         {
                             Cursor = Cursors.Default;
                             return;
                         }
                     }
                 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             }
 
@@ -102,6 +89,8 @@ namespace Loja.Telas.Configuracoes.Estrategia
             {
                 ClasseSelecionada = TabelaClasses.Rows[e.RowIndex].Cells["Classe"].Value.ToString();
                 Classes.ClassEstrategia.RetornaParametros(TabelaStatus, ClasseSelecionada);
+                //TabelaStatus.Rows[0].Cells[1].ReadOnly = false;
+
             }
         }
 

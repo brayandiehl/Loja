@@ -19,7 +19,7 @@ namespace Loja
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             UsuarioLogado = "BRAYAN";
-            Application.Run(new Telas.Configuracoes.Estrategia.EstrategiasDinamica());
+            Application.Run(new Telas.Configuracoes.Estrategia.Estrategias());
         }
     }
 }

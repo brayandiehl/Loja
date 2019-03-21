@@ -37,7 +37,7 @@ namespace Loja.Telas.Configuracoes.Estrategia.Classes
                     else if (dgw.Name.Trim().Equals("TabelaClasses"))
                     {
                         query = "select c.classe, c.nome_classe, c.classe_ativa from classes_estrategias c where c.classe_ativa = '1' order by c.id_classe desc";
-                    } 
+                    }
                     MySqlCommand cm = new MySqlCommand(query, conn);
                     MySqlDataReader dr = cm.ExecuteReader();
                     int cont = 0;
@@ -52,13 +52,13 @@ namespace Loja.Telas.Configuracoes.Estrategia.Classes
                             dgw.Rows.Insert(cont, dr["classe"], dr["nome_classe"]);
                         }
 
-                        if (dgw.Name.Trim().Equals("TabelaClassesEstrategia"))
+                        if (dgw.Name.Trim().Equals("TabelaStatus"))
                         {
-                            dgw.Rows[cont].Cells["Descricao"].ReadOnly = false;
-                     
+                            //   
+
                         }
-                        //dgw.Rows[cont].Cells["Classe"].ReadOnly = true;
-                        //dgw.Rows[cont].Cells["DescricaoClasse"].ReadOnly = true;
+                        dgw.Rows[cont].Cells["Classe"].ReadOnly = true;
+                        dgw.Rows[cont].Cells["DescricaoClasse"].ReadOnly = true;
                     }
 
                     dr.Close();
@@ -187,6 +187,12 @@ namespace Loja.Telas.Configuracoes.Estrategia.Classes
                         {
 
                             dgv.Rows.Insert(cont, dr["estrategia"], dr["parametro"], dr["nome_estrategia"]);
+
+                            if (dgv.Name.Equals("TabelaStatus"))
+                            {
+                                dgv.Rows[cont].Cells[0].ReadOnly = true;
+                            }
+
                         }
 
                         dr.Close();
@@ -216,6 +222,8 @@ namespace Loja.Telas.Configuracoes.Estrategia.Classes
         {
             try
             {
+                Parametro = null;
+                DescricaoParametro = null;
                 if (string.IsNullOrEmpty(classe))
                 {
                     Erro = "Classe não pode ser em branca";
@@ -327,10 +335,6 @@ namespace Loja.Telas.Configuracoes.Estrategia.Classes
                 return false;
             }
         }
-
-
-
-
 
 
     }

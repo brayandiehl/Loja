@@ -30,15 +30,15 @@
         {
             this.BtCancelar = new System.Windows.Forms.Button();
             this.BtSalvar = new System.Windows.Forms.Button();
-            this.TabelaStatus = new System.Windows.Forms.DataGridView();
             this.TabelaClasses = new System.Windows.Forms.DataGridView();
             this.Classe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescricaoClasse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TabelaStatus = new System.Windows.Forms.DataGridView();
             this.Estrategia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorParametro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.TabelaStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabelaClasses)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TabelaStatus)).BeginInit();
             this.SuspendLayout();
             // 
             // BtCancelar
@@ -59,26 +59,6 @@
             this.BtSalvar.Text = "Salvar";
             this.BtSalvar.UseVisualStyleBackColor = true;
             this.BtSalvar.Click += new System.EventHandler(this.BtSalvar_Click);
-            // 
-            // TabelaStatus
-            // 
-            this.TabelaStatus.AllowUserToAddRows = false;
-            this.TabelaStatus.AllowUserToDeleteRows = false;
-            this.TabelaStatus.AllowUserToResizeColumns = false;
-            this.TabelaStatus.AllowUserToResizeRows = false;
-            this.TabelaStatus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TabelaStatus.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Estrategia,
-            this.ValorParametro,
-            this.Descricao});
-            this.TabelaStatus.Location = new System.Drawing.Point(12, 162);
-            this.TabelaStatus.Name = "TabelaStatus";
-           // this.TabelaStatus.ShowCellToolTips = false;
-            this.TabelaStatus.ShowEditingIcon = false;
-           // this.TabelaStatus.ShowRowErrors = false;
-            this.TabelaStatus.Size = new System.Drawing.Size(594, 295);
-            this.TabelaStatus.TabIndex = 42;
-            
             // 
             // TabelaClasses
             // 
@@ -116,21 +96,33 @@
             this.DescricaoClasse.Name = "DescricaoClasse";
             this.DescricaoClasse.Width = 490;
             // 
+            // TabelaStatus
+            // 
+            this.TabelaStatus.AllowUserToResizeColumns = false;
+            this.TabelaStatus.AllowUserToResizeRows = false;
+            this.TabelaStatus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TabelaStatus.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Estrategia,
+            this.ValorParametro,
+            this.Descricao});
+            this.TabelaStatus.Location = new System.Drawing.Point(12, 162);
+            this.TabelaStatus.Name = "TabelaStatus";
+            this.TabelaStatus.Size = new System.Drawing.Size(594, 297);
+            this.TabelaStatus.TabIndex = 45;
+            // 
             // Estrategia
             // 
             this.Estrategia.HeaderText = "Estrategia";
-            this.Estrategia.MaxInputLength = 10;
             this.Estrategia.Name = "Estrategia";
-            this.Estrategia.ReadOnly = true;
             // 
             // ValorParametro
             // 
-            this.ValorParametro.HeaderText = "Parâmetro";
+            this.ValorParametro.HeaderText = "ValorParametro";
             this.ValorParametro.Name = "ValorParametro";
             // 
             // Descricao
             // 
-            this.Descricao.HeaderText = "Descrição";
+            this.Descricao.HeaderText = "Descricao";
             this.Descricao.Name = "Descricao";
             this.Descricao.Width = 350;
             // 
@@ -139,14 +131,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 500);
+            this.Controls.Add(this.TabelaStatus);
             this.Controls.Add(this.BtCancelar);
             this.Controls.Add(this.BtSalvar);
-            this.Controls.Add(this.TabelaStatus);
             this.Controls.Add(this.TabelaClasses);
             this.Name = "Estrategias";
             this.Text = "Estrategias";
-            ((System.ComponentModel.ISupportInitialize)(this.TabelaStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabelaClasses)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TabelaStatus)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -155,10 +147,10 @@
 
         private System.Windows.Forms.Button BtCancelar;
         private System.Windows.Forms.Button BtSalvar;
-        private System.Windows.Forms.DataGridView TabelaStatus;
         private System.Windows.Forms.DataGridView TabelaClasses;
         private System.Windows.Forms.DataGridViewTextBoxColumn Classe;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescricaoClasse;
+        private System.Windows.Forms.DataGridView TabelaStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estrategia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorParametro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
