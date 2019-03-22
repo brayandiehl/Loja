@@ -336,6 +336,48 @@ namespace Loja.Telas.Configuracoes.Estrategia.Classes
             }
         }
 
+        public static bool InsereNovoParametro(string classe, string estrategia, string parametro, string nome_parametro)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(classe))
+                {
+                    Erro = "Classe não pode estar em branco";
+                    return false;
+                }
+                if (string.IsNullOrEmpty(estrategia))
+                {
+                    Erro = "Estrategia não pode estar em branco";
+                    return false;
+                }
+                if (string.IsNullOrEmpty(parametro))
+                {
+                    Erro = "Parametro não pode estar em branco";
+                    return false;
+                }
+                if (string.IsNullOrEmpty(nome_parametro))
+                {
+                    Erro = "Nome do Parametro não pode estar em branco";
+                    return false;
+                }
+                var query = "insert into estrategias (classe, estrategia, nome_estrategia, parametro, usuario_criacao, data_criacao) values ('" + classe + "','" + estrategia + "','" + nome_parametro + "','" + Loja.Program.UsuarioLogado + "','" + parametro + "',NOW())";
+
+                if (!Banco.ExecutaQuery(query))
+                {
+                    Erro = Banco.Erro;
+                    return false;
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Erro = ex.Message;
+                return false;
+            }
+
+
+        }
+
 
     }
 }
