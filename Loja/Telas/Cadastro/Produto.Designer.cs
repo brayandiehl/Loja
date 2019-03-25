@@ -34,9 +34,12 @@
             this.NomeProduto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Descricao = new System.Windows.Forms.TextBox();
-            this.Marca = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Dados = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.Marca = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.EstoqueAtual = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -55,7 +58,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.PrdAtivo = new System.Windows.Forms.CheckBox();
             this.AlertaProdutoVencer = new System.Windows.Forms.CheckBox();
-            this.ControleLote = new System.Windows.Forms.CheckBox();
             this.ControlaValidade = new System.Windows.Forms.CheckBox();
             this.AlertaEstoqueMinimo = new System.Windows.Forms.CheckBox();
             this.ImagemProduto = new System.Windows.Forms.PictureBox();
@@ -64,8 +66,6 @@
             this.BtLocalizar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.qtdCodBarras = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Dados.SuspendLayout();
             this.Configuracao.SuspendLayout();
@@ -107,7 +107,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 9);
+            this.label3.Location = new System.Drawing.Point(2, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 4;
@@ -119,16 +119,6 @@
             this.Descricao.Name = "Descricao";
             this.Descricao.Size = new System.Drawing.Size(688, 20);
             this.Descricao.TabIndex = 40;
-            // 
-            // Marca
-            // 
-            this.Marca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.Marca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Marca.FormattingEnabled = true;
-            this.Marca.Location = new System.Drawing.Point(89, 32);
-            this.Marca.Name = "Marca";
-            this.Marca.Size = new System.Drawing.Size(293, 21);
-            this.Marca.TabIndex = 60;
             // 
             // tabControl1
             // 
@@ -143,7 +133,9 @@
             // Dados
             // 
             this.Dados.Controls.Add(this.label7);
-            this.Dados.Controls.Add(this.qtdCodBarras);
+            this.Dados.Controls.Add(this.textBox2);
+            this.Dados.Controls.Add(this.checkBox2);
+            this.Dados.Controls.Add(this.Marca);
             this.Dados.Controls.Add(this.label14);
             this.Dados.Controls.Add(this.EstoqueAtual);
             this.Dados.Controls.Add(this.label13);
@@ -156,7 +148,6 @@
             this.Dados.Controls.Add(this.GarantiasEmDias);
             this.Dados.Controls.Add(this.Categoria);
             this.Dados.Controls.Add(this.label4);
-            this.Dados.Controls.Add(this.Marca);
             this.Dados.Controls.Add(this.label5);
             this.Dados.Controls.Add(this.label3);
             this.Dados.Controls.Add(this.Descricao);
@@ -168,14 +159,55 @@
             this.Dados.Text = "Dados";
             this.Dados.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(2, 141);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 13);
+            this.label7.TabIndex = 123;
+            this.label7.Text = "Valor Promoção:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(88, 138);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(101, 20);
+            this.textBox2.TabIndex = 122;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(195, 141);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(74, 17);
+            this.checkBox2.TabIndex = 123;
+            this.checkBox2.Text = "Promoção";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // Marca
+            // 
+            this.Marca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Marca.FormattingEnabled = true;
+            this.Marca.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.Marca.Location = new System.Drawing.Point(89, 32);
+            this.Marca.Name = "Marca";
+            this.Marca.Size = new System.Drawing.Size(293, 21);
+            this.Marca.TabIndex = 60;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(229, 89);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 13);
+            this.label14.Size = new System.Drawing.Size(76, 13);
             this.label14.TabIndex = 28;
-            this.label14.Text = "Estoque Atual";
+            this.label14.Text = "Estoque Atual:";
             // 
             // EstoqueAtual
             // 
@@ -188,11 +220,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 115);
+            this.label13.Location = new System.Drawing.Point(2, 115);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(82, 13);
+            this.label13.Size = new System.Drawing.Size(87, 13);
             this.label13.TabIndex = 26;
-            this.label13.Text = "Estoque Minimo";
+            this.label13.Text = "Estoque Mínimo:";
             // 
             // EstoqueMinimo
             // 
@@ -204,16 +236,16 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 89);
+            this.label10.Location = new System.Drawing.Point(2, 89);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 13);
+            this.label10.Size = new System.Drawing.Size(68, 13);
             this.label10.TabIndex = 15;
-            this.label10.Text = "Valor Venda";
+            this.label10.Text = "Valor Venda:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 63);
+            this.label8.Location = new System.Drawing.Point(2, 63);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 13);
             this.label8.TabIndex = 18;
@@ -252,7 +284,6 @@
             // 
             // Categoria
             // 
-            this.Categoria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.Categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Categoria.FormattingEnabled = true;
             this.Categoria.Location = new System.Drawing.Point(458, 32);
@@ -272,7 +303,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 35);
+            this.label5.Location = new System.Drawing.Point(2, 35);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 9;
@@ -284,7 +315,6 @@
             this.Configuracao.Controls.Add(this.label15);
             this.Configuracao.Controls.Add(this.PrdAtivo);
             this.Configuracao.Controls.Add(this.AlertaProdutoVencer);
-            this.Configuracao.Controls.Add(this.ControleLote);
             this.Configuracao.Controls.Add(this.ControlaValidade);
             this.Configuracao.Controls.Add(this.AlertaEstoqueMinimo);
             this.Configuracao.Controls.Add(this.ImagemProduto);
@@ -338,16 +368,6 @@
             this.AlertaProdutoVencer.TabIndex = 40;
             this.AlertaProdutoVencer.Text = "Alertar Produto a Vencer";
             this.AlertaProdutoVencer.UseVisualStyleBackColor = true;
-            // 
-            // ControleLote
-            // 
-            this.ControleLote.AutoSize = true;
-            this.ControleLote.Location = new System.Drawing.Point(6, 29);
-            this.ControleLote.Name = "ControleLote";
-            this.ControleLote.Size = new System.Drawing.Size(89, 17);
-            this.ControleLote.TabIndex = 20;
-            this.ControleLote.Text = "Controla Lote";
-            this.ControleLote.UseVisualStyleBackColor = true;
             // 
             // ControlaValidade
             // 
@@ -418,26 +438,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(12, 41);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.Size = new System.Drawing.Size(65, 13);
             this.label6.TabIndex = 222;
-            this.label6.Text = "Cod. Barras";
-            // 
-            // qtdCodBarras
-            // 
-            this.qtdCodBarras.Enabled = false;
-            this.qtdCodBarras.Location = new System.Drawing.Point(318, 112);
-            this.qtdCodBarras.Name = "qtdCodBarras";
-            this.qtdCodBarras.Size = new System.Drawing.Size(64, 20);
-            this.qtdCodBarras.TabIndex = 125;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(210, 115);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 13);
-            this.label7.TabIndex = 122;
-            this.label7.Text = "Qtde. P/ Cód barras";
+            this.label6.Text = "Cod. Barras:";
             // 
             // Produto
             // 
@@ -476,7 +479,6 @@
         private System.Windows.Forms.TextBox NomeProduto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Descricao;
-        private System.Windows.Forms.ComboBox Marca;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Dados;
         private System.Windows.Forms.TabPage Configuracao;
@@ -491,7 +493,6 @@
         private System.Windows.Forms.TextBox ValorVenda;
         private System.Windows.Forms.CheckBox AlertaEstoqueMinimo;
         private System.Windows.Forms.CheckBox ControlaValidade;
-        private System.Windows.Forms.CheckBox ControleLote;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox EstoqueMinimo;
         private System.Windows.Forms.Label label14;
@@ -506,7 +507,9 @@
         private System.Windows.Forms.Button BtAdicionarImagem;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox Marca;
+        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox qtdCodBarras;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

@@ -11,20 +11,85 @@ create table classes_estrategias(
 	data_modificacao datetime default now()
 )
 
-
 create table estrategias (
 	id_estrategia int(10) primary key auto_increment,
 	classe varchar(255) not null,
 	estrategia varchar(255) not null,
 	nome_estrategia varchar(255) not null,
-	parametro varchar(255) default 0,
+	parametro varchar(255) not null default 0,
 	usuario_criacao varchar(50) not null,
 	data_criacao datetime not null,
 	usuario_modificacao varchar(50),
-	data_alteracao datetime default now()
-	
+	data_alteracao datetime default now()	
 )
 
 ALTER TABLE estrategias
 ADD CONSTRAINT FK_classe
 FOREIGN KEY (classe) REFERENCES classes_estrategias(classe);
+
+
+insert into classes_estrategias (classe, nome_classe, classe_ativa, usuario_criacao, data_criacao) values ('ACOES','AÇÕES DO SISTEMA', '1', 'BRAYAN', now());
+
+insert into estrategias (classe, estrategia, nome_estrategia, parametro, usuario_criacao, data_criacao) values ('ACOES', 'LOCALIZA_CEP','Localizar CEP Automático 1 = sim 0 = não', '1','BRAYAN', now());
+
+insert into estrategias (classe, estrategia, nome_estrategia, parametro, usuario_criacao, data_criacao) values ('ACOES', 'VALIDA_CPF_CNPJ','Valida se o CNPJ ou CPF está correto 1 = sim 0 = não', '1','BRAYAN', now());
+
+insert into classes_estrategias (classe, nome_classe, classe_ativa, usuario_criacao, data_criacao) values ('GRUPO_ENT','GRUPO DA ENTIDADE', '1', 'BRAYAN', now());
+
+insert into estrategias (classe, estrategia, nome_estrategia, parametro, usuario_criacao, data_criacao) values ('GRUPO_ENT', 'FOR','Fornecedor', 'F','BRAYAN', now());
+
+insert into estrategias (classe, estrategia, nome_estrategia, parametro, usuario_criacao, data_criacao) values ('GRUPO_ENT', 'CLI','Cliente', 'C','BRAYAN', now());
+
+create table entidade (
+	id_entidade int(10) auto_increment primary key,
+	cpf_cnpj varchar(14) unique key,
+	flg_ativo char(1) not null default 1,
+	razao_social varchar(255) not null,
+	grupo_parametro varchar(255) not null,
+	data_nascimento date not null,
+	cep varchar(8),
+	rua varchar(255),
+	cidade varchar(255),
+	bairro varchar(255),
+	numero varchar(50),
+	complemento varchar(255),
+	estado varchar(100),
+	email varchar(255),
+	facebook varchar(255),
+	celular1 varchar(15),
+	flg_whatsapp_celular1 char(1),
+	nome_celular1 varchar(200),
+	celular2 varchar(15),
+	flg_whatsapp_celular2 char(1),
+	nome_celular2 varchar(200),
+	flg_cliente_vip char(1),
+	flg_notificar_produto_novo char(1),
+	flg_notificar_vencimento char(1),
+	flg_notificar_promocao char(1),
+	flg_aceita_fiado char(1),
+	flg_notificar_aniversario char(1),
+	nome_foto varchar(255),
+	observacao varchar(255),
+	status_entidade char(1),
+	data_cadastro datetime,
+	usuario_cadastro varchar(50)not null,
+	data_alteracao datetime default now(),
+	usuario_alteracao varchar(50)
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

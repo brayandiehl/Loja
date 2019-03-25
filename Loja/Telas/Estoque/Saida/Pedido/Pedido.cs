@@ -30,5 +30,11 @@ namespace Loja.Telas.Estoque.Saida.Pedido
         {
 
         }
+
+        private void BtFinalizar_Click(object sender, EventArgs e)
+        {
+            PagamentoPedido pp = new PagamentoPedido();
+            pp.Show();
+        }
     }
 }

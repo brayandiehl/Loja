@@ -24,5 +24,16 @@ namespace Loja.Telas.Estoque.Recebimento.CadastraRecebimento
             
 
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtSalvar_Click(object sender, EventArgs e)
+        {
+            Loja.Telas.Estoque.Recebimento.CadastraRecebimento.Pagamento pag = new Pagamento();
+            pag.Show();
+        }
     }
 }

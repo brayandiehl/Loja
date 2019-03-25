@@ -106,10 +106,10 @@
             // VlDinheiro
             // 
             this.VlDinheiro.FillWeight = 69.28934F;
-            this.VlDinheiro.HeaderText = "ValorDinheiro";
+            this.VlDinheiro.HeaderText = "Valor Dinheiro";
             this.VlDinheiro.MinimumWidth = 80;
             this.VlDinheiro.Name = "VlDinheiro";
-            this.VlDinheiro.Width = 95;
+            this.VlDinheiro.Width = 98;
             // 
             // Total
             // 

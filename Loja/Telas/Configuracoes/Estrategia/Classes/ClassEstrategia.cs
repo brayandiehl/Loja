@@ -360,7 +360,7 @@ namespace Loja.Telas.Configuracoes.Estrategia.Classes
                     Erro = "Nome do Parametro não pode estar em branco";
                     return false;
                 }
-                var query = "insert into estrategias (classe, estrategia, nome_estrategia, parametro, usuario_criacao, data_criacao) values ('" + classe + "','" + estrategia + "','" + nome_parametro + "','" + Loja.Program.UsuarioLogado + "','" + parametro + "',NOW())";
+                var query = "insert into estrategias (classe, estrategia, nome_estrategia,  usuario_criacao, parametro, data_criacao) values ('" + classe + "','" + estrategia + "','" + nome_parametro + "','" + Loja.Program.UsuarioLogado + "','" + parametro + "',NOW())";
 
                 if (!Banco.ExecutaQuery(query))
                 {
@@ -376,6 +376,51 @@ namespace Loja.Telas.Configuracoes.Estrategia.Classes
             }
 
 
+        }
+
+        public static bool RetornaDescricaoParametro(string classe, string parametro)
+        {
+            try
+            {
+                Parametro = null;
+                DescricaoParametro = null;
+                if (string.IsNullOrEmpty(classe))
+                {
+                    Erro = "Classe não pode ser em branca";
+                    return false;
+                }
+               
+                if (string.IsNullOrEmpty(parametro))
+                {
+                    Erro = "Parametro não pode ser em branco";
+                    return false;
+                }
+
+                var conn = Loja.Classes.Banco.ConectaMysql();
+
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+                var query = "select s.parametro, s.nome_estrategia from estrategias s where s.classe = '" + classe + "'  and s.parametro = '" + parametro + "'";
+                MySqlCommand cm = new MySqlCommand(query, conn);
+                MySqlDataReader dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    //Parametro = dr["parametro"].ToString();
+                    DescricaoParametro = dr["nome_estrategia"].ToString();
+                }
+
+                dr.Close();
+                conn.Close();
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                Erro = ex.Message;
+                return false;
+            }
         }
 
 

@@ -98,6 +98,11 @@ namespace Loja.Telas.Configuracoes.Estrategia
                         MessageBox.Show("Erro ao inserir novo parametro\nErro: " + ClassEstrategia.Erro, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
+                    else
+                    {
+                        MessageBox.Show("Estratégia " + TabelaStatus.Rows[a].Cells["Estrategia"].Value.ToString() + " Inserida com sucesso",  "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                    }
                 }
 
 

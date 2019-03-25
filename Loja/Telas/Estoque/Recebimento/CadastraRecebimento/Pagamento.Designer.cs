@@ -34,28 +34,28 @@
             this.FormaPagamento = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Avista = new System.Windows.Forms.TabPage();
-            this.Parcelado = new System.Windows.Forms.TabPage();
-            this.DataVencimentoAvista = new System.Windows.Forms.MaskedTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.TipoPagamentoAvista = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.DataVencimentoParcelado = new System.Windows.Forms.MaskedTextBox();
-            this.TipoPagamentoParcelado = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.NumeroParcelas = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.DataVencimentoAvista = new System.Windows.Forms.MaskedTextBox();
+            this.Parcelado = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.BtSalvarData = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.NumParcela = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
+            this.NumeroParcelas = new System.Windows.Forms.TextBox();
+            this.TipoPagamentoParcelado = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.DataVencimentoParcelado = new System.Windows.Forms.MaskedTextBox();
             this.BtSalvar = new System.Windows.Forms.Button();
             this.BtCancelar = new System.Windows.Forms.Button();
-            this.BtSalvarData = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Avista.SuspendLayout();
             this.Parcelado.SuspendLayout();
@@ -120,6 +120,42 @@
             this.Avista.Text = "Avista";
             this.Avista.UseVisualStyleBackColor = true;
             // 
+            // TipoPagamentoAvista
+            // 
+            this.TipoPagamentoAvista.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TipoPagamentoAvista.FormattingEnabled = true;
+            this.TipoPagamentoAvista.Location = new System.Drawing.Point(287, 6);
+            this.TipoPagamentoAvista.Name = "TipoPagamentoAvista";
+            this.TipoPagamentoAvista.Size = new System.Drawing.Size(232, 21);
+            this.TipoPagamentoAvista.TabIndex = 40;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(178, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Tipo de Pagamento:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Data Pagamento:";
+            // 
+            // DataVencimentoAvista
+            // 
+            this.DataVencimentoAvista.Location = new System.Drawing.Point(104, 6);
+            this.DataVencimentoAvista.Mask = "00/00/0000";
+            this.DataVencimentoAvista.Name = "DataVencimentoAvista";
+            this.DataVencimentoAvista.Size = new System.Drawing.Size(68, 20);
+            this.DataVencimentoAvista.TabIndex = 30;
+            this.DataVencimentoAvista.ValidatingType = typeof(System.DateTime);
+            // 
             // Parcelado
             // 
             this.Parcelado.Controls.Add(this.label9);
@@ -142,93 +178,48 @@
             this.Parcelado.Text = "Parcelado";
             this.Parcelado.UseVisualStyleBackColor = true;
             // 
-            // DataVencimentoAvista
+            // label9
             // 
-            this.DataVencimentoAvista.Location = new System.Drawing.Point(104, 6);
-            this.DataVencimentoAvista.Mask = "00/00/0000";
-            this.DataVencimentoAvista.Name = "DataVencimentoAvista";
-            this.DataVencimentoAvista.Size = new System.Drawing.Size(68, 20);
-            this.DataVencimentoAvista.TabIndex = 30;
-            this.DataVencimentoAvista.ValidatingType = typeof(System.DateTime);
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(7, 61);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(89, 13);
+            this.label9.TabIndex = 102;
+            this.label9.Text = "Dias Por Parcela:";
             // 
-            // label3
+            // textBox1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Data Vencimento:";
+            this.textBox1.Location = new System.Drawing.Point(104, 58);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(68, 20);
+            this.textBox1.TabIndex = 101;
             // 
-            // label4
+            // label8
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(178, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Tipo de Pagamento:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(72, 142);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(64, 13);
+            this.label8.TabIndex = 82;
+            this.label8.Text = "Pagamento:";
             // 
-            // TipoPagamentoAvista
+            // maskedTextBox1
             // 
-            this.TipoPagamentoAvista.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TipoPagamentoAvista.FormattingEnabled = true;
-            this.TipoPagamentoAvista.Location = new System.Drawing.Point(287, 6);
-            this.TipoPagamentoAvista.Name = "TipoPagamentoAvista";
-            this.TipoPagamentoAvista.Size = new System.Drawing.Size(232, 21);
-            this.TipoPagamentoAvista.TabIndex = 40;
+            this.maskedTextBox1.Location = new System.Drawing.Point(144, 139);
+            this.maskedTextBox1.Mask = "00/00/0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(68, 20);
+            this.maskedTextBox1.TabIndex = 90;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
             // 
-            // label5
+            // BtSalvarData
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Data Vencimento:";
-            // 
-            // DataVencimentoParcelado
-            // 
-            this.DataVencimentoParcelado.Location = new System.Drawing.Point(104, 6);
-            this.DataVencimentoParcelado.Mask = "00/00/0000";
-            this.DataVencimentoParcelado.Name = "DataVencimentoParcelado";
-            this.DataVencimentoParcelado.Size = new System.Drawing.Size(68, 20);
-            this.DataVencimentoParcelado.TabIndex = 50;
-            this.DataVencimentoParcelado.ValidatingType = typeof(System.DateTime);
-            // 
-            // TipoPagamentoParcelado
-            // 
-            this.TipoPagamentoParcelado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TipoPagamentoParcelado.FormattingEnabled = true;
-            this.TipoPagamentoParcelado.Location = new System.Drawing.Point(287, 6);
-            this.TipoPagamentoParcelado.Name = "TipoPagamentoParcelado";
-            this.TipoPagamentoParcelado.Size = new System.Drawing.Size(232, 21);
-            this.TipoPagamentoParcelado.TabIndex = 60;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(178, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Tipo de Pagamento:";
-            // 
-            // NumeroParcelas
-            // 
-            this.NumeroParcelas.Location = new System.Drawing.Point(104, 32);
-            this.NumeroParcelas.Name = "NumeroParcelas";
-            this.NumeroParcelas.Size = new System.Drawing.Size(68, 20);
-            this.NumeroParcelas.TabIndex = 70;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 35);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Num. de Parcelas";
+            this.BtSalvarData.Location = new System.Drawing.Point(137, 165);
+            this.BtSalvarData.Name = "BtSalvarData";
+            this.BtSalvarData.Size = new System.Drawing.Size(75, 23);
+            this.BtSalvarData.TabIndex = 100;
+            this.BtSalvarData.Text = "Salvar Data";
+            this.BtSalvarData.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -262,6 +253,58 @@
             this.Data.HeaderText = "Data";
             this.Data.Name = "Data";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 35);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 13);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Num. de Parcelas";
+            // 
+            // NumeroParcelas
+            // 
+            this.NumeroParcelas.Location = new System.Drawing.Point(104, 32);
+            this.NumeroParcelas.Name = "NumeroParcelas";
+            this.NumeroParcelas.Size = new System.Drawing.Size(68, 20);
+            this.NumeroParcelas.TabIndex = 70;
+            // 
+            // TipoPagamentoParcelado
+            // 
+            this.TipoPagamentoParcelado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TipoPagamentoParcelado.FormattingEnabled = true;
+            this.TipoPagamentoParcelado.Location = new System.Drawing.Point(287, 6);
+            this.TipoPagamentoParcelado.Name = "TipoPagamentoParcelado";
+            this.TipoPagamentoParcelado.Size = new System.Drawing.Size(232, 21);
+            this.TipoPagamentoParcelado.TabIndex = 60;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(178, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(103, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Tipo de Pagamento:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Data Pagamento";
+            // 
+            // DataVencimentoParcelado
+            // 
+            this.DataVencimentoParcelado.Location = new System.Drawing.Point(104, 6);
+            this.DataVencimentoParcelado.Mask = "00/00/0000";
+            this.DataVencimentoParcelado.Name = "DataVencimentoParcelado";
+            this.DataVencimentoParcelado.Size = new System.Drawing.Size(68, 20);
+            this.DataVencimentoParcelado.TabIndex = 50;
+            this.DataVencimentoParcelado.ValidatingType = typeof(System.DateTime);
+            // 
             // BtSalvar
             // 
             this.BtSalvar.Location = new System.Drawing.Point(16, 265);
@@ -279,49 +322,6 @@
             this.BtCancelar.TabIndex = 210;
             this.BtCancelar.Text = "Cancelar";
             this.BtCancelar.UseVisualStyleBackColor = true;
-            // 
-            // BtSalvarData
-            // 
-            this.BtSalvarData.Location = new System.Drawing.Point(137, 165);
-            this.BtSalvarData.Name = "BtSalvarData";
-            this.BtSalvarData.Size = new System.Drawing.Size(75, 23);
-            this.BtSalvarData.TabIndex = 100;
-            this.BtSalvarData.Text = "Salvar Data";
-            this.BtSalvarData.UseVisualStyleBackColor = true;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(144, 139);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(68, 20);
-            this.maskedTextBox1.TabIndex = 90;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(72, 142);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 13);
-            this.label8.TabIndex = 82;
-            this.label8.Text = "Vencimento:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(104, 58);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(68, 20);
-            this.textBox1.TabIndex = 101;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 61);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 13);
-            this.label9.TabIndex = 102;
-            this.label9.Text = "Dias Por Parcela:";
             // 
             // Pagamento
             // 

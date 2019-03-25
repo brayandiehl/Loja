@@ -1,4 +1,6 @@
-﻿namespace Loja.Telas.Cadastro
+﻿using System;
+
+namespace Loja.Telas.Cadastro
 {
     partial class Entidade
     {
@@ -92,7 +94,7 @@
             this.Bt_Localizar = new System.Windows.Forms.Button();
             this.AtivarFoto = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.Nascimento = new System.Windows.Forms.MaskedTextBox();
             this.Idade = new System.Windows.Forms.Label();
             this.sss.SuspendLayout();
             this.Endereco.SuspendLayout();
@@ -107,6 +109,8 @@
             this.Cpf_Cnpj.Name = "Cpf_Cnpj";
             this.Cpf_Cnpj.Size = new System.Drawing.Size(119, 20);
             this.Cpf_Cnpj.TabIndex = 20;
+            this.Cpf_Cnpj.Enter += new System.EventHandler(this.Cpf_Cnpj_Enter);
+            this.Cpf_Cnpj.Leave += new System.EventHandler(this.Cpf_Cnpj_Leave);
             // 
             // label1
             // 
@@ -166,6 +170,7 @@
             this.Grupo.Name = "Grupo";
             this.Grupo.Size = new System.Drawing.Size(100, 20);
             this.Grupo.TabIndex = 50;
+            this.Grupo.Enter += new System.EventHandler(this.Grupo_Enter);
             this.Grupo.Leave += new System.EventHandler(this.Grupo_Leave);
             // 
             // DescricaoGrupo
@@ -229,6 +234,7 @@
             this.BtLocalizar.TabIndex = 100;
             this.BtLocalizar.Text = "Localizar";
             this.BtLocalizar.UseVisualStyleBackColor = true;
+            this.BtLocalizar.Click += new System.EventHandler(this.BtLocalizar_Click);
             // 
             // label11
             // 
@@ -268,6 +274,7 @@
             this.label10.Size = new System.Drawing.Size(74, 13);
             this.label10.TabIndex = 10;
             this.label10.Text = "Complemento:";
+            
             // 
             // label9
             // 
@@ -342,6 +349,7 @@
             this.Cep.Name = "Cep";
             this.Cep.Size = new System.Drawing.Size(65, 20);
             this.Cep.TabIndex = 90;
+            this.Cep.Leave += new System.EventHandler(this.Cep_Leave);
             // 
             // Contatos
             // 
@@ -576,6 +584,7 @@
             this.DataCadastro.Size = new System.Drawing.Size(100, 20);
             this.DataCadastro.TabIndex = 70;
             this.DataCadastro.ValidatingType = typeof(System.DateTime);
+            //this.DataCadastro.Text = DateTime.Now.ToString();
             // 
             // DataAlteracao
             // 
@@ -604,6 +613,7 @@
             this.Bt_Salvar.TabIndex = 320;
             this.Bt_Salvar.Text = "Salvar";
             this.Bt_Salvar.UseVisualStyleBackColor = true;
+            this.Bt_Salvar.Click += new System.EventHandler(this.Bt_Salvar_Click);
             // 
             // Foto
             // 
@@ -695,14 +705,15 @@
             this.label20.TabIndex = 341;
             this.label20.Text = "Nascimento:";
             // 
-            // maskedTextBox1
+            // Nascimento
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(477, 90);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(65, 20);
-            this.maskedTextBox1.TabIndex = 81;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.Nascimento.Location = new System.Drawing.Point(477, 90);
+            this.Nascimento.Mask = "00/00/0000";
+            this.Nascimento.Name = "Nascimento";
+            this.Nascimento.Size = new System.Drawing.Size(65, 20);
+            this.Nascimento.TabIndex = 81;
+            this.Nascimento.ValidatingType = typeof(System.DateTime);
+            this.Nascimento.Leave += new System.EventHandler(this.Nascimento_Leave);
             // 
             // Idade
             // 
@@ -719,7 +730,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 388);
             this.Controls.Add(this.Idade);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.Nascimento);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.AtivarFoto);
             this.Controls.Add(this.Bt_Localizar);
@@ -820,7 +831,7 @@
         private System.Windows.Forms.CheckBox Flg_notificar_vencimeneto;
         private System.Windows.Forms.CheckBox Flg_Aceita_Fiado;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox Nascimento;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox Facebook;
         private System.Windows.Forms.Label label21;

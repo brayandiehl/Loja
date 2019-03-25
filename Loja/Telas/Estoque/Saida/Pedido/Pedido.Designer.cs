@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.NrPedido = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,12 +48,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Produto = new System.Windows.Forms.TextBox();
             this.TabelaItens = new System.Windows.Forms.DataGridView();
-            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValorItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtRemoverItem = new System.Windows.Forms.Button();
             this.ValorTotal = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -63,6 +57,12 @@
             this.BtCancelar = new System.Windows.Forms.Button();
             this.CodBarras = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValorItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.TabelaItens)).BeginInit();
             this.SuspendLayout();
             // 
@@ -211,14 +211,14 @@
             // 
             this.TabelaItens.AllowUserToAddRows = false;
             this.TabelaItens.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TabelaItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TabelaItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.TabelaItens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TabelaItens.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Item,
@@ -227,57 +227,19 @@
             this.Quantidade,
             this.ValorItem,
             this.Valor});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TabelaItens.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TabelaItens.DefaultCellStyle = dataGridViewCellStyle4;
             this.TabelaItens.Location = new System.Drawing.Point(15, 164);
             this.TabelaItens.Name = "TabelaItens";
             this.TabelaItens.RowHeadersVisible = false;
             this.TabelaItens.Size = new System.Drawing.Size(872, 321);
             this.TabelaItens.TabIndex = 110;
-            // 
-            // Item
-            // 
-            this.Item.HeaderText = "Item";
-            this.Item.Name = "Item";
-            this.Item.ReadOnly = true;
-            this.Item.Width = 60;
-            // 
-            // CodProduto
-            // 
-            this.CodProduto.HeaderText = "Cód Produto";
-            this.CodProduto.Name = "CodProduto";
-            this.CodProduto.ReadOnly = true;
-            this.CodProduto.Width = 188;
-            // 
-            // Descricao
-            // 
-            this.Descricao.HeaderText = "Descrição";
-            this.Descricao.Name = "Descricao";
-            this.Descricao.ReadOnly = true;
-            this.Descricao.Width = 340;
-            // 
-            // Quantidade
-            // 
-            this.Quantidade.HeaderText = "Quantidade";
-            this.Quantidade.Name = "Quantidade";
-            this.Quantidade.ReadOnly = true;
-            this.Quantidade.Width = 80;
-            // 
-            // ValorItem
-            // 
-            this.ValorItem.HeaderText = "ValorItem";
-            this.ValorItem.Name = "ValorItem";
-            // 
-            // Valor
-            // 
-            this.Valor.HeaderText = "Valor";
-            this.Valor.Name = "Valor";
             // 
             // BtRemoverItem
             // 
@@ -329,6 +291,7 @@
             this.BtFinalizar.TabIndex = 200;
             this.BtFinalizar.Text = "Finalizar";
             this.BtFinalizar.UseVisualStyleBackColor = true;
+            this.BtFinalizar.Click += new System.EventHandler(this.BtFinalizar_Click);
             // 
             // BtCancelar
             // 
@@ -354,6 +317,44 @@
             this.label10.Size = new System.Drawing.Size(62, 13);
             this.label10.TabIndex = 212;
             this.label10.Text = "Cód Barras:";
+            // 
+            // Item
+            // 
+            this.Item.HeaderText = "Item";
+            this.Item.Name = "Item";
+            this.Item.ReadOnly = true;
+            this.Item.Width = 60;
+            // 
+            // CodProduto
+            // 
+            this.CodProduto.HeaderText = "Cód Produto";
+            this.CodProduto.Name = "CodProduto";
+            this.CodProduto.ReadOnly = true;
+            this.CodProduto.Width = 188;
+            // 
+            // Descricao
+            // 
+            this.Descricao.HeaderText = "Descrição";
+            this.Descricao.Name = "Descricao";
+            this.Descricao.ReadOnly = true;
+            this.Descricao.Width = 340;
+            // 
+            // Quantidade
+            // 
+            this.Quantidade.HeaderText = "Quantidade";
+            this.Quantidade.Name = "Quantidade";
+            this.Quantidade.ReadOnly = true;
+            this.Quantidade.Width = 80;
+            // 
+            // ValorItem
+            // 
+            this.ValorItem.HeaderText = "Valor Item";
+            this.ValorItem.Name = "ValorItem";
+            // 
+            // Valor
+            // 
+            this.Valor.HeaderText = "Valor";
+            this.Valor.Name = "Valor";
             // 
             // Pedido
             // 
@@ -421,15 +422,15 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox QtdItens;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button BtFinalizar;
+        private System.Windows.Forms.Button BtCancelar;
+        private System.Windows.Forms.TextBox CodBarras;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Item;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
-        private System.Windows.Forms.Button BtFinalizar;
-        private System.Windows.Forms.Button BtCancelar;
-        private System.Windows.Forms.TextBox CodBarras;
-        private System.Windows.Forms.Label label10;
     }
 }
