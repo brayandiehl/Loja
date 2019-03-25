@@ -62,8 +62,8 @@ namespace Loja.Telas.Cadastro
             this.NomeCelular2 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.NomeCelular1 = new System.Windows.Forms.TextBox();
-            this.whatsappCelular2 = new System.Windows.Forms.CheckBox();
-            this.whatsappCelular1 = new System.Windows.Forms.CheckBox();
+            this.Flg_whatsappCelular2 = new System.Windows.Forms.CheckBox();
+            this.Flg_whatsappCelular1 = new System.Windows.Forms.CheckBox();
             this.Celular2 = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.Celular1 = new System.Windows.Forms.MaskedTextBox();
@@ -274,7 +274,6 @@ namespace Loja.Telas.Cadastro
             this.label10.Size = new System.Drawing.Size(74, 13);
             this.label10.TabIndex = 10;
             this.label10.Text = "Complemento:";
-            
             // 
             // label9
             // 
@@ -357,8 +356,8 @@ namespace Loja.Telas.Cadastro
             this.Contatos.Controls.Add(this.NomeCelular2);
             this.Contatos.Controls.Add(this.label21);
             this.Contatos.Controls.Add(this.NomeCelular1);
-            this.Contatos.Controls.Add(this.whatsappCelular2);
-            this.Contatos.Controls.Add(this.whatsappCelular1);
+            this.Contatos.Controls.Add(this.Flg_whatsappCelular2);
+            this.Contatos.Controls.Add(this.Flg_whatsappCelular1);
             this.Contatos.Controls.Add(this.Celular2);
             this.Contatos.Controls.Add(this.label15);
             this.Contatos.Controls.Add(this.Celular1);
@@ -407,25 +406,25 @@ namespace Loja.Telas.Cadastro
             this.NomeCelular1.Size = new System.Drawing.Size(208, 20);
             this.NomeCelular1.TabIndex = 231;
             // 
-            // whatsappCelular2
+            // Flg_whatsappCelular2
             // 
-            this.whatsappCelular2.AutoSize = true;
-            this.whatsappCelular2.Location = new System.Drawing.Point(192, 87);
-            this.whatsappCelular2.Name = "whatsappCelular2";
-            this.whatsappCelular2.Size = new System.Drawing.Size(76, 17);
-            this.whatsappCelular2.TabIndex = 250;
-            this.whatsappCelular2.Text = "WhatsApp";
-            this.whatsappCelular2.UseVisualStyleBackColor = true;
+            this.Flg_whatsappCelular2.AutoSize = true;
+            this.Flg_whatsappCelular2.Location = new System.Drawing.Point(192, 87);
+            this.Flg_whatsappCelular2.Name = "Flg_whatsappCelular2";
+            this.Flg_whatsappCelular2.Size = new System.Drawing.Size(76, 17);
+            this.Flg_whatsappCelular2.TabIndex = 250;
+            this.Flg_whatsappCelular2.Text = "WhatsApp";
+            this.Flg_whatsappCelular2.UseVisualStyleBackColor = true;
             // 
-            // whatsappCelular1
+            // Flg_whatsappCelular1
             // 
-            this.whatsappCelular1.AutoSize = true;
-            this.whatsappCelular1.Location = new System.Drawing.Point(192, 61);
-            this.whatsappCelular1.Name = "whatsappCelular1";
-            this.whatsappCelular1.Size = new System.Drawing.Size(76, 17);
-            this.whatsappCelular1.TabIndex = 230;
-            this.whatsappCelular1.Text = "WhatsApp";
-            this.whatsappCelular1.UseVisualStyleBackColor = true;
+            this.Flg_whatsappCelular1.AutoSize = true;
+            this.Flg_whatsappCelular1.Location = new System.Drawing.Point(192, 61);
+            this.Flg_whatsappCelular1.Name = "Flg_whatsappCelular1";
+            this.Flg_whatsappCelular1.Size = new System.Drawing.Size(76, 17);
+            this.Flg_whatsappCelular1.TabIndex = 230;
+            this.Flg_whatsappCelular1.Text = "WhatsApp";
+            this.Flg_whatsappCelular1.UseVisualStyleBackColor = true;
             // 
             // Celular2
             // 
@@ -584,7 +583,6 @@ namespace Loja.Telas.Cadastro
             this.DataCadastro.Size = new System.Drawing.Size(100, 20);
             this.DataCadastro.TabIndex = 70;
             this.DataCadastro.ValidatingType = typeof(System.DateTime);
-            //this.DataCadastro.Text = DateTime.Now.ToString();
             // 
             // DataAlteracao
             // 
@@ -806,8 +804,8 @@ namespace Loja.Telas.Cadastro
         private System.Windows.Forms.TextBox EmailContato;
         private System.Windows.Forms.MaskedTextBox Celular1;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.CheckBox whatsappCelular2;
-        private System.Windows.Forms.CheckBox whatsappCelular1;
+        private System.Windows.Forms.CheckBox Flg_whatsappCelular2;
+        private System.Windows.Forms.CheckBox Flg_whatsappCelular1;
         private System.Windows.Forms.MaskedTextBox Celular2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;

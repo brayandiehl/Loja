@@ -54,6 +54,7 @@ namespace Loja.Telas.Cadastro.Classes
                 if (ValidaCampos())
                 {
                     var cpf_cnpj_tratado = Cpf_cnpj.Replace(".", "").Replace(",", "").Replace("-", "").Replace("/", "").Replace("_", "");
+                    var cep_tratado = CEP.Replace("-", "").Replace(",", "").Replace("_", "");
 
                     string query = @"INSERT INTO entidade (cpf_cnpj, 
                                                        flg_ativo, 
@@ -92,7 +93,7 @@ namespace Loja.Telas.Cadastro.Classes
                                                             "'" + Nome + "'," +
                                                             "'" + Grupo + "', " +
                                                             "'" + Data_nascimento + "'," +
-                                                            "'" + CEP + "', " +
+                                                            "'" + cep_tratado + "', " +
                                                             "'" + Rua + "', " +
                                                             "'" + Cidade + "', " +
                                                             "'" + Bairro + "', " +

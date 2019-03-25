@@ -40,7 +40,7 @@ namespace Loja.Telas.Cadastro
         {
             if (AtivarFoto.Checked)
             {
-                AForge.Video.DirectShow.FilterInfoCollection videosource = new AForge.Video.DirectShow.FilterInfoCollection(AForge.Video.DirectShow.FilterCategory.VideoInputDevice);
+                FilterInfoCollection videosource = new AForge.Video.DirectShow.FilterInfoCollection(AForge.Video.DirectShow.FilterCategory.VideoInputDevice);
                 if (videosource != null)
                 {
                     videoSource = new AForge.Video.DirectShow.VideoCaptureDevice(videosource[0].MonikerString); ;
@@ -126,9 +126,9 @@ namespace Loja.Telas.Cadastro
         {
             try
             {
-                if (Telas.Configuracoes.Estrategia.Classes.ClassEstrategia.RetornaValorParametro("ACOES", "LOCALIZA_CEP"))
+                if (ClassEstrategia.RetornaValorParametro("ACOES", "LOCALIZA_CEP"))
                 {
-                    var valorParametro = Telas.Configuracoes.Estrategia.Classes.ClassEstrategia.Parametro;
+                    var valorParametro = ClassEstrategia.Parametro;
                     if (valorParametro.Equals("1"))
                     {
                         Cursor = Cursors.WaitCursor;
@@ -266,9 +266,29 @@ namespace Loja.Telas.Cadastro
                         ClassEntidade.NotificarAniversario = ClassEntidade.ValidaCheckBox(Flg_Notificar_Aniversario);
                         ClassEntidade.NotificarProdutoNovo = ClassEntidade.ValidaCheckBox(Flg_notificar_produto_novo);
                         ClassEntidade.NotificarPromocao = ClassEntidade.ValidaCheckBox(Flg_notificar_produto_novo);
-                        
+                        ClassEntidade.NotificarVencimento = ClassEntidade.ValidaCheckBox(Flg_notificar_vencimeneto);
+                        ClassEntidade.Numero = Numero.Text;
+                        ClassEntidade.Observacao = Observacao.Text;
+                        ClassEntidade.Rua = Logradouro.Text;
+                        ClassEntidade.WhatsApp_Celular1 = ClassEntidade.ValidaCheckBox(Flg_whatsappCelular1);
+                        ClassEntidade.WhatsApp_Celular2 = ClassEntidade.ValidaCheckBox(Flg_whatsappCelular2);
+                        if (ClassEntidade.CadastraEntidade())
+                        {
+                            MessageBox.Show("Entidade salva com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erro ao salvar entidade.\nErro: " + ClassEntidade.Erro, "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                        }
                     }
                 }
+                else
+                {
+                    //Aplica Update
+                    var teste = "222";
+                    }
 
 
 
