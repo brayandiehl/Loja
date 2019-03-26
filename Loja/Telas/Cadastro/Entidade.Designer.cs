@@ -34,8 +34,6 @@ namespace Loja.Telas.Cadastro
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.RazaoSocial = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Codigo = new System.Windows.Forms.TextBox();
             this.Flg_ativo = new System.Windows.Forms.CheckBox();
             this.Grupo = new System.Windows.Forms.TextBox();
             this.DescricaoGrupo = new System.Windows.Forms.TextBox();
@@ -90,12 +88,13 @@ namespace Loja.Telas.Cadastro
             this.BtCarregarFoto = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.Observacao = new System.Windows.Forms.TextBox();
-            this.Bt_Excluir = new System.Windows.Forms.Button();
             this.Bt_Localizar = new System.Windows.Forms.Button();
             this.AtivarFoto = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
             this.Nascimento = new System.Windows.Forms.MaskedTextBox();
             this.Idade = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Codigo = new System.Windows.Forms.TextBox();
             this.sss.SuspendLayout();
             this.Endereco.SuspendLayout();
             this.Contatos.SuspendLayout();
@@ -105,17 +104,17 @@ namespace Loja.Telas.Cadastro
             // 
             // Cpf_Cnpj
             // 
-            this.Cpf_Cnpj.Location = new System.Drawing.Point(282, 12);
+            this.Cpf_Cnpj.Location = new System.Drawing.Point(102, 38);
             this.Cpf_Cnpj.Name = "Cpf_Cnpj";
             this.Cpf_Cnpj.Size = new System.Drawing.Size(119, 20);
-            this.Cpf_Cnpj.TabIndex = 20;
+            this.Cpf_Cnpj.TabIndex = 40;
             this.Cpf_Cnpj.Enter += new System.EventHandler(this.Cpf_Cnpj_Enter);
             this.Cpf_Cnpj.Leave += new System.EventHandler(this.Cpf_Cnpj_Leave);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(208, 15);
+            this.label1.Location = new System.Drawing.Point(13, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 1;
@@ -124,7 +123,7 @@ namespace Loja.Telas.Cadastro
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 41);
+            this.label2.Location = new System.Drawing.Point(12, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 2;
@@ -132,59 +131,42 @@ namespace Loja.Telas.Cadastro
             // 
             // RazaoSocial
             // 
-            this.RazaoSocial.Location = new System.Drawing.Point(102, 38);
+            this.RazaoSocial.Location = new System.Drawing.Point(102, 64);
             this.RazaoSocial.Name = "RazaoSocial";
             this.RazaoSocial.Size = new System.Drawing.Size(620, 20);
-            this.RazaoSocial.TabIndex = 40;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Código:";
-            // 
-            // Codigo
-            // 
-            this.Codigo.Enabled = false;
-            this.Codigo.Location = new System.Drawing.Point(102, 12);
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Size = new System.Drawing.Size(100, 20);
-            this.Codigo.TabIndex = 10;
+            this.RazaoSocial.TabIndex = 60;
             // 
             // Flg_ativo
             // 
             this.Flg_ativo.AutoSize = true;
-            this.Flg_ativo.Location = new System.Drawing.Point(407, 15);
+            this.Flg_ativo.Location = new System.Drawing.Point(227, 40);
             this.Flg_ativo.Name = "Flg_ativo";
             this.Flg_ativo.Size = new System.Drawing.Size(50, 17);
-            this.Flg_ativo.TabIndex = 30;
+            this.Flg_ativo.TabIndex = 50;
             this.Flg_ativo.Text = "Ativo";
             this.Flg_ativo.UseVisualStyleBackColor = true;
             // 
             // Grupo
             // 
-            this.Grupo.Location = new System.Drawing.Point(102, 64);
+            this.Grupo.Location = new System.Drawing.Point(253, 12);
             this.Grupo.Name = "Grupo";
             this.Grupo.Size = new System.Drawing.Size(100, 20);
-            this.Grupo.TabIndex = 50;
+            this.Grupo.TabIndex = 20;
             this.Grupo.Enter += new System.EventHandler(this.Grupo_Enter);
             this.Grupo.Leave += new System.EventHandler(this.Grupo_Leave);
             // 
             // DescricaoGrupo
             // 
             this.DescricaoGrupo.Enabled = false;
-            this.DescricaoGrupo.Location = new System.Drawing.Point(211, 64);
+            this.DescricaoGrupo.Location = new System.Drawing.Point(359, 12);
             this.DescricaoGrupo.Name = "DescricaoGrupo";
-            this.DescricaoGrupo.Size = new System.Drawing.Size(511, 20);
-            this.DescricaoGrupo.TabIndex = 60;
+            this.DescricaoGrupo.Size = new System.Drawing.Size(363, 20);
+            this.DescricaoGrupo.TabIndex = 30;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 67);
+            this.label4.Location = new System.Drawing.Point(208, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 9;
@@ -665,18 +647,9 @@ namespace Loja.Telas.Cadastro
             this.Observacao.Size = new System.Drawing.Size(620, 20);
             this.Observacao.TabIndex = 310;
             // 
-            // Bt_Excluir
-            // 
-            this.Bt_Excluir.Location = new System.Drawing.Point(96, 351);
-            this.Bt_Excluir.Name = "Bt_Excluir";
-            this.Bt_Excluir.Size = new System.Drawing.Size(75, 23);
-            this.Bt_Excluir.TabIndex = 330;
-            this.Bt_Excluir.Text = "Excluir";
-            this.Bt_Excluir.UseVisualStyleBackColor = true;
-            // 
             // Bt_Localizar
             // 
-            this.Bt_Localizar.Location = new System.Drawing.Point(177, 351);
+            this.Bt_Localizar.Location = new System.Drawing.Point(102, 351);
             this.Bt_Localizar.Name = "Bt_Localizar";
             this.Bt_Localizar.Size = new System.Drawing.Size(75, 23);
             this.Bt_Localizar.TabIndex = 340;
@@ -722,6 +695,23 @@ namespace Loja.Telas.Cadastro
             this.Idade.TabIndex = 342;
             this.Idade.Text = "XX Anos";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Código:";
+            // 
+            // Codigo
+            // 
+            this.Codigo.Enabled = false;
+            this.Codigo.Location = new System.Drawing.Point(102, 12);
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Size = new System.Drawing.Size(100, 20);
+            this.Codigo.TabIndex = 10;
+            // 
             // Entidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -732,7 +722,6 @@ namespace Loja.Telas.Cadastro
             this.Controls.Add(this.label20);
             this.Controls.Add(this.AtivarFoto);
             this.Controls.Add(this.Bt_Localizar);
-            this.Controls.Add(this.Bt_Excluir);
             this.Controls.Add(this.Observacao);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.BtCarregarFoto);
@@ -776,8 +765,6 @@ namespace Loja.Telas.Cadastro
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox RazaoSocial;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Codigo;
         private System.Windows.Forms.CheckBox Flg_ativo;
         private System.Windows.Forms.TextBox Grupo;
         private System.Windows.Forms.TextBox DescricaoGrupo;
@@ -819,7 +806,6 @@ namespace Loja.Telas.Cadastro
         private System.Windows.Forms.Button BtCarregarFoto;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox Observacao;
-        private System.Windows.Forms.Button Bt_Excluir;
         private System.Windows.Forms.Button Bt_Localizar;
         private System.Windows.Forms.CheckBox AtivarFoto;
         private System.Windows.Forms.TabPage Configuracoes;
@@ -838,5 +824,7 @@ namespace Loja.Telas.Cadastro
         private System.Windows.Forms.TextBox NomeCelular2;
         private System.Windows.Forms.CheckBox Flg_Notificar_Aniversario;
         private System.Windows.Forms.Label Idade;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox Codigo;
     }
 }

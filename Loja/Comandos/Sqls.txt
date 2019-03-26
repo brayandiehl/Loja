@@ -34,6 +34,8 @@ insert into estrategias (classe, estrategia, nome_estrategia, parametro, usuario
 
 insert into estrategias (classe, estrategia, nome_estrategia, parametro, usuario_criacao, data_criacao) values ('ACOES', 'VALIDA_CPF_CNPJ','Valida se o CNPJ ou CPF está correto 1 = sim 0 = não', '1','BRAYAN', now());
 
+insert into estrategias (classe, estrategia, nome_estrategia, parametro, usuario_criacao, data_criacao) values ('ACOES', 'LOCALIZA_ENTIDADE','Preencher campos caso encontrar entidade 1 = sim 0 = não', '1','BRAYAN', now());
+
 insert into classes_estrategias (classe, nome_classe, classe_ativa, usuario_criacao, data_criacao) values ('GRUPO_ENT','GRUPO DA ENTIDADE', '1', 'BRAYAN', now());
 
 insert into estrategias (classe, estrategia, nome_estrategia, parametro, usuario_criacao, data_criacao) values ('GRUPO_ENT', 'FOR','Fornecedor', 'F','BRAYAN', now());
@@ -42,7 +44,7 @@ insert into estrategias (classe, estrategia, nome_estrategia, parametro, usuario
 
 create table entidade (
 	id_entidade int(10) auto_increment primary key,
-	cpf_cnpj varchar(14) unique key,
+	cpf_cnpj varchar(14) not null,
 	flg_ativo char(1) not null default 1,
 	razao_social varchar(255) not null,
 	grupo_parametro varchar(255) not null,

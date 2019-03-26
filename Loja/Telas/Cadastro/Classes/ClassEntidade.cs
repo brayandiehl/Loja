@@ -46,6 +46,7 @@ namespace Loja.Telas.Cadastro.Classes
         public static string Observacao { get; set; }
         public static string NomeFoto { get; set; }
         public static string Erro { get; private set; }
+        public static string Status { get; set; }
 
         public static bool CadastraEntidade()
         {
@@ -153,7 +154,7 @@ namespace Loja.Telas.Cadastro.Classes
 
         public static bool RetornaEntidade(string cpf_cnpj, string grupo)
         {
-            LimpaCampos();
+            //LimpaCampos();
             var cpf_cnpj_tratado = cpf_cnpj.Replace(".", "").Replace(",", "").Replace("-", "").Replace("/", "").Replace("_", "");
 
             if (string.IsNullOrEmpty(cpf_cnpj_tratado))
@@ -274,9 +275,172 @@ namespace Loja.Telas.Cadastro.Classes
             }
         }
 
+        public static bool RetornaIdEntidade(string cpf_cnpj, string grupo)
+        {
+            //LimpaCampos();
+            var cpf_cnpj_tratado = cpf_cnpj.Replace(".", "").Replace(",", "").Replace("-", "").Replace("/", "").Replace("_", "");
+
+            if (string.IsNullOrEmpty(cpf_cnpj_tratado))
+            {
+                Erro = "CPF ou CNPJ não pode estrar em branco";
+                return false;
+            }
+            if (string.IsNullOrEmpty(grupo))
+            {
+                Erro = "Grupo não pode estrar em branco";
+                return false;
+            }
+
+            try
+            {
+                var conn = Loja.Classes.Banco.ConectaMysql();
+
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+
+                if (conn.State == ConnectionState.Open)
+                {
+                    string query = @"select 
+                                e.id_entidade,
+                                e.cpf_cnpj,
+                                e.flg_ativo,
+                                e.razao_social,
+                                e.grupo_parametro,
+                                e.data_nascimento,
+                                e.cep,
+                                e.rua,
+                                e.cidade,
+                                e.bairro,
+                                e.numero,
+                                e.complemento,
+                                e.estado,
+                                e.email,
+                                e.facebook,
+                                e.celular1,
+                                e.flg_whatsapp_celular1,
+                                e.nome_celular1,
+                                e.celular2,
+                                e.flg_whatsapp_celular2,
+                                e.nome_celular2,
+                                e.flg_cliente_vip,
+                                e.flg_notificar_produto_novo,
+                                e.flg_notificar_vencimento,
+                                e.flg_notificar_promocao,
+                                e.flg_aceita_fiado,
+                                e.flg_notificar_aniversario,
+                                e.nome_foto,
+                                e.observacao,
+                                e.status_entidade,
+                                e.data_cadastro,
+                                e.usuario_cadastro,
+                                e.data_alteracao,
+                                e.usuario_alteracao
+                             from entidade e where e.cpf_cnpj = '" + cpf_cnpj_tratado + "' and e.grupo_parametro = '" + grupo + "'";
+
+                    MySqlCommand cm = new MySqlCommand(query, conn);
+                    MySqlDataReader dr = cm.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        Cod = dr["id_entidade"].ToString();
+
+                    }
+
+                    dr.Close();
+                    conn.Close();
+                    return true;
+
+                }
+                else
+                {
+
+                    Erro = "Falha abrir conexão com o banco de dados";
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Erro = ex.Message;
+                return false;
+            }
+        }
+
         public static bool AtualizaEntidade()
         {
-            return false;
+            try
+            {
+                var cpf_cnpj_tratado = Cpf_cnpj.Replace(".", "").Replace(",", "").Replace("-", "").Replace("/", "").Replace("_", "");
+                var cep_tratado = CEP.Replace("-", "").Replace(",", "").Replace("_", "");
+                if (!string.IsNullOrEmpty(cpf_cnpj_tratado))
+                {
+                    if (!string.IsNullOrEmpty(Grupo))
+                    {
+                        string query = @"UPDATE entidade SET flg_ativo='" + Ativo +
+                                                        "',  razao_social = '" + Nome +
+                                                        "', data_nascimento = '" + Data_nascimento +
+                                                        "', cep = '" + cep_tratado +
+                                                        "', rua = '" + Rua +
+                                                        "', cidade = '" + Cidade +
+                                                        "', bairro = '" + Bairro +
+                                                        "', numero = '" + Numero +
+                                                        "', complemento = '" + Complemento +
+                                                        "', estado = '" + Estado +
+                                                        "', email = '" + Email +
+                                                        "', facebook = '" + Facebook +
+                                                        "', celular1 = '" + Celular1 +
+                                                        "', flg_whatsapp_celular1 = '" + WhatsApp_Celular1 +
+                                                        "', nome_celular1 = '" + Nome_Celular1 +
+                                                        "', celular2 = '" + Celular2 +
+                                                        "', flg_whatsapp_celular2 = '" + WhatsApp_Celular2 +
+                                                        "', nome_celular2 = '" + Nome_Celular2 +
+                                                        "', flg_cliente_vip = '" + ClienteVip +
+                                                        "', flg_notificar_produto_novo = '" + NotificarProdutoNovo +
+                                                        "', flg_notificar_vencimento = '" + NotificarVencimento +
+                                                        "', flg_notificar_promocao = '" + NotificarPromocao +
+                                                        "', flg_aceita_fiado = '" + AceitaFiado +
+                                                        "', flg_notificar_aniversario = '" + NotificarAniversario +
+                                                        "', nome_foto = '" + NomeFoto +
+                                                        "', observacao = '" + Observacao +
+                                                        "', status_entidade = '" + Status +
+                                                        "', data_alteracao = CURRENT_TIMESTAMP" +
+                                                        ", usuario_alteracao = '" + Loja.Program.UsuarioLogado +
+                                                        "' WHERE cpf_cnpj = '" + cpf_cnpj_tratado +
+                                                        "' and grupo_parametro = '" + Grupo +
+                                                        "' and id_entidade = '" + Cod + "'";
+                        if (Banco.ExecutaQuery(query))
+                        {
+                            LimpaCampos();
+                            return true;
+
+                        }
+                        else
+                        {
+                            LimpaCampos();
+                            Erro = Banco.Erro;
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        LimpaCampos();
+                        Erro = "Grupo não pode estar em branco";
+                        return false;
+                    }
+                }
+                else
+                {
+                    LimpaCampos();
+                    Erro = "CNPJ não pode estar em branco";
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Erro = ex.Message;
+                return false;
+            }
         }
 
         public static bool DeletaEntidade()
@@ -561,7 +725,7 @@ namespace Loja.Telas.Cadastro.Classes
             }
         }
 
-        public static string ValidaCheckBox (CheckBox cb)
+        public static string ValidaCheckBox(CheckBox cb)
         {
             if (cb.Checked)
             {
@@ -570,6 +734,18 @@ namespace Loja.Telas.Cadastro.Classes
             else
             {
                 return "0";
+            }
+        }
+
+        public static bool PreencheCheckBox(string campo)
+        {
+            if (campo.Equals("1"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
