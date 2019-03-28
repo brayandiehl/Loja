@@ -40,7 +40,7 @@ namespace Loja.Telas.Cadastro
             this.label4 = new System.Windows.Forms.Label();
             this.sss = new System.Windows.Forms.TabControl();
             this.Endereco = new System.Windows.Forms.TabPage();
-            this.BtLocalizar = new System.Windows.Forms.Button();
+            this.BtLocalizarCep = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.Estado = new System.Windows.Forms.TextBox();
             this.Bairro = new System.Windows.Forms.TextBox();
@@ -88,7 +88,7 @@ namespace Loja.Telas.Cadastro
             this.BtCarregarFoto = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.Observacao = new System.Windows.Forms.TextBox();
-            this.Bt_Localizar = new System.Windows.Forms.Button();
+            this.BtLocalizarEntidade = new System.Windows.Forms.Button();
             this.AtivarFoto = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
             this.Nascimento = new System.Windows.Forms.MaskedTextBox();
@@ -185,7 +185,7 @@ namespace Loja.Telas.Cadastro
             // 
             // Endereco
             // 
-            this.Endereco.Controls.Add(this.BtLocalizar);
+            this.Endereco.Controls.Add(this.BtLocalizarCep);
             this.Endereco.Controls.Add(this.label11);
             this.Endereco.Controls.Add(this.Estado);
             this.Endereco.Controls.Add(this.Bairro);
@@ -208,15 +208,15 @@ namespace Loja.Telas.Cadastro
             this.Endereco.Text = "Endereço";
             this.Endereco.UseVisualStyleBackColor = true;
             // 
-            // BtLocalizar
+            // BtLocalizarCep
             // 
-            this.BtLocalizar.Location = new System.Drawing.Point(154, 5);
-            this.BtLocalizar.Name = "BtLocalizar";
-            this.BtLocalizar.Size = new System.Drawing.Size(75, 20);
-            this.BtLocalizar.TabIndex = 100;
-            this.BtLocalizar.Text = "Localizar";
-            this.BtLocalizar.UseVisualStyleBackColor = true;
-            this.BtLocalizar.Click += new System.EventHandler(this.BtLocalizar_Click);
+            this.BtLocalizarCep.Location = new System.Drawing.Point(154, 5);
+            this.BtLocalizarCep.Name = "BtLocalizarCep";
+            this.BtLocalizarCep.Size = new System.Drawing.Size(75, 20);
+            this.BtLocalizarCep.TabIndex = 100;
+            this.BtLocalizarCep.Text = "Localizar";
+            this.BtLocalizarCep.UseVisualStyleBackColor = true;
+            this.BtLocalizarCep.Click += new System.EventHandler(this.BtLocalizar_Click);
             // 
             // label11
             // 
@@ -647,14 +647,15 @@ namespace Loja.Telas.Cadastro
             this.Observacao.Size = new System.Drawing.Size(620, 20);
             this.Observacao.TabIndex = 310;
             // 
-            // Bt_Localizar
+            // BtLocalizarEntidade
             // 
-            this.Bt_Localizar.Location = new System.Drawing.Point(102, 351);
-            this.Bt_Localizar.Name = "Bt_Localizar";
-            this.Bt_Localizar.Size = new System.Drawing.Size(75, 23);
-            this.Bt_Localizar.TabIndex = 340;
-            this.Bt_Localizar.Text = "Localizar";
-            this.Bt_Localizar.UseVisualStyleBackColor = true;
+            this.BtLocalizarEntidade.Location = new System.Drawing.Point(102, 351);
+            this.BtLocalizarEntidade.Name = "BtLocalizarEntidade";
+            this.BtLocalizarEntidade.Size = new System.Drawing.Size(75, 23);
+            this.BtLocalizarEntidade.TabIndex = 340;
+            this.BtLocalizarEntidade.Text = "Localizar";
+            this.BtLocalizarEntidade.UseVisualStyleBackColor = true;
+            this.BtLocalizarEntidade.Click += new System.EventHandler(this.BtLocalizarEntidade_Click);
             // 
             // AtivarFoto
             // 
@@ -721,7 +722,7 @@ namespace Loja.Telas.Cadastro
             this.Controls.Add(this.Nascimento);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.AtivarFoto);
-            this.Controls.Add(this.Bt_Localizar);
+            this.Controls.Add(this.BtLocalizarEntidade);
             this.Controls.Add(this.Observacao);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.BtCarregarFoto);
@@ -746,6 +747,7 @@ namespace Loja.Telas.Cadastro
             this.Controls.Add(this.Cpf_Cnpj);
             this.Name = "Entidade";
             this.Text = "Entidade";
+            this.Load += new System.EventHandler(this.Entidade_Load);
             this.sss.ResumeLayout(false);
             this.Endereco.ResumeLayout(false);
             this.Endereco.PerformLayout();
@@ -786,7 +788,7 @@ namespace Loja.Telas.Cadastro
         private System.Windows.Forms.TextBox Complemento;
         private System.Windows.Forms.TextBox Estado;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button BtLocalizar;
+        private System.Windows.Forms.Button BtLocalizarCep;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox EmailContato;
         private System.Windows.Forms.MaskedTextBox Celular1;
@@ -806,7 +808,7 @@ namespace Loja.Telas.Cadastro
         private System.Windows.Forms.Button BtCarregarFoto;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox Observacao;
-        private System.Windows.Forms.Button Bt_Localizar;
+        private System.Windows.Forms.Button BtLocalizarEntidade;
         private System.Windows.Forms.CheckBox AtivarFoto;
         private System.Windows.Forms.TabPage Configuracoes;
         private System.Windows.Forms.CheckBox Flg_vip;

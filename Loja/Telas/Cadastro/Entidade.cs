@@ -40,14 +40,14 @@ namespace Loja.Telas.Cadastro
         {
             if (AtivarFoto.Checked)
             {
-                FilterInfoCollection videosource = new AForge.Video.DirectShow.FilterInfoCollection(AForge.Video.DirectShow.FilterCategory.VideoInputDevice);
+                FilterInfoCollection videosource = new FilterInfoCollection(FilterCategory.VideoInputDevice);
                 if (videosource != null)
                 {
                     videoSource = new AForge.Video.DirectShow.VideoCaptureDevice(videosource[0].MonikerString); ;
                     videoSource.VideoResolution = videoSource.VideoCapabilities[0];
                     videoSource.Start();
                     videoSource.NewFrame += (s, a) => Foto.Image = (Bitmap)a.Frame.Clone();
-                    
+
                 }
             }
             else
@@ -67,7 +67,7 @@ namespace Loja.Telas.Cadastro
                 if (!string.IsNullOrEmpty(Grupo.Text.ToUpper()))
                 {
                     Cursor = Cursors.WaitCursor;
-                    if (ClassEntidade.RetornaGrupoEntidade(Grupo.Text))
+                    if (ClassEntidade.RetornaGrupoEntidade(Grupo.Text.ToUpper()))
                     {
                         DescricaoGrupo.Text = ClassEntidade.NomeGrupo;
                         Cursor = Cursors.Default;
@@ -213,7 +213,7 @@ namespace Loja.Telas.Cadastro
                         if (ClassEstrategia.Parametro.Equals("1"))
                         {
                             var cpf_cnpj_tratado = Cpf_Cnpj.Text.Replace(".", "").Replace(",", "").Replace("-", "").Replace("/", "").Replace("_", "");
-                            if (ClassEntidade.RetornaEntidade(cpf_cnpj_tratado, Grupo.Text))
+                            if (ClassEntidade.RetornaEntidade(cpf_cnpj_tratado, Grupo.Text.ToUpper()))
                             {
                                 if (!string.IsNullOrEmpty(ClassEntidade.Cod))
                                 {
@@ -233,7 +233,15 @@ namespace Loja.Telas.Cadastro
                                 return;
                             }
                         }
+                        else
+                        {
+                            Cursor = Cursors.Default;
+                        }
 
+                    }
+                    else
+                    {
+                        Cursor = Cursors.Default;
                     }
 
                 }
@@ -247,7 +255,7 @@ namespace Loja.Telas.Cadastro
         }
 
         private void Cpf_Cnpj_Enter(object sender, EventArgs e)
-        {
+            {
             Cpf_Cnpj.Mask = "";
         }
 
@@ -282,7 +290,7 @@ namespace Loja.Telas.Cadastro
                 ClassEntidade.Email = EmailContato.Text;
                 ClassEntidade.Estado = Estado.Text;
                 ClassEntidade.Facebook = Facebook.Text;
-                ClassEntidade.Grupo = Grupo.Text;
+                ClassEntidade.Grupo = Grupo.Text.ToUpper();
                 ClassEntidade.Nome = RazaoSocial.Text;
                 ClassEntidade.Nome_Celular1 = NomeCelular1.Text;
                 ClassEntidade.Nome_Celular2 = NomeCelular2.Text;
@@ -296,7 +304,7 @@ namespace Loja.Telas.Cadastro
                 ClassEntidade.WhatsApp_Celular1 = ClassEntidade.ValidaCheckBox(Flg_whatsappCelular1);
                 ClassEntidade.WhatsApp_Celular2 = ClassEntidade.ValidaCheckBox(Flg_whatsappCelular2);
 
-                if (ClassEntidade.RetornaIdEntidade(Cpf_Cnpj.Text, Grupo.Text))
+                if (ClassEntidade.RetornaIdEntidade(Cpf_Cnpj.Text, Grupo.Text.ToUpper()))
                 {
                     if (string.IsNullOrEmpty(ClassEntidade.Cod))
                     {
@@ -307,7 +315,6 @@ namespace Loja.Telas.Cadastro
                         else
                         {
                             MessageBox.Show("Erro ao salvar entidade.\nErro: " + ClassEntidade.Erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                         }
                     }
                     else
@@ -322,17 +329,10 @@ namespace Loja.Telas.Cadastro
                         }
                     }
                 }
-                else
-                {
-
-                }
-
-
-
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -352,7 +352,7 @@ namespace Loja.Telas.Cadastro
             EmailContato.Text = ClassEntidade.Email;
             Estado.Text = ClassEntidade.Estado;
             Facebook.Text = ClassEntidade.Facebook;
-            Grupo.Text = ClassEntidade.Grupo;
+            Grupo.Text = ClassEntidade.Grupo.ToUpper();
             RazaoSocial.Text = ClassEntidade.Nome;
             NomeCelular1.Text = ClassEntidade.Nome_Celular1;
             NomeCelular2.Text = ClassEntidade.Nome_Celular2;
@@ -372,7 +372,7 @@ namespace Loja.Telas.Cadastro
 
         private void CalculaIdade()
         {
-            var data_tratada = Nascimento.Text.Replace("_", "").Replace("/", "").Replace(" ","");
+            var data_tratada = Nascimento.Text.Replace("_", "").Replace("/", "").Replace(" ", "");
             if (!string.IsNullOrEmpty(data_tratada))
             {
                 DateTime dt = Convert.ToDateTime(Nascimento.Text.Replace("_", ""));
@@ -417,6 +417,59 @@ namespace Loja.Telas.Cadastro
             DataCadastro.Text = null;
             Codigo.Text = null;
             Idade.Text = "XX Anos";
+        }
+
+        private void Entidade_Load(object sender, EventArgs e)
+        {
+            if (ClassEstrategia.RetornaValorParametro("ACOES", "LOCALIZA_ENTIDADE"))
+            {
+                if (ClassEstrategia.Parametro.Equals("1"))
+                {
+                    BtLocalizarEntidade.Enabled = false;
+                }
+            }
+
+            if (ClassEstrategia.RetornaValorParametro("ACOES", "LOCALIZA_CEP"))
+            {
+                if (ClassEstrategia.Parametro.Equals("1"))
+                {
+                    BtLocalizarCep.Enabled = false;
+                }
+            }
+        }
+
+        private void BtLocalizarEntidade_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var cpf_cnpj_tratado = Cpf_Cnpj.Text.Replace(".", "").Replace(",", "").Replace("-", "").Replace("/", "").Replace("_", "");
+                if (ClassEntidade.RetornaEntidade(cpf_cnpj_tratado, Grupo.Text.ToUpper()))
+                {
+                    if (!string.IsNullOrEmpty(ClassEntidade.Cod))
+                    {
+                        PreencheCampoTela();
+                        CalculaIdade();
+                    }
+                    else
+                    {
+                        LimpaCamposTela();
+                    }
+                    Cursor = Cursors.Default;
+                }
+                else
+                {
+                    Cursor = Cursors.Default;
+                    MessageBox.Show("Erro: " + ClassEntidade.Erro, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
         }
     }
 }
