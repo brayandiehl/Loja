@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 using AForge.Video.DirectShow;
+using System.IO;
 using AForge.Video;
 using Loja.Telas.Cadastro.Classes;
 using Loja.Telas.Configuracoes.Estrategia.Classes;
@@ -30,10 +31,89 @@ namespace Loja.Telas.Cadastro
         }
 
 
-        private void Bt_Tirar_Foto_Click(object sender, EventArgs e)
+
+
+        private void SalvaFoto()
         {
-            Foto.Image.Save("C:\\Temp\\teste1.png", System.Drawing.Imaging.ImageFormat.Png);
-            MessageBox.Show("Salvo com sucesso");
+            try
+            {
+                ClassEntidade.CaminhoFoto = null;
+                if (ClassEstrategia.RetornaValorParametro("ACOES", "VALIDA_CPF_CNPJ"))
+                {
+                    if (ClassEstrategia.Parametro.Equals("1"))
+                    {
+                        if (!ClassEntidade.ValidaCnpjCpf(Cpf_Cnpj.Text, Cpf_Cnpj))
+                        {
+                            Cursor = Cursors.Default;
+                            MessageBox.Show("Erro: " + ClassEntidade.Erro, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        else
+                        {
+                            if (Foto.Image != null)
+                            {
+                                if (ClassEstrategia.RetornaValorParametro("PARAMETROS", "CAMINHO_FOTOS"))
+                                {
+                                    if (!ClassEstrategia.Parametro.Equals("0"))
+                                    {
+                                        var cpf_cnpj_tratado = Cpf_Cnpj.Text.Replace(".", "").Replace(",", "").Replace("-", "").Replace("/", "").Replace("_", "");
+
+                                        var caminho = ClassEstrategia.Parametro;
+
+                                        if (ClassEstrategia.RetornaValorParametro("PARAMETROS", "FORMATO_FOTOS"))
+                                        {
+
+                                            caminho = caminho + cpf_cnpj_tratado + ClassEstrategia.Parametro;
+                                            ClassEntidade.CaminhoFoto = caminho;
+
+                                            if (Loja.Classes.Arquivos.VerificaArquivoExiste(caminho))
+                                            {
+                                                if (Loja.Classes.Arquivos.ArquivoExiste)
+                                                {
+                                                    if (MessageBox.Show("Já Existe uma imagem com esse nome.\nDeseja substituir a que já existe?", "Pergunta", MessageBoxButtons.YesNo, MessageBoxIcon.None) == DialogResult.Yes)
+                                                    {
+                                                        if (Loja.Classes.Arquivos.RemoveArquivo(caminho))
+                                                        {
+                                                            Foto.Image.Save(caminho);
+                                                        }
+                                                        else
+                                                        {
+                                                            MessageBox.Show("Erro: " + Loja.Classes.Arquivos.Erro, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                                        }
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    Foto.Image.Save(caminho);
+                                                }
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Erro: " + Loja.Classes.Arquivos.Erro, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Cursor = Cursors.Default;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Cursor = Cursors.Default;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro " + ex.Message, "Erro: ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            //Foto.Image.Save("C:\\Temp\\teste1.png", System.Drawing.Imaging.ImageFormat.);
+            //MessageBox.Show("Salvo com sucesso");
         }
 
         private void AtivarFoto_CheckedChanged(object sender, EventArgs e)
@@ -44,9 +124,10 @@ namespace Loja.Telas.Cadastro
                 if (videosource != null)
                 {
                     videoSource = new AForge.Video.DirectShow.VideoCaptureDevice(videosource[0].MonikerString); ;
-                    videoSource.VideoResolution = videoSource.VideoCapabilities[0];
-                    videoSource.Start();
+                    videoSource.VideoResolution = videoSource.VideoCapabilities[1];
                     videoSource.NewFrame += (s, a) => Foto.Image = (Bitmap)a.Frame.Clone();
+                    videoSource.Start();
+
 
                 }
             }
@@ -255,7 +336,7 @@ namespace Loja.Telas.Cadastro
         }
 
         private void Cpf_Cnpj_Enter(object sender, EventArgs e)
-            {
+        {
             Cpf_Cnpj.Mask = "";
         }
 
@@ -265,7 +346,7 @@ namespace Loja.Telas.Cadastro
         }
 
         private void Nascimento_Leave(object sender, EventArgs e)
-        {
+                {
             //var data_tradata =
             CalculaIdade();
 
@@ -303,7 +384,7 @@ namespace Loja.Telas.Cadastro
                 ClassEntidade.Rua = Logradouro.Text;
                 ClassEntidade.WhatsApp_Celular1 = ClassEntidade.ValidaCheckBox(Flg_whatsappCelular1);
                 ClassEntidade.WhatsApp_Celular2 = ClassEntidade.ValidaCheckBox(Flg_whatsappCelular2);
-
+                SalvaFoto();
                 if (ClassEntidade.RetornaIdEntidade(Cpf_Cnpj.Text, Grupo.Text.ToUpper()))
                 {
                     if (string.IsNullOrEmpty(ClassEntidade.Cod))
@@ -368,18 +449,28 @@ namespace Loja.Telas.Cadastro
             DataAlteracao.Text = ClassEntidade.Data_alteracao;
             DataCadastro.Text = ClassEntidade.Data_cadastro;
             Codigo.Text = ClassEntidade.Cod;
+            Foto.ImageLocation = ClassEntidade.CaminhoFoto;
         }
 
         private void CalculaIdade()
         {
             var data_tratada = Nascimento.Text.Replace("_", "").Replace("/", "").Replace(" ", "");
+
             if (!string.IsNullOrEmpty(data_tratada))
             {
                 DateTime dt = Convert.ToDateTime(Nascimento.Text.Replace("_", ""));
-                TimeSpan ts = DateTime.Today - dt;
-                DateTime idade = (new DateTime() + ts).AddYears(-1);//.AddDays(-1);
-                Idade.Text = idade.Year + " Anos";
-
+                if (dt < DateTime.Today.AddYears(-1))
+                {
+                    TimeSpan ts = DateTime.Today - dt;
+                    DateTime idade = (new DateTime() + ts).AddYears(-1);//.AddDays(-1);
+                    Idade.Text = idade.Year + " Anos";
+                }
+                else
+                {
+                    Idade.Text = "XX Anos";
+                    MessageBox.Show("Data Inválida!\nData deve ser menor quee a data atual.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
+                }
 
             }
         }
@@ -417,6 +508,7 @@ namespace Loja.Telas.Cadastro
             DataCadastro.Text = null;
             Codigo.Text = null;
             Idade.Text = "XX Anos";
+            Foto.Image = null;
         }
 
         private void Entidade_Load(object sender, EventArgs e)

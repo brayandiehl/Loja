@@ -222,8 +222,8 @@ namespace Loja.Telas.Configuracoes.Estrategia.Classes
         {
             try
             {
-                Parametro = null;
-                DescricaoParametro = null;
+                Parametro = "0";
+                DescricaoParametro = "0";
                 if (string.IsNullOrEmpty(classe))
                 {
                     Erro = "Classe não pode ser em branca";

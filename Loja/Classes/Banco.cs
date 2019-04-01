@@ -51,7 +51,6 @@ namespace Loja.Classes
                         Erro = "Falha ao abrir conexão";
                         return false;
                     }
-
                 }
                 else
                 {
@@ -62,11 +61,10 @@ namespace Loja.Classes
             }
             catch (MySqlException my)
             {
-                
                 Erro = "Erro: " + my.Message;
                 return false;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Erro = "Erro: " + ex.Message;
                 return false;

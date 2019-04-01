@@ -44,9 +44,10 @@ namespace Loja.Telas.Cadastro.Classes
         public static string AceitaFiado { get; set; }
         public static string NotificarAniversario { get; set; }
         public static string Observacao { get; set; }
-        public static string NomeFoto { get; set; }
+        public static string CaminhoFoto { get; set; }
         public static string Erro { get; private set; }
         public static string Status { get; set; }
+        // public static string CaminhoFoto { get; set; }
 
         public static bool CadastraEntidade()
         {
@@ -57,39 +58,7 @@ namespace Loja.Telas.Cadastro.Classes
                     var cpf_cnpj_tratado = Cpf_cnpj.Replace(".", "").Replace(",", "").Replace("-", "").Replace("/", "").Replace("_", "");
                     var cep_tratado = CEP.Replace("-", "").Replace(",", "").Replace("_", "");
 
-                    string query = @"INSERT INTO entidade (cpf_cnpj, 
-                                                       flg_ativo, 
-                                                       razao_social, 
-                                                       grupo_parametro, 
-                                                       data_nascimento,
-                                                       cep, 
-                                                       rua,
-                                                       cidade, 
-                                                       bairro,
-                                                       numero,
-                                                       complemento, 
-                                                       estado, email, 
-                                                       facebook, 
-                                                       celular1,
-                                                       flg_whatsapp_celular1, 
-                                                       nome_celular1,
-                                                       celular2, 
-                                                       flg_whatsapp_celular2,
-                                                       nome_celular2,
-                                                       flg_cliente_vip, 
-                                                       flg_notificar_produto_novo, 
-                                                       flg_notificar_vencimento, 
-                                                       flg_notificar_promocao, 
-                                                       flg_aceita_fiado, 
-                                                       flg_notificar_aniversario,
-                                                       nome_foto, 
-                                                       observacao, 
-                                                       status_entidade, 
-                                                       data_cadastro, 
-                                                       usuario_cadastro,
-                                                       data_alteracao, 
-                                                       usuario_alteracao)
-                                    VALUES('" + cpf_cnpj_tratado + "', " +
+                    string query = "INSERT INTO entidade (cpf_cnpj, flg_ativo, razao_social, grupo_parametro, data_nascimento,cep, rua,cidade, bairro,numero,complemento, estado, email, facebook, celular1,flg_whatsapp_celular1, nome_celular1,celular2, flg_whatsapp_celular2,nome_celular2,flg_cliente_vip, flg_notificar_produto_novo, flg_notificar_vencimento, flg_notificar_promocao, flg_aceita_fiado, flg_notificar_aniversario,nome_foto, observacao, status_entidade, data_cadastro,usuario_cadastro,data_alteracao, usuario_alteracao) VALUES('" + cpf_cnpj_tratado + "', " +
                                                             "'" + Ativo + "', " +
                                                             "'" + Nome + "'," +
                                                             "'" + Grupo + "', " +
@@ -115,7 +84,7 @@ namespace Loja.Telas.Cadastro.Classes
                                                             "'" + NotificarPromocao + "', " +
                                                             "'" + AceitaFiado + "', " +
                                                             "'" + NotificarAniversario + "', " +
-                                                            "'" + NomeFoto + "', " +
+                                                            "'" + CaminhoFoto.ToString().Replace("\\", "\\\\") + "', " +
                                                             "'" + Observacao + "', " +
                                                             "'1', " +
                                                             "now(), " +
@@ -179,6 +148,7 @@ namespace Loja.Telas.Cadastro.Classes
 
                 if (conn.State == ConnectionState.Open)
                 {
+                    Cod = null;
                     string query = @"select 
                                 e.id_entidade,
                                 e.cpf_cnpj,
@@ -252,7 +222,7 @@ namespace Loja.Telas.Cadastro.Classes
                         AceitaFiado = dr["flg_aceita_fiado"].ToString();
                         NotificarAniversario = dr["flg_notificar_aniversario"].ToString();
                         Observacao = dr["observacao"].ToString();
-                        NomeFoto = dr["nome_foto"].ToString();
+                        CaminhoFoto = dr["nome_foto"].ToString();
                     }
 
                     dr.Close();
@@ -401,7 +371,7 @@ namespace Loja.Telas.Cadastro.Classes
                                                         "', flg_notificar_promocao = '" + NotificarPromocao +
                                                         "', flg_aceita_fiado = '" + AceitaFiado +
                                                         "', flg_notificar_aniversario = '" + NotificarAniversario +
-                                                        "', nome_foto = '" + NomeFoto +
+                                                        "', nome_foto = '" + CaminhoFoto.ToString().Replace("\\", "\\\\") + 
                                                         "', observacao = '" + Observacao +
                                                         "', status_entidade = '" + Status +
                                                         "', data_alteracao = CURRENT_TIMESTAMP" +
@@ -534,7 +504,7 @@ namespace Loja.Telas.Cadastro.Classes
             AceitaFiado = null;
             NotificarAniversario = null;
             Observacao = null;
-            NomeFoto = null;
+            CaminhoFoto = null;
             Erro = null;
             return true;
         }

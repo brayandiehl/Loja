@@ -84,7 +84,6 @@ namespace Loja.Telas.Cadastro
             this.Bt_Salvar = new System.Windows.Forms.Button();
             this.Foto = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.Bt_Tirar_Foto = new System.Windows.Forms.Button();
             this.BtCarregarFoto = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.Observacao = new System.Windows.Forms.TextBox();
@@ -612,16 +611,6 @@ namespace Loja.Telas.Cadastro
             this.label18.TabIndex = 18;
             this.label18.Text = "Foto:";
             // 
-            // Bt_Tirar_Foto
-            // 
-            this.Bt_Tirar_Foto.Location = new System.Drawing.Point(660, 274);
-            this.Bt_Tirar_Foto.Name = "Bt_Tirar_Foto";
-            this.Bt_Tirar_Foto.Size = new System.Drawing.Size(62, 23);
-            this.Bt_Tirar_Foto.TabIndex = 190;
-            this.Bt_Tirar_Foto.Text = "Tirar Foto";
-            this.Bt_Tirar_Foto.UseVisualStyleBackColor = true;
-            this.Bt_Tirar_Foto.Click += new System.EventHandler(this.Bt_Tirar_Foto_Click);
-            // 
             // BtCarregarFoto
             // 
             this.BtCarregarFoto.Location = new System.Drawing.Point(564, 274);
@@ -726,7 +715,6 @@ namespace Loja.Telas.Cadastro
             this.Controls.Add(this.Observacao);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.BtCarregarFoto);
-            this.Controls.Add(this.Bt_Tirar_Foto);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.Foto);
             this.Controls.Add(this.Bt_Salvar);
@@ -804,7 +792,6 @@ namespace Loja.Telas.Cadastro
         private System.Windows.Forms.Button Bt_Salvar;
         private System.Windows.Forms.PictureBox Foto;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button Bt_Tirar_Foto;
         private System.Windows.Forms.Button BtCarregarFoto;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox Observacao;
