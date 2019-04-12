@@ -619,6 +619,7 @@ namespace Loja.Telas.Cadastro
             this.BtCarregarFoto.TabIndex = 180;
             this.BtCarregarFoto.Text = "Carregar Foto";
             this.BtCarregarFoto.UseVisualStyleBackColor = true;
+            this.BtCarregarFoto.Click += new System.EventHandler(this.BtCarregarFoto_Click);
             // 
             // label19
             // 

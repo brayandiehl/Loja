@@ -73,6 +73,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Telas\Cadastro\Classes\ClassEntidade.cs" />
+    <Compile Include="Telas\Cadastro\Classes\ClassProduto.cs" />
     <Compile Include="Telas\Cadastro\Entidade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +117,7 @@
     <Compile Include="Telas\Configuracoes\Parametrizacoes\Classes.Designer.cs">
       <DependentUpon>Classes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Configuracoes\Parametrizacoes\Classe\ClassParametros.cs" />
     <Compile Include="Telas\Configuracoes\Parametrizacoes\Status.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +232,9 @@
     <Compile Include="Telas\Orcamento\RealizarOrcamento.Designer.cs">
       <DependentUpon>RealizarOrcamento.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -12,6 +12,7 @@ using System.IO;
 using AForge.Video;
 using Loja.Telas.Cadastro.Classes;
 using Loja.Telas.Configuracoes.Estrategia.Classes;
+using System.Drawing.Drawing2D;
 
 namespace Loja.Telas.Cadastro
 {
@@ -346,11 +347,9 @@ namespace Loja.Telas.Cadastro
         }
 
         private void Nascimento_Leave(object sender, EventArgs e)
-                {
+        {
             //var data_tradata =
             CalculaIdade();
-
-
         }
 
         private void Bt_Salvar_Click(object sender, EventArgs e)
@@ -469,7 +468,7 @@ namespace Loja.Telas.Cadastro
                 {
                     Idade.Text = "XX Anos";
                     MessageBox.Show("Data Inválida!\nData deve ser menor quee a data atual.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    
+
                 }
 
             }
@@ -561,7 +560,41 @@ namespace Loja.Telas.Cadastro
                 MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
 
+        private void BtCarregarFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog abrirImagem = new OpenFileDialog
+            {
+                Filter = "Imagens (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png"
+            };
+
+            //dialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+
+            DialogResult resultado = abrirImagem.ShowDialog();
+
+            if (resultado == DialogResult.OK)
+            {
+                if (!string.IsNullOrEmpty(abrirImagem.FileName))
+                {
+                    Image imagemEscalonada = EscalaPercentual(Image.FromFile(abrirImagem.FileName));
+                    Foto.Image = imagemEscalonada;
+                }
+            }
+        }
+
+        static Image EscalaPercentual(Image imgFoto)
+        {
+            Bitmap bmImagem = new Bitmap(158, 130, PixelFormat.Format24bppRgb);
+            bmImagem.SetResolution(imgFoto.HorizontalResolution, imgFoto.VerticalResolution);
+            Graphics grImagem = Graphics.FromImage(bmImagem);
+            grImagem.InterpolationMode = InterpolationMode.HighQualityBicubic;
+            grImagem.DrawImage(imgFoto,
+                new Rectangle(0, 0, 158, 130),
+                new Rectangle(0, 0, imgFoto.Width, imgFoto.Height),
+                GraphicsUnit.Pixel);
+            grImagem.Dispose();
+            return bmImagem;
         }
     }
 }

@@ -83,6 +83,7 @@
             this.BtSalvar.TabIndex = 20;
             this.BtSalvar.Text = "Salvar";
             this.BtSalvar.UseVisualStyleBackColor = true;
+            this.BtSalvar.Click += new System.EventHandler(this.BtSalvar_Click);
             // 
             // BtCancelar
             // 
