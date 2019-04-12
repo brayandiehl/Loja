@@ -12,9 +12,6 @@ namespace Loja.Telas.Configuracoes.Parametrizacoes
 {
     public partial class Status : Form
     {
-
-
-
         public Status()
         {
             InitializeComponent();
@@ -48,48 +45,44 @@ namespace Loja.Telas.Configuracoes.Parametrizacoes
 
                 ClassParametros.RetornaValorParametro(ClasseSelecionada, TabelaStatus.Rows[a].Cells["ColunaStatus"].Value.ToString());
 
-
-
-
-
-               
-
-
-                    if (string.IsNullOrEmpty(ClassParametros.Parametro) && string.IsNullOrEmpty(ClassParametros.DescricaoParametro))
+                if (string.IsNullOrEmpty(ClassParametros.Parametro) && string.IsNullOrEmpty(ClassParametros.DescricaoParametro))
+                {
+                    if (string.IsNullOrEmpty((string)TabelaStatus.Rows[a].Cells["ColunaStatus"].Value))
                     {
-                        if (string.IsNullOrEmpty((string)TabelaStatus.Rows[a].Cells["ColunaStatus"].Value))
+                        if (MessageBox.Show("Valor do Status está em branco! \nAo continuar será atribuido atuomáticamente um valor Dinamico 0!\nDesejá continuar?", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
                         {
-                            if (MessageBox.Show("Valor da Estratégia está em branco! \nAo continuar será atribuido atuomáticamente a estratégia 0!\nDesejá continuar?", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
-                            {
-                                //Cursor = Cursors.Default;
-                                return;
-                            }
-
+                            //Cursor = Cursors.Default;
+                            var data = DateTime.Now;
+                            TabelaStatus.Rows[a].Cells["ColunaStatus"].Value = data.ToString().Replace("/", "").Replace(" ", "").Replace(".", "");
+                          
                         }
-                        if (!ClassParametros.InsereNovoParametro(ClasseSelecionada, TabelaStatus.Rows[a].Cells["ColunaStatus"].Value.ToString(), ParametroAtual, DescricaoAtual))
-                        {
-                            MessageBox.Show("Erro ao inserir novo parametro\nErro: " + ClassParametros.Erro, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                        }
-                        else
-                        {
-                            MessageBox.Show("Estratégia " + TabelaStatus.Rows[a].Cells["ColunaStatus"].Value.ToString() + " Inserida com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
-
-                        }
                     }
 
-
-                    /*S
-                    if (!ClassParametros.AtualizaValorParametro(ClasseSelecionada, TabelaStatus.Rows[a].Cells["ColunaStatus"].Value.ToString(), ParametroAtual))
+                    if (!ClassParametros.InsereNovoParametro(ClasseSelecionada, TabelaStatus.Rows[a].Cells["ColunaStatus"].Value.ToString(), ParametroAtual, DescricaoAtual))
                     {
-                        if (MessageBox.Show("Erro ao Atualizar\nClasse:  " + ClasseSelecionada + "\nStatus: " + TabelaStatus.Rows[a].Cells["ColunaStatus"].Value.ToString() + "\nErro: " + ClassParametros.Erro + "\n\nDEsejá continuar sem atualizar o parametro acima?", "ERRO", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.No)
-                        {
-                            Cursor = Cursors.Default;
-                            return;
-                        }
+                        MessageBox.Show("Erro ao inserir novo parametro\nErro: " + ClassParametros.Erro, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
-                    */
-                
+                    else
+                    {
+                        MessageBox.Show("Estratégia " + TabelaStatus.Rows[a].Cells["ColunaStatus"].Value.ToString() + " Inserida com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                    }
+                }
+
+
+                /*S
+                if (!ClassParametros.AtualizaValorParametro(ClasseSelecionada, TabelaStatus.Rows[a].Cells["ColunaStatus"].Value.ToString(), ParametroAtual))
+                {
+                    if (MessageBox.Show("Erro ao Atualizar\nClasse:  " + ClasseSelecionada + "\nStatus: " + TabelaStatus.Rows[a].Cells["ColunaStatus"].Value.ToString() + "\nErro: " + ClassParametros.Erro + "\n\nDEsejá continuar sem atualizar o parametro acima?", "ERRO", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.No)
+                    {
+                        Cursor = Cursors.Default;
+                        return;
+                    }
+                }
+                */
+
                 //Pega as descrição
                 if (string.IsNullOrEmpty((string)TabelaStatus.Rows[a].Cells["Descricao"].Value))
                 {
@@ -103,7 +96,7 @@ namespace Loja.Telas.Configuracoes.Parametrizacoes
                         TabelaStatus[2, a].Value = "0";
                     }
                 }
-                
+
                 //Classes.ClassEstrategia.RetornaValorParametro(ClasseSelecionada, TabelaStatus.Rows[a].Cells["Descricao"].Value.ToString());
                 var teste = ClassParametros.DescricaoParametro;
                 if ((!DescricaoAtual.Equals(ClassParametros.DescricaoParametro)) && (!string.IsNullOrEmpty(ClassParametros.DescricaoParametro)))
@@ -121,7 +114,7 @@ namespace Loja.Telas.Configuracoes.Parametrizacoes
                 }
                 //Estrategia
 
-               
+
 
 
             }
